@@ -1,10 +1,10 @@
-// 
+//
 // Global
-// 
+//
 
 // Scroll padding for all scroll targets on page used with
 // native CSS smooth scrolling
-// 
+//
 // https://caniuse.com/?search=scroll-padding
 
 html {
@@ -27,4 +27,10 @@ html {
             line-height: 2.5rem;
         }
     }
+}
+
+// overwrite j1 styles if NO attic is used for layout
+// see: _data/modules/attics.yml
+.no-attic {
+  display:  none;
 }

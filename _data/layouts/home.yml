@@ -254,38 +254,9 @@ lanes:
       region:                           body-main
       type:                             async
 
-  # ----------------------------------------------------------------------------
-  # CUSTOM content
-  #
-  #   Load custom rendered static HTML data files or HTML templates.
-  #
-  #   NOTE:
-  #
-  #   For Jekyll, only includes from folder '~/_includes' are accepted
-  #   to load HTML data (include) files from.
-  #
-  # ----------------------------------------------------------------------------
-  #
-  - lane:
-      enabled:                          false
-      id:                               custom_content
-      region:                           body-main
-      type:                             sync
-      base:                             _includes/custom
-      path:                             static
-      file:                             bs5_accordion.html
-
-  - lane:
-      enabled:                          false
-      id:                               custom_content
-      region:                           body-main
-      type:                             sync
-      base:                             _includes/custom
-      path:                             templates
-      file:                             bs5_accordion.html
 
   # ----------------------------------------------------------------------------
-  # FREELANCER content
+  # CUSTOM content (FREELANCER)
   #
   #   Load custom rendered static HTML data files or HTML templates.
   #
@@ -343,30 +314,6 @@ lanes:
       base:                             _includes/custom/agency
       path:                             templates
       file:                             clients.html
-
-  # ----------------------------------------------------------------------------
-  # FREELANCER team
-  #
-  - lane:
-      enabled:                          false
-      id:                               freelancer_team
-      region:                           body-main
-      type:                             sync
-      base:                             _includes/custom/agency
-      path:                             templates
-      file:                             team.html
-
-  # ----------------------------------------------------------------------------
-  # FREELANCER partners
-  #
-  - lane:
-      enabled:                          false
-      id:                               freelancer_partners
-      region:                           body-main
-      type:                             sync
-      base:                             _includes/custom/agency
-      path:                             templates
-      file:                             partners.html
 
   # ----------------------------------------------------------------------------
   # FREELANCER contact
