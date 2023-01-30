@@ -1,0 +1,100 @@
+//
+// Portfolio
+//
+
+.portfolio {
+    .portfolio-item {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        max-width: 25rem;
+        border-radius: $border-radius;
+        overflow: hidden;
+
+        .portfolio-item-caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: $transition-base;
+            opacity: 0;
+            background-color: fade-out($primary, .1);
+
+            &:hover {
+                opacity: 1;
+            }
+
+            .portfolio-item-caption-content {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+// Styling for the portfolio modals
+// .portfolio-modal {
+//     .btn-close {
+//         color: $primary;
+//         font-size: 2rem;
+//         padding: 1rem;
+//     }
+//
+//     .portfolio-modal-title {
+//         font-size: 2.25rem;
+//         line-height: 2rem;
+//
+//         @include media-breakpoint-up(lg) {
+//             font-size: 3rem;
+//             line-height: 2.5rem;
+//         }
+//     }
+// }
+
+.portfolio-modal {
+    .modal-dialog {
+        margin: 1rem;
+        max-width: 100vw;
+    }
+
+    .modal-content {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        text-align: center;
+
+        h2 {
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+
+        p.item-intro {
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-family: $subheadings-font-family;
+        }
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        ul.list-inline {
+            margin-bottom: 2rem;
+        }
+
+        img {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .close-modal {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        background-color: transparent;
+
+        &:hover {
+            opacity: 0.3;
+        }
+    }
+}

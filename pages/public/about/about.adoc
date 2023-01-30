@@ -1,0 +1,155 @@
+---
+title:                                  About
+tagline:                                Learn The Agency
+date:                                   2023-01-22 00:00:00
+description: >
+                                        JekyllOne Theme is a website template for the static
+                                        site generator Jekyll. The Theme is free to use and
+                                        can be downloaded at RubyGems as a Ruby Gem. The
+                                        Theme supports a wide range of websites, from a personal
+                                        website, a blog web, a documentation site to classic
+                                        company webs.
+
+keywords: >
+                                        Jekyll, Theme, JekyllOne, J1, Theme, Features
+
+categories:                             [ About ]
+tags:                                   [ Agency, History ]
+
+image:
+  path:                                 /assets/images/agency/img/header-bg.jpg
+  width:                                1920
+  height:                               1280
+  alt:                                  J1 Theme Agency
+
+comments:                               false
+fab_menu_id:                            open_toc_reload
+scrollbar:                              false
+comments:                               false
+
+permalink:                              /pages/public/about/
+regenerate:                             false
+
+resources:                              [ animate ]
+resource_options:
+  - attic:
+      padding_top:                      550
+      padding_bottom:                   60
+      slides:
+        - url:                          /assets/images/agency/img/header-bg.jpg
+          alt:                          J1 Theme Agency
+---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+:badges-enabled:                        false
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="global" %}
+
+ifeval::[{badges-enabled} == true]
+[role="mb-4"]
+{badge-j1--version-latest} {badge-j1--downloads}
+endif::[]
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[role="dropcap"]
+JekyllOne Theme is a website template for the static site generator Jekyll.
+The Theme is free to use and can be downloaded at
+link:{url-j1--download}[RubyGems, {browser-window--new}] as a Ruby Gem.
+The Theme supports a wide range of websites, from a personal website,
+a blog web, a documentation site to classic company webs.
+
+Read what people and companies have contributed to making a project like J1
+Theme real.
+
+++++
+<!-- About-->
+<div class="container">
+<section id="about" class="mt-5" >
+  <div class="row">
+
+    <div class="text-left mb-5">
+    	<h2 class="mb-0">History</h2>
+    	<p class="h3 mb-0 text-muted"><i>Our agency-timeline</i></p>
+    	<div class="d-inline-block g-width-50 g-height-2 bg-primary mb-2"></div>
+    </div>
+
+    <ul class="agency-timeline">
+      <li>
+        <div class="agency-timeline-image"><img class="rounded-circle img-fluid" src="/assets/images/agency/img/about/1.jpg" alt="..." /></div>
+        <div class="agency-timeline-panel">
+          <div class="agency-timeline-heading">
+            <h4>2009-2011</h4>
+            <h4 class="subheading">Our Humble Beginnings</h4>
+          </div>
+          <div class="agency-timeline-body">
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+          </div>
+        </div>
+      </li>
+      <li class="agency-timeline-inverted">
+        <div class="agency-timeline-image"><img class="rounded-circle img-fluid" src="/assets/images/agency/img/about/2.jpg" alt="..." /></div>
+        <div class="agency-timeline-panel">
+          <div class="agency-timeline-heading">
+            <h4>March 2011</h4>
+            <h4 class="subheading">An Agency is Born</h4>
+          </div>
+          <div class="agency-timeline-body">
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="agency-timeline-image"><img class="rounded-circle img-fluid" src="/assets/images/agency/img/about/3.jpg" alt="..." /></div>
+        <div class="agency-timeline-panel">
+          <div class="agency-timeline-heading">
+            <h4>December 2015</h4>
+            <h4 class="subheading">Transition to Full Service</h4>
+          </div>
+          <div class="agency-timeline-body">
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+          </div>
+        </div>
+      </li>
+      <li class="agency-timeline-inverted">
+        <div class="agency-timeline-image"><img class="rounded-circle img-fluid" src="/assets/images/agency/img/about/4.jpg" alt="..." /></div>
+        <div class="agency-timeline-panel">
+          <div class="agency-timeline-heading">
+            <h4>July 2020</h4>
+            <h4 class="subheading">Phase Two Expansion</h4>
+          </div>
+          <div class="agency-timeline-body">
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+          </div>
+        </div>
+      </li>
+      <li class="agency-timeline-inverted">
+        <div class="agency-timeline-image">
+          <h4>
+            Be Part
+            <br />
+            Of Our
+            <br />
+            Story!
+          </h4>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+</div>
+++++

@@ -1,0 +1,114 @@
+{% comment %}
+ # -----------------------------------------------------------------------------
+ #   ~/_includes/themes/j1/procedures/posts/create_collection_article_preview.proc
+ #  Liquid PROCEDURE to create a series header for collection articles
+ #
+ #  http://jekyll.one
+ #
+ #  Copyright (C) 2023 Juergen Adams
+ #
+ #  J1 Theme is licensed under the MIT License.
+ #  See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
+ #
+ # -----------------------------------------------------------------------------
+ #   Posts procedure. Generates ...
+ #
+ #    Usage:
+ #
+ #      1)  assign the 'page', 'post' and 'readmore' variables
+ #      2)  include the create_ad_block.proc procedure
+ #
+ #    Example:
+ #
+ #      {% capture create_ad_block %}themes/{{site.template.name}}/procedures/posts/create_ad_block.proc{% endcapture %}
+ #      {% assign my_navigation_data = nav_data_array %}
+ #
+ #      {% include {{create_ad_block}} page=page post=post %}
+ #
+ # -----------------------------------------------------------------------------
+ # Test data:
+ #  liquid_var:  {{ liquid_var | debug }}
+ #
+ # -----------------------------------------------------------------------------
+{% endcomment %}
+
+{% comment %} Set config files
+-------------------------------------------------------------------------------- {% endcomment %}
+{% assign template_config     = site.data.j1_config %}
+{% assign blocks              = site.data.blocks %}
+{% assign modules             = site.data.modules %}
+{% assign plugins             = site.data.plugins %}
+
+{% comment %} Variables
+-------------------------------------------------------------------------------- {% endcomment %}
+{% assign category_blacklist  = template_config.posts.category_blacklist %}
+{% assign articles            = include.collection %}
+
+{% comment %} Debug templates
+-------------------------------------------------------------------------------- {% endcomment %}
+{% comment %} articles:  {{ articles | debug }} {% endcomment %}
+
+
+{% comment %} Main
+-------------------------------------------------------------------------------- {% endcomment %}
+{% for article in articles %}
+
+ {% comment %} article_url:  {{ article.url | debug }} {% endcomment %}
+ {% comment %} article:  {{ article | debug }} {% endcomment %}
+
+ <!-- Cleanup categories by given blacklist -->
+ {% assign my_categories = article.categories | difference: category_blacklist %}
+
+ <!-- Build element strings -->
+ {% assign categories    = my_categories |join: " · "  %}
+ {% assign tags          = article.tags | join: " · "  %}
+
+ <article class="card raised-z0 mb-5">
+
+   <div class="card-header bg-primary">
+     <h3 id="{{100000|rand}}" class="card-header bg-primary notranslate">
+       {{ article.title }}
+     </h3>
+   </div>
+
+   <div class="row mx-0">
+
+     <div class="col-md-4 img-bg--fill px-0" style="border-right: 1px dotted rgba(0, 0, 0, 0.25);
+       filter: grayscale(1) contrast(0.8) brightness(0.7);
+       background-image: url( {{article.book.cover}} );">
+     </div>
+
+     <div class="col-md-8 p-0">
+
+       <div class="card-body r-text-300 mt-0">
+         <div class="paragraph dropcap">
+           {{ article.excerpt }}
+         </div>
+       </div>
+
+       <div class="card-footer not-rounded r-text-200">
+         <div class="card-footer-text">
+           <i class="mdi mdi-calendar-blank md-grey-900 mr-1"></i> {{article.book.published}}</i>
+
+           <!-- Cleanup categories by given blacklist -->
+           <!-- Build element strings -->
+           <p class="result-item-text small mb-3 notranslate">
+             <i class="mdi mdi-tag-text-outline mdi-18px mr-1"></i>
+             <span class="sr-categories">{{categories}}</span>
+             <br>
+             <i class="mdi mdi-tag mdi-18px mr-1"></i>
+             <span class="sr-tags">{{tags}}</span>
+           </p>
+         </div>
+
+         <a class="card-link md-grey-900 text-lowercase" href="{{ article.url }}#readmore">
+           read · {{article.tagline}}
+         </a>
+       </div>
+
+     </div>
+   </div>
+
+ </article>
+
+{% endfor %}

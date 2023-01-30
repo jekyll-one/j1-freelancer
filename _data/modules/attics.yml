@@ -1,0 +1,106 @@
+# ------------------------------------------------------------------------------
+# ~/_data/modules/attics.yml
+# User configuration settings for attics used on all layouts|pages.
+#
+# Product/Info:
+# https://jekyll.one
+#
+# Copyright (C) 2023 Juergen Adams
+#
+# J1 Theme is licensed under the MIT License.
+# See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
+#
+# ------------------------------------------------------------------------------
+# NOTE:
+#   If NO attic (top page header) is assigned to a LAYOUT, all pages based
+#   on this layout will have NO top page header.
+# ------------------------------------------------------------------------------
+# NOTE:
+#   By J1 Theme, "Liquid Procedures" are being used intensively. To load
+#   HTML data for a layout, the loader procedure places the data based this
+#   YAML data file into the REGION specified with a LANE.
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# Description (used for J1 CC only)
+#
+description:
+
+  title:                                Attics
+  scope:                                User settings
+  location:                             _data/modules/attics.yml
+
+# ------------------------------------------------------------------------------
+# SETTINGS
+#
+settings:
+
+  # ----------------------------------------------------------------------------
+  # Global properties (all layouts)
+  #
+  debug:                                false
+
+  # ----------------------------------------------------------------------------
+  # Layout specific properties
+  #
+  attics:
+
+    # --------------------------------------------------------------------------
+    # Home page (disabled for theme FREELANCER)
+    #
+    - name:                             Home
+      attic:
+        enabled:                        false
+
+        id:                             attic_home
+        layout:                         home
+
+        padding_top:                    550
+        padding_bottom:                 60
+        opacity:                        0.8
+
+#       background_color_1:             transparent
+#       background_color_2:             transparent
+
+        background_color_1:             "#a8aaad"
+        background_color_2:             "#030914"
+
+        filters:
+#         grayscale:                    1
+          contrast:                     0.8
+          brightness:                   0.8
+
+#       currently NOT implemented|supported
+#
+#       action:
+#         enabled:                      true
+#         action_url:                   "#void"
+#         action_button:                btn-default
+#         action_icon:                  download                                # cloud-action
+#         action_icon_family:           MDI                                     # FontAweSome
+#         action_text:                  Download Now
+
+    # --------------------------------------------------------------------------
+    # layouts posts|pages
+    #
+    - name:                             Pages and Posts
+      attic:
+        enabled:                        true
+
+        id:                             attic_page_post
+        layout:                         [ collection, page, post, blog_archive ]
+
+        padding_top:                    400
+        padding_bottom:                 50
+        opacity:                        0.8
+
+        background_color_1:             "#a8aaad"                               # md-blue-900
+        background_color_2:             "#030914"                               # md-blue-900
+
+        filters:
+          grayscale:                    1
+          contrast:                     0.8
+          brightness:                   0.8
+
+# ------------------------------------------------------------------------------
+# END config
