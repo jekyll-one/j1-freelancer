@@ -27,7 +27,7 @@ Have fun!
 The template comes with a Web included, a skeleton for your new Web site.
 This Web is called the **Starter Web**, a general-purpose Website scaffold to
 be modified for your needs. The built-in Starter Web can be visited live
-at [Freelancer]https://freelancer.jekyll.one/).
+at [Freelancer](https://freelancer.jekyll.one/).
 
 **Have fun exploring what a modern static web, a Jekyll site can do**!
 
