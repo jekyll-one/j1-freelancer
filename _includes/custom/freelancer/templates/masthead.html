@@ -1,0 +1,16 @@
+<!-- Masthead -->
+<script>
+
+  var attic = '<div class="masthead bg-primary text-white text-center mb-5"> <div class="container d-flex align-items-center flex-column"> <!-- Masthead Avatar Image--> <div> <img class="masthead-avatar mb-5" src="/assets/images/freelancer/img/avataaars.svg" alt="Masthead Aavatar" aria-label="Masthead Aavatar"> </div> <!-- Masthead Heading--> <h1 class="masthead-heading text-uppercase mb-0"> Freelancer </h1> <!-- Icon Divider--> <div class="divider-custom divider-light"> <div class="divider-custom-line"></div> <div class="divider-custom-icon"> <!--Font Awesome fontawesome.com --> <i class="fas fa-star"></i> </div> <div class="divider-custom-line"></div> </div> <!-- Masthead Subheading--> <p class="masthead-subheading font-weight-light mb-0"> Graphic Artist · Web Designer · Illustrator </p> </div> </div>'
+
+  var dependencies_page_ready = setInterval (function () {
+    $('#header').hide();
+    if (j1.getState() === 'finished') {
+      $('#header').append(attic);
+      clearInterval(dependencies_page_ready);
+    }
+    $('#header').show();
+
+  }, 25); // END dependencies_page_ready
+
+</script>
