@@ -311,7 +311,7 @@ lanes:
       id:                               freelancer_clients
       region:                           body-main
       type:                             sync
-      base:                             _includes/custom/agency
+      base:                             _includes/custom/freelancer
       path:                             templates
       file:                             clients.html
 
