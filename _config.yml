@@ -335,8 +335,8 @@ permalink:                              pretty
 #
 # MAP file:                             https://agency.jekyll.one/sitemap.xml
 #
-# url:                                  http://localhost:20000
-url:                                    https://agency.jekyll.one
+url:                                    http://localhost:20000
+# url:                                  https://freelancer.jekyll.one
 
 # The subpath of your site, e.g. /blog/. Used in conjunction with
 # site.url (see above) when you want a link to something with the

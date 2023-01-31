@@ -85,7 +85,7 @@ settings:
     #
     - name:                             Pages and Posts
       attic:
-        enabled:                        true
+        enabled:                        false
 
         id:                             attic_page_post
         layout:                         [ collection, page, post, blog_archive ]
