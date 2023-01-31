@@ -9,10 +9,10 @@ categories:                             [ Development ]
 tags:                                   [ Performance, Web Vitals ]
 
 image:
-  path:                                 /assets/images/agency/img/header-bg.jpg
+  path:                                 /assets/images/modules/attics/1920x1280/melanie-deziel.jpg
   width:                                1920
   height:                               1280
-  alt:                                  Bootstrap Theme Agency
+  alt:                                  Photo by Melanie Deziel on Unsplash
 
 fab_menu_id:                            default
 comments:                               false
@@ -22,12 +22,15 @@ regenerate:                             false
 resources:                              [ animate ]
 resource_options:
   - attic:
-      padding_top:                      550
-      padding_bottom:                   50
-#     opacity:                          0.5
+      opacity:                          0.5
       slides:
-        - url:                          /assets/images/agency/img/header-bg.jpg
-          alt:                          Bootstrap Theme Agency
+        - url:                          /assets/images/modules/attics/1920x1280/melanie-deziel.jpg
+          alt:                          Photo by Melanie Deziel on Unsplash
+          alignY:                       0.3
+          badge:
+            type:                       unsplash
+            author:                     Melanie Deziel
+            href:                       https://unsplash.com/@storyfuel
 ---
 
 [//]: # [role="dropcap"]

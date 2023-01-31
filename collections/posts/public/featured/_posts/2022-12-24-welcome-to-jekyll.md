@@ -9,10 +9,10 @@ categories:                             [ Jekyll ]
 tags:                                   [ Theme ]
 
 image:
-  path:                                 /assets/images/agency/img/header-bg.jpg
+  path:                                 /assets/images/modules/attics/katie-moum-1920x1280.jpg
   width:                                1920
   height:                               1280
-  alt:                                  Bootstrap Theme Agency
+  alt:                                  Photo by Katie Moum on Unsplash
 
 fab_menu_id:                            default
 comments:                               false
@@ -22,12 +22,15 @@ regenerate:                             false
 resources:                              [ animate ]
 resource_options:
   - attic:
-      padding_top:                      550
-      padding_bottom:                   50
-#     opacity:                          0.5
+      opacity:                          0.5
       slides:
-        - url:                          /assets/images/agency/img/header-bg.jpg
-          alt:                          Bootstrap Theme Agency
+        - url:                          /assets/images/modules/attics/katie-moum-1920x1280.jpg
+          alt:                          Photo by Katie Moum on Unsplash
+          alignY:                       0.3
+          badge:
+            type:                       unsplash
+            author:                     Katie Moum
+            href:                       https://unsplash.com/@katiemoum
 ---
 
 [//]: # [role="dropcap"]
