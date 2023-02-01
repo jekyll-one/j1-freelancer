@@ -53,13 +53,19 @@ environment:                            development
 # ------------------------------------------------------------------------------
 # Sets the build version of J1 Theme Gem
 #
-version:                                2023.0.6
+version:                                2023.0.7
 
 # version
 # ------------------------------------------------------------------------------
 # Sets the build version of J1 Theme
 #
 copyright:                              © 2023 J1 · All rights reserved
+
+# noscript
+# ------------------------------------------------------------------------------
+# Enables|Disables a noscript page
+#
+noscript:                               false
 
 
 # ==============================================================================

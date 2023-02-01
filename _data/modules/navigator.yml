@@ -35,8 +35,10 @@ settings:
   nav_bar:
     enabled:                            true
     fixed:                              true
-    background_color_collapsed:         "#212529"                               # default: theme|bg_primary
-    background_color_scrolled:          "#212529"                               # default: theme|bg_primary
+#   background_color_collapsed:         "#212529"                               # Theme Agency
+#   background_color_scrolled:          "#212529"                               # Theme Agency
+    background_color_scrolled:          default                                 # default: theme|bg_primary
+    background_color_collapsed:         default                                 # default: theme|bg_primary
 
   # ----------------------------------------------------------------------------
   # NavMenu (Desktop)
@@ -102,7 +104,7 @@ settings:
       # DRAWER Sidebar
       #
       - menu:
-          enabled:                      false
+          enabled:                      true
 
           xhr_container_id:             navigator_sidebar_mmenu
           xhr_data_element:             sidebar_mmenu
@@ -223,12 +225,6 @@ settings:
     github_url:                         none                                    # https://github.com/jekyll-one
     disqus_url:                         none                                    # https://disqus.com/
     patreon_url:                        none                                    # https://www.patreon.com/jekyll_one/posts
-
-  # ----------------------------------------------------------------------------
-  # NavTopsearch
-  #
-  nav_topsearch:
-    enabled:                            true
 
 # ------------------------------------------------------------------------------
 # END config
