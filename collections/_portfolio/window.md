@@ -4,7 +4,7 @@ layout:                                 portfolio
 title:                                  Window
 category:                               Photography
 
-image:                                  assets/images/agency/img/portfolio/6.jpg
+image:                                  assets/images/freelancer/img/portfolio/submarine.png
 
 comments:                               false
 sitemap:                                false

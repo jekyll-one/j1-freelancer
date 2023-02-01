@@ -4,7 +4,7 @@ layout:                                 portfolio
 title:                                  Threads
 category:                               Illustration
 
-image:                                  assets/images/agency/img/portfolio/1.jpg
+image:                                  assets/images/freelancer/img/portfolio/safe.png
 
 comments:                               false
 sitemap:                                false

@@ -4,7 +4,7 @@ layout:                                 portfolio
 title:                                  Explore
 category:                               Graphic Design
 
-image:                                  assets/images/agency/img/portfolio/2.jpg
+image:                                  assets/images/freelancer/img/portfolio/cabin.png
 
 comments:                               false
 sitemap:                                false

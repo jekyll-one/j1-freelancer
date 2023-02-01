@@ -592,11 +592,8 @@ excerpt_truncate_words:                 100
 collections:
 
   # ----------------------------------------------------------------------------
-  # Agency
+  # Freelancer
   #
-  team:
-    output: true
-
   portfolio:
     output: true
 

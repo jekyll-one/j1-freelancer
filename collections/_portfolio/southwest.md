@@ -4,7 +4,7 @@ layout:                                 portfolio
 title:                                  Southwest
 category:                               Website Design
 
-image:                                  assets/images/agency/img/portfolio/5.jpg
+image:                                  assets/images/freelancer/img/portfolio/game.png
 
 comments:                               false
 sitemap:                                false

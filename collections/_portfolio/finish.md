@@ -4,7 +4,7 @@ layout:                                 portfolio
 title:                                  Finish
 category:                               Identity
 
-image:                                  assets/images/agency/img/portfolio/3.jpg
+image:                                  assets/images/freelancer/img/portfolio/cake.png
 
 comments:                               false
 sitemap:                                false

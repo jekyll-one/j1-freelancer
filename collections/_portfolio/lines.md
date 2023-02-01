@@ -4,7 +4,7 @@ layout:                                 portfolio
 title:                                  Lines
 category:                               Branding
 
-image:                                  assets/images/agency/img/portfolio/4.jpg
+image:                                  assets/images/freelancer/img/portfolio/circus.png
 
 comments:                               false
 sitemap:                                false
