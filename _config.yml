@@ -597,13 +597,6 @@ collections:
   portfolio:
     output: true
 
-  # ----------------------------------------------------------------------------
-  # Book shelf
-  #
-  biography:
-    output:                             true
-    permalink:                          /collections/public/:collection/:name/
-
 # ------------------------------------------------------------------------------
 # FRONTMATTER defaults
 #
@@ -762,20 +755,6 @@ defaults:
       resource_options:
         - toccer:
             collapseDepth:              3
-
-  # ----------------------------------------------------------------------------
-  # Collections
-  #
-
-  # ----------------------------------------------------------------------------
-  # Biography (Book Shelf)
-  #
-  - scope:
-      type:                             biography
-      path:                             collections/_biography
-
-    values:
-      layout:                           page
 
 
 # ==============================================================================
