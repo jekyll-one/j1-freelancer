@@ -77,28 +77,24 @@ endif::[]
 // Wenn Sie lediglich einen persönlichen Blog ohne Werbung haben und kein
 // Geld damit verdienen, ist das Impressum nicht erforderlich.
 
-// Include sub-documents (if any)
+/// Include sub-documents (if any)
 // -----------------------------------------------------------------------------
 ifeval::[{eu-region} == true]
 .Postal address
 ----
-  Juergen Adams
-  Erasmusstrasse 28
-  40223 Duesseldorf
+  <your-postal-address>
 ----
 endif::[]
 
 .Contact
 [source, text]
 ----
-  webmaster@jekyll.one
+  webmaster@<your.domain>
 ----
 
 ifeval::[{eu-region} == true]
 .Responsible for the content according to § 18 Abs. 1 MStV:
 ----
-  Juergen Adams
-  Erasmusstrasse 28
-  40223 Duesseldorf
+  <your-postal-address>
 ----
 endif::[]

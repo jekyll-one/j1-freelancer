@@ -1,0 +1,70 @@
+---
+layout:                                 post
+
+title:                                  Performance
+tagline:                                Optimize Customer Interaction
+# date:                                 2023-01-03 09:33:20 +0000
+
+categories:                             [ Development ]
+tags:                                   [ Performance, Web Vitals ]
+
+image:
+  path:                                 /assets/images/agency/img/header-bg.jpg
+  width:                                1920
+  height:                               1280
+  alt:                                  Bootstrap Theme Agency
+
+fab_menu_id:                            default
+comments:                               false
+scrollbar:                              false
+regenerate:                             false
+
+resources:                              [ animate ]
+resource_options:
+  - attic:
+      padding_top:                      550
+      padding_bottom:                   50
+#     opacity:                          0.5
+      slides:
+        - url:                          /assets/images/agency/img/header-bg.jpg
+          alt:                          Bootstrap Theme Agency
+---
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+
+[role="dropcap"]
+Praesent luctus vehicula dignissim. Nunc in magna at lacus elementum auctor.
+Vestibulum lobortis fringilla viverra. Quisque consequat est sit amet libero
+viverra sodales. Etiam accumsan sagittis sagittis. Nam pulvinar, mauris id
+pulvinar placerat, lectus eros aliquam mauris, iaculis posuere lectus neque
+eget tellus. Vivamus eu libero id leo mattis egestas. In sollicitudin nunc
+et ipsum mattis fringilla. Nam et neque eget sem pharetra varius. Quisque
+nec placerat eros.
+
+excerpt__end
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="global" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents (if any)
+// -----------------------------------------------------------------------------
+lorem:sentences[7]
+
+lorem:sentences[5]
+
+lorem:sentences[5]
