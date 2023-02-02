@@ -16,7 +16,7 @@ robots:
   follow:                               false
 
 image:
-  path:                                 /assets/images/agency/img/header-bg.jpg
+  path:                                 /assets/images/freelancer/img/header-bg.jpg
   width:                                1920
   height:                               1280
   alt:                                  Bootstrap Theme Agency
@@ -38,7 +38,7 @@ resource_options:
       padding_bottom:                   50
 #     opacity:                          0.5
       slides:
-        - url:                          /assets/images/agency/img/header-bg.jpg
+        - url:                          /assets/images/freelancer/img/header-bg.jpg
           alt:                          Bootstrap Theme Agency
 ---
 
