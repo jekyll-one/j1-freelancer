@@ -368,7 +368,7 @@ base_path:                              ""
 #
 protocol:                               http
 host:                                   localhost
-port:                                   20000
+port:                                   22000
 timezone:                               Europe/Berlin
 encoding:                               UTF-8
 
