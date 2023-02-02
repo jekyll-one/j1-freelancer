@@ -45,13 +45,14 @@ $theme: "Freelancer" !default;
 
 // Components
 // -----------------------------------------------------------------------------
-@import "./theme_freelancer/components/divider.scss";
+@import "./theme_freelancer/components/anchors.scss";
 @import "./theme_freelancer/components/buttons.scss";
-@import "./theme_freelancer/components/navbar.scss";
+@import "./theme_freelancer/components/divider.scss";
 @import "./theme_freelancer/components/forms.scss";
+@import "./theme_freelancer/components/navbar.scss";
 
 // Theme CSS sections
 // -----------------------------------------------------------------------------
+@import "./theme_freelancer/sections/footer.scss";
 @import "./theme_freelancer/sections/masthead.scss";
 @import "./theme_freelancer/sections/portfolio.scss";
-@import "./theme_freelancer/sections/footer.scss";

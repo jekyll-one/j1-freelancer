@@ -12,10 +12,10 @@ categories:                             [ Previewer ]
 tags:                                   [ Bootstrap, CSS, Theme ]
 
 image:
-  path:                                 /assets/images/agency/img/header-bg.jpg
+  path:                                 /assets/images/modules/attics/themes-1920x1280-bw.jpg
   width:                                1920
   height:                               1280
-  alt:                                  Bootstrap Theme Agency
+  alt:                                  Photo by Clem Onojeghuo on Unsplash
 
 comments:                               false
 fab_menu_id:                            page_ctrl                               # open_toc
@@ -29,12 +29,13 @@ resource_options:
   - toccer:
       collapseDepth:                    3
   - attic:
-      padding_top:                      600
-      padding_bottom:                   50
-#     opacity:                          0.5
       slides:
-        - url:                          /assets/images/agency/img/header-bg.jpg
-          alt:                          Bootstrap Theme Agency
+        - url:                          /assets/images/modules/attics/themes-1920x1280-bw.jpg
+          alt:                          Photo by Clem Onojeghuo on Unsplash
+          badge:
+            type:                       unsplash
+            author:                     Clem Onojeghuo
+            href:                       https://unsplash.com/@clemono
 ---
 
 // Page Initializer

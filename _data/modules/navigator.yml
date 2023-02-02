@@ -41,7 +41,7 @@ settings:
 #    background_color_collapsed:         default                                # default: theme|bg_primary
     background_color_scrolled:          "#212529"                               # bs-gray-900
     background_color_collapsed:         "#212529"                               # bs-gray-900
-  
+
   # ----------------------------------------------------------------------------
   # NavMenu (Desktop)
   #
@@ -132,9 +132,9 @@ settings:
 
                   links:
                     - title:            Name
-                      icon:             face
+                      icon:             theme-light-dark
                       value:            ??theme-name
-                      href:             /pages/public/previewer/current_theme/
+                      href:             /pages/public/previewer/freelancer/
                       target:           none
                     - title:            Author
                       icon:             grease-pencil
@@ -144,7 +144,7 @@ settings:
                     - title:            Version
                       icon:             numeric
                       value:            ??theme-version
-                      href:             /pages/public/previewer/current_theme/
+                      href:             /pages/public/previewer/freelancer/
                       target:           none
 
               - box:

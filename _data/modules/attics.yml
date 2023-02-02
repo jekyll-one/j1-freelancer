@@ -85,17 +85,19 @@ settings:
     #
     - name:                             Pages and Posts
       attic:
-        enabled:                        false
+        enabled:                        true
 
         id:                             attic_page_post
         layout:                         [ collection, page, post, blog_archive ]
 
-        padding_top:                    400
+        padding_top:                    610
         padding_bottom:                 50
         opacity:                        0.8
 
-        background_color_1:             "#a8aaad"                               # md-blue-900
-        background_color_2:             "#030914"                               # md-blue-900
+#       no background colors
+#
+#       background_color_1:             "#1abc9c"                               # default
+#       background_color_2:             "#1abc9c"                               # default
 
         filters:
           grayscale:                    1

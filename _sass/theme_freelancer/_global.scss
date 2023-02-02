@@ -28,9 +28,3 @@ html {
         }
     }
 }
-
-// overwrite j1 styles if NO attic is used for layout
-// see: _data/modules/attics.yml
-.no-attic {
-  display:  none;
-}

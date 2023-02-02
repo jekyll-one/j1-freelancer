@@ -1,6 +1,6 @@
-// 
+//
 // Masthead
-// 
+//
 
 .masthead {
     padding-top: calc(6rem + 74px);
@@ -35,4 +35,10 @@
         }
 
     }
+}
+
+// overwrite j1 styles if NO attic is used for layout
+// see: _data/modules/attics.yml
+.no-attic {
+  display:  none;
 }
