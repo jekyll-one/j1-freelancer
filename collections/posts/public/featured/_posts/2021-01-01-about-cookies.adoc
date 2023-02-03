@@ -6,10 +6,10 @@ categories:                             [ Technology ]
 tags:                                   [ Cookies ]
 
 image:
-  path:                                 /assets/images/modules/attics/cookies-1920x1200.jpg
+  path:                                 /assets/images/modules/attics/1920x1280/sj.jpg
   width:                                1920
   height:                               1280
-  alt:                                  Cookies - Good to know
+  alt:                                  Photo by SJ on Unsplash
 
 fab_menu_id:                            open_toc_reload
 comments:                               false
@@ -23,12 +23,12 @@ resource_options:
       padding_bottom:                   50
 #     opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/cookies-1920x1200.jpg
-          alt:                          Photo by Miroslava on Unsplash
+        - url:                          /assets/images/modules/attics/1920x1280/sj.jpg
+          alt:                          Photo by SJ on Unsplash
           badge:
             type:                       unsplash
-            author:                     Miroslava
-            href:                       https://unsplash.com/@miroslava
+            author:                     SJ
+            href:                       https://unsplash.com/de/@sjcbrn
 ---
 
 // Page Initializer

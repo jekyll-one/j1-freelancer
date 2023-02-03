@@ -6,10 +6,10 @@ categories:                             [ Jekyll ]
 tags:                                   [ Theme ]
 
 image:
-  path:                                 /assets/images/modules/attics/machine-generator-1920x1280.jpg
+  path:                                 /assets/images/modules/attics/1920x1280/peter-herrmann.jpg
   width:                                1920
   height:                               1280
-  alt:                                  Site Generators
+  alt:                                  Photo by Peter Herrmann on Unsplash
 
 fab_menu_id:                            open_toc_reload
 comments:                               false
@@ -23,12 +23,12 @@ resource_options:
       padding_bottom:                   50
 #     opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/machine-generator-1920x1280.jpg
-          alt:                          Photo by Isis Françal on Unsplash
+        - url:                          /assets/images/modules/attics/1920x1280/peter-herrmann.jpg
+          alt:                          Photo by Peter Herrmann on Unsplash
           badge:
             type:                       unsplash
-            author:                     Isis França
-            href:                       https://unsplash.com/@isisfra
+            author:                     Peter Herrmann
+            href:                       https://unsplash.com/de/@tama66
 ---
 
 // Page Initializer

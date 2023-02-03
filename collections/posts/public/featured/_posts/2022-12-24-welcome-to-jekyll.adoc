@@ -9,10 +9,10 @@ categories:                             [ Jekyll ]
 tags:                                   [ Theme ]
 
 image:
-  path:                                 /assets/images/modules/attics/katie-moum-1920x1280.jpg
+  path:                                 /assets/images/modules/attics/1920x1280/nick-fewings.jpg
   width:                                1920
   height:                               1280
-  alt:                                  Photo by Katie Moum on Unsplash
+  alt:                                  Photo by Nick Fewings on Unsplash
 
 fab_menu_id:                            default
 comments:                               false
@@ -24,13 +24,13 @@ resource_options:
   - attic:
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/katie-moum-1920x1280.jpg
-          alt:                          Photo by Katie Moum on Unsplash
+        - url:                          /assets/images/modules/attics/1920x1280/nick-fewings.jpg
+          alt:                          Photo by Nick Fewings on Unsplash
           alignY:                       0.3
           badge:
             type:                       unsplash
-            author:                     Katie Moum
-            href:                       https://unsplash.com/@katiemoum
+            author:                     Nick Fewings
+            href:                       https://unsplash.com/@jannerboy62
 ---
 
 // Page Initializer

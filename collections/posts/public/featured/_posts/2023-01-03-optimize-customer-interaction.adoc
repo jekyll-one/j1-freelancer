@@ -9,10 +9,10 @@ categories:                             [ Development ]
 tags:                                   [ Performance, Web Vitals ]
 
 image:
-  path:                                 /assets/images/modules/attics/1920x1280/melanie-deziel.jpg
+  path:                                 /assets/images/modules/attics/1920x1280/nadim-merrikh.jpg
   width:                                1920
   height:                               1280
-  alt:                                  Photo by Melanie Deziel on Unsplash
+  alt:                                  Photo by Nadim Merrikh on Unsplash
 
 fab_menu_id:                            default
 comments:                               false
@@ -24,13 +24,13 @@ resource_options:
   - attic:
       opacity:                          0.5
       slides:
-        - url:                          /assets/images/modules/attics/1920x1280/melanie-deziel.jpg
-          alt:                          Photo by Melanie Deziel on Unsplash
+        - url:                          /assets/images/modules/attics/1920x1280/nadim-merrikh.jpg
+          alt:                          Photo by Nadim Merrikh on Unsplash
           alignY:                       0.3
           badge:
             type:                       unsplash
-            author:                     Melanie Deziel
-            href:                       https://unsplash.com/@storyfuel
+            author:                     Nadim Merrikh
+            href:                       https://unsplash.com/de/@merrikh
 ---
 // Page Initializer
 // =============================================================================
