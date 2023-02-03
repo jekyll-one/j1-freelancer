@@ -16,10 +16,10 @@ robots:
   follow:                               false
 
 image:
-  path:                                 /assets/images/freelancer/img/header-bg.jpg
+  path:                                 /assets/images/modules/attics/1920x1280/freelancer.jpg
   width:                                1920
   height:                               1280
-  alt:                                  Bootstrap Theme Agency
+  alt:                                  Bootstrap Theme Freelancer
 
 sitemap:                                false
 exclude_from_search:                    true
@@ -34,12 +34,12 @@ regenerate:                             false
 resources:                              [ animate ]
 resource_options:
   - attic:
-      padding_top:                      600
+      padding_top:                      610
       padding_bottom:                   50
 #     opacity:                          0.5
       slides:
-        - url:                          /assets/images/freelancer/img/header-bg.jpg
-          alt:                          Bootstrap Theme Agency
+        - url:                          /assets/images/modules/attics/1920x1280/freelancer.jpg
+          alt:                          Bootstrap Theme Freelancer
 ---
 
 // Page Initializer

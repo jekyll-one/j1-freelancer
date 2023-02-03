@@ -100,7 +100,7 @@ settings:
 #       background_color_2:             "#1abc9c"                               # default
 
         filters:
-          grayscale:                    1
+          grayscale:                    0
           contrast:                     0.8
           brightness:                   0.8
 

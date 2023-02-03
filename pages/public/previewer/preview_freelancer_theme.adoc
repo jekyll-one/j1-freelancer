@@ -29,6 +29,8 @@ resource_options:
   - toccer:
       collapseDepth:                    3
   - attic:
+      padding_top:                      610
+      padding_bottom:                   50
       slides:
         - url:                          /assets/images/modules/attics/themes-1920x1280-bw.jpg
           alt:                          Photo by Clem Onojeghuo on Unsplash
