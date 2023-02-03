@@ -12,7 +12,7 @@ categories:                             [ Previewer ]
 tags:                                   [ Bootstrap, CSS, Theme ]
 
 image:
-  path:                                 /assets/images/modules/attics/themes-1920x1280-bw.jpg
+  path:                                 /assets/images/modules/attics/1920x1280/clem-onojeghuo.jpg
   width:                                1920
   height:                               1280
   alt:                                  Photo by Clem Onojeghuo on Unsplash
@@ -32,7 +32,7 @@ resource_options:
       padding_top:                      610
       padding_bottom:                   50
       slides:
-        - url:                          /assets/images/modules/attics/themes-1920x1280-bw.jpg
+        - url:                          /assets/images/modules/attics/1920x1280/clem-onojeghuo.jpg
           alt:                          Photo by Clem Onojeghuo on Unsplash
           badge:
             type:                       unsplash
