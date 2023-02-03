@@ -48,6 +48,11 @@ generators (SSG) in many different programming languages. You'll find Jekyll
 one of them. Look at the top open-source SSGs if a full-blown CMS is needed
 for your project.
 
+For many websites, dynamic page generation by an CMS is entirely
+unnecessary and adds unwanted risks in terms of complexity, performance
+losses, and security issues. Statically build web pages is often the better
+solution.
+
 excerpt__end
 
 //  Load Liquid procedures

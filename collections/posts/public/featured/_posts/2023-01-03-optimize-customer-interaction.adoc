@@ -46,9 +46,10 @@ Praesent luctus vehicula dignissim. Nunc in magna at lacus elementum auctor.
 Vestibulum lobortis fringilla viverra. Quisque consequat est sit amet libero
 viverra sodales. Etiam accumsan sagittis sagittis. Nam pulvinar, mauris id
 pulvinar placerat, lectus eros aliquam mauris, iaculis posuere lectus neque
-eget tellus. Vivamus eu libero id leo mattis egestas. In sollicitudin nunc
-et ipsum mattis fringilla. Nam et neque eget sem pharetra varius. Quisque
-nec placerat eros.
+eget tellus.
+
+Vivamus eu libero id leo mattis egestas. In sollicitudin nunc et ipsum mattis
+fringilla. Nam et neque eget sem pharetra varius. Quisque nec placerat eros.
 
 excerpt__end
 
