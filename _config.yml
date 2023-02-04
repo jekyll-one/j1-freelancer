@@ -47,13 +47,13 @@
 #   values:                             development|production
 #   default:                            development
 #
-environment:                            development
+environment:                            production
 
 # version
 # ------------------------------------------------------------------------------
 # Sets the build version of J1 Theme Gem
 #
-version:                                2023.0.8
+version:                                2023.0.9
 
 # version
 # ------------------------------------------------------------------------------
@@ -339,9 +339,9 @@ permalink:                              pretty
 # site.url will be set to the value of host, port.
 # NOTE: Required setting for the sitemap plugin, for example.
 #
-# MAP file:                             https://agency.jekyll.one/sitemap.xml
+# MAP file:                             https://freelancer.jekyll.one/sitemap.xml
 #
-# url:                                  http://localhost:20000
+# url:                                  http://localhost:22000
 url:                                    https://freelancer.jekyll.one
 
 # The subpath of your site, e.g. /blog/. Used in conjunction with

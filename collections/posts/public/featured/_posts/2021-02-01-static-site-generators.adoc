@@ -20,8 +20,6 @@ resources:                              [ animate, lightbox ]
 resource_options:
   - attic:
       padding_top:                      550
-      padding_bottom:                   50
-#     opacity:                          0.5
       slides:
         - url:                          /assets/images/modules/attics/1920x1280/peter-herrmann.jpg
           alt:                          Photo by Peter Herrmann on Unsplash

@@ -56,6 +56,11 @@ regenerate:                             true
   {% assign production = true %}
 {% endif %}
 
+
+
+
+
+
 /*
  # -----------------------------------------------------------------------------
  # ~/assets/themes/j1/adapter/js/attic.js
@@ -92,6 +97,9 @@ j1.adapter.attic = (function (j1, window) {
   var _this;
   var logger;
   var logText;
+  var atticFilters;
+  var filterArray;
+  var filterStr;
 
   // ---------------------------------------------------------------------------
   // Main object
@@ -160,8 +168,29 @@ j1.adapter.attic = (function (j1, window) {
 
           {% assign attic_id = item.attic.id %}
 
+          {% comment %} Collect CSS image filters
+          -------------------------------------------------------------------------------- {% endcomment %}
+          {% if item.attic.filters %}
+            {% for filter in blog_navigator_options.filters %}
+              {% capture css_filters %}{{css_filters}} {{filter[0]}}({{filter[1]}}){% endcapture %}
+            {% endfor %}
+            {% capture image_filters %}filter:{{css_filters}}{% endcapture %}
+          {% else %}
+            {% assign image_filters = '' %}
+          {% endif %}
+
           // Create the SPECIFIC header loader FUNCTION of type: {{attic_id}}
           function {{attic_id}} (atticOptions) {
+
+            // convert attic filter settings to object to array to string
+            atticFilters = $.extend({}, {{item.attic.filters | replace: 'nil', 'null' | replace: '=>', ':' }});
+            filterArray = [];
+            $.each(atticFilters, function(idx2,val2) {
+              var str = idx2 + '(' + val2 + ')';
+              filterArray.push(str);
+            });
+            filterStr = filterArray.join(' ');
+
             // Fire backstretch for all slides of the header on attic_id
             if ($('#{{attic_id}}').length) {
               $('#{{attic_id}}').backstretch(
@@ -232,8 +261,8 @@ j1.adapter.attic = (function (j1, window) {
                 $('.backstretch').removeClass(atticOptions.spinner);
               }
 
-              // TODO: !!!!!!!!!
-              $('.backstretch').css('filter', 'grayscale(0) contrast(1) brightness(1)');
+              // Add collected CSS filters
+              $('.backstretch').css('filter', filterStr);
 
               // mute the overlay content while sliding
               $('.textOverlay').css('opacity', '0');
@@ -312,7 +341,8 @@ j1.adapter.attic = (function (j1, window) {
 
               }
 
-              // TODO: Add additional styles to head-title-text|head-tagline-text (e.g. text-center)
+              // TODO: Add additional styles to head-title-text|head-tagline-
+              // text (e.g. text-center)
               //
               textOverlayHTML = ''
                 + '<div id="head-title" class="head-title animate__animated ">'

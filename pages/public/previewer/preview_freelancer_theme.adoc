@@ -113,10 +113,10 @@ resource_options:
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [role="dropcap"]
-Freelancer is one of the most popular HTML themes offered by Start Bootstrap.
-I have Jekyllised this theme to give web developers and hobbyists a simple
-and clean implimentation in Jekyll for starting new projects. This template
-is free and open source, released under the MIT license.
+JekyllOne is a theme for multifunctional Bootstrap-based and responsive
+websites, and offers various unique functionalities compared to other themes
+and templates for Jekyll. Themes for Bootstrap are used to customize the appearance
+of a website based on the basic rules and definitions of Bootstrap's CSS styles.
 
 // Include sub-documents (if any)
 // -----------------------------------------------------------------------------
@@ -269,7 +269,7 @@ colors. Then, customize with `.bg-*` utilities.
           </li>
           <li class="nav-item dropdown">
             <a class="link-no-decoration nav-link dropdown-toggle" data-bs-toggle="dropdown"
-              ref="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
             <div class="dropdown-menu">
               <a class="link-no-decoration dropdown-item" href="#">Action</a>
               <a class="link-no-decoration dropdown-item" href="#">Another action</a>
@@ -1377,7 +1377,7 @@ link:{url-bs-docs--components-forms}[Bootstrap Docs {char-middot} Forms, {browse
 <div class="doc-example mb-3">
   <form>
     <div class="form-group">
-      <input type="email" class="form-control" id="exampleInputEmail1" autocomplete="none">
+      <input type="email" class="form-control" id="exampleInputEmail1">
       <label for="exampleInputEmail1" class="bmd-label-floating">Email address</label>
       <!-- span class="form-clear d-none"><i class="mdi mdi-2x mdi-format-clear"></i></span-->
       <span class="bmd-help">We'll never share your email with anyone else.</span>
@@ -2558,7 +2558,6 @@ it (the backdrop).
   class="modal fade"
   tabindex="-1"
   role="dialog"
-  aria-labelledby="exampleStaticModalLabel" aria-hidden="true"
   data-keyboard="false"
   data-backdrop="static">
   <div class="modal-dialog">
