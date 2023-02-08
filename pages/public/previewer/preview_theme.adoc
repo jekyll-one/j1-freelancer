@@ -21,7 +21,7 @@ comments:                               false
 fab_menu_id:                            page_ctrl                               # open_toc
 scrollbar:                              false
 
-permalink:                              /pages/public/previewer/freelancer/
+permalink:                              /pages/public/previewer/theme/
 regenerate:                             false
 
 resources:                              [ animate, clipboard, rouge ]
