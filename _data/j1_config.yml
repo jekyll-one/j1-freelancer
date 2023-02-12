@@ -36,9 +36,9 @@
 #   default:                            https://jekyll.one/
 # ------------------------------------------------------------------------------
 theme:
-  name:                                 UnoLight
-  author:                               J1 Team
-  author_url:                           https://jekyll.one/
+  name:                                 Freelancer
+  author:                               Start Bootstrap
+  author_url:                           https://startbootstrap.com/
 
 # ------------------------------------------------------------------------------
 # CSS and SASS settings

@@ -167,13 +167,12 @@ settings:
 
             title:                      Freelancer
             title_translation:          notranslate
-            tagline:                    popular bootstrap v5 theme for jekyll
+            tagline:                    bootstrap v5 theme for jekyll
             text: >
-                                        Freelancer is one of the most popular HTML themes based
-                                        on Bootstrap V5 offered by Start Bootstrap. This theme
-                                        gives web developers and hobbyists a simple and clean
-                                        implementation in Jekyll for starting a personal website.
-                                        This template is free and open source, released under the
+                                        The theme gives web developers and hobbyists
+                                        a simple and clean omplementation in Jekyll
+                                        for starting personal website's. This template
+                                        is free and open source, released under the
                                         MIT license.
                                         <br><br>
                                         <b>No pain for private or professional purposes.</b>
