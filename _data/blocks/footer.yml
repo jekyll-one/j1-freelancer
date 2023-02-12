@@ -95,7 +95,7 @@ settings:
               enabled:                  true
 
               type:                     copyright
-              statement:                © 2023 J1 · All rights reserved
+              statement:                © 2023 Freelancer · All rights reserved
               translate_statement:      notranslate                             # translate|notranslate
               href:                     /pages/public/legal/en/copyright/
 
