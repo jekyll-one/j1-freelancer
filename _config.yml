@@ -47,7 +47,7 @@
 #   values:                             development|production
 #   default:                            development
 #
-environment:                            development
+environment:                            production
 
 # version
 # ------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ version:                                2023.0.15
 # ------------------------------------------------------------------------------
 # Sets the copyright info of the site
 #
-copyright:                              © 2023 J1 · All rights reserved
+copyright:                              © 2023 Frelancer · All rights reserved
 
 # noscript
 # ------------------------------------------------------------------------------
@@ -341,8 +341,8 @@ permalink:                              pretty
 #
 # MAP file:                             https://freelancer.jekyll.one/sitemap.xml
 #
-url:                                    http://localhost:22000
-# url:                                  https://freelancer.jekyll.one
+# url:                                  http://localhost:22000
+url:                                    https://freelancer.jekyll.one
 
 # The subpath of your site, e.g. /blog/. Used in conjunction with
 # site.url (see above) when you want a link to something with the
