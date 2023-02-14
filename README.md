@@ -1,7 +1,7 @@
 # J1 Freelancer
 
 All you need for your new amazing site! Jekyll meets Bootstrap - and makes a
-lot of friends. J1 Agency combines
+lot of friends. J1 Freelancer combines
 the best of OpenSource software for the Web and the Web site generator
 `Jekyll`. J1 is OpenSource, and so are the packaged modules - no pain for
 private or professional use. Explore this site to learn what's possible if

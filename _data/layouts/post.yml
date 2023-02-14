@@ -139,16 +139,6 @@ lanes:
       file:                             generator.html
 
   # ----------------------------------------------------------------------------
-  #
-  - lane:
-      enabled:                          false
-      region:                           body-header
-      type:                             sync
-      base:                             _includes/custom/freelancer
-      path:                             static
-      file:                             masthead.html
-
-  # ----------------------------------------------------------------------------
   # CONTENT region (region body-main)
   #
   #   NOTE:

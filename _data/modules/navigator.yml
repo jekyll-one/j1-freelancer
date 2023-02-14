@@ -35,12 +35,6 @@ settings:
   nav_bar:
     enabled:                            true
     fixed:                              true
-#   background_color_collapsed:         "#212529"                               # Theme Agency
-#   background_color_scrolled:          "#212529"                               # Theme Agency
-#    background_color_scrolled:          default                                # default: theme|bg_primary
-#    background_color_collapsed:         default                                # default: theme|bg_primary
-    background_color_scrolled:          "#212529"                               # bs-gray-900
-    background_color_collapsed:         "#212529"                               # bs-gray-900
 
   # ----------------------------------------------------------------------------
   # NavMenu (Desktop)
@@ -106,7 +100,7 @@ settings:
       # DRAWER Sidebar
       #
       - menu:
-          enabled:                      true
+          enabled:                      false
 
           xhr_container_id:             navigator_sidebar_mmenu
           xhr_data_element:             sidebar_mmenu
@@ -134,7 +128,7 @@ settings:
                     - title:            Name
                       icon:             theme-light-dark
                       value:            ??theme-name
-                      href:             /pages/public/previewer/theme/
+                      href:             /pages/public/previewer/current_theme/
                       target:           none
                     - title:            Author
                       icon:             grease-pencil
@@ -144,7 +138,7 @@ settings:
                     - title:            Version
                       icon:             numeric
                       value:            ??theme-version
-                      href:             /pages/public/previewer/theme/
+                      href:             /pages/public/previewer/current_theme/
                       target:           none
 
               - box:
@@ -227,6 +221,12 @@ settings:
     github_url:                         none                                    # https://github.com/jekyll-one
     disqus_url:                         none                                    # https://disqus.com/
     patreon_url:                        none                                    # https://www.patreon.com/jekyll_one/posts
+
+  # ----------------------------------------------------------------------------
+  # NavTopsearch
+  #
+  nav_topsearch:
+    enabled:                            true
 
 # ------------------------------------------------------------------------------
 # END config

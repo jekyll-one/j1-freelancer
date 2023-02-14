@@ -47,13 +47,13 @@
 #   values:                             development|production
 #   default:                            development
 #
-environment:                            production
+environment:                            development
 
 # version
 # ------------------------------------------------------------------------------
 # Sets the build version of the site
 #
-version:                                2023.0.15
+version:                                2023.0.16
 
 # copyright
 # ------------------------------------------------------------------------------
@@ -227,7 +227,7 @@ doctype:                                html
 # ------------------------------------------------------------------------------
 #
 title:                                  Freelancer
-tagline:                                Graphic Artist - Web Designer - Illustrator
+tagline:                                Graphic Artist · Web Designer · Illustrator
 description: >
                                         Freelancer is a one page HTML/CSS theme built with Bootstrap 5.
                                         This theme is perfect for agencies or small businesses looking
@@ -254,6 +254,15 @@ keywords: >
                                         google, analytics, advertising, search, console, silverlight, score,
                                         j1, template, jekyllone, comment
 
+author:
+  name:                                 Juergen Adams
+  email:                                juergen@jekyll.one
+  url:                                  https://jekyll.one/
+  github:                               username
+  facebook:                             username
+  twitter:                              username
+# feedburner:                           feedname
+
 webmaster:
   email:                                webmaster@freelancer.jekyll.one
 
@@ -268,9 +277,8 @@ robots:
 # ------------------------------------------------------------------------------
 # BRAND configuration
 # Set the brand image and favicon (located in /asset/images)
-
 brand:
-  image:                                icons/freelancer/menubar-logo.svg
+  image:                                icons/freelancer/scalable/menubar-logo.svg
   image_height:                         38px
   text:                                 Freelancer
   text_color:                           "#9E9E9E"
@@ -339,10 +347,8 @@ permalink:                              pretty
 # site.url will be set to the value of host, port.
 # NOTE: Required setting for the sitemap plugin, for example.
 #
-# MAP file:                             https://freelancer.jekyll.one/sitemap.xml
-#
-# url:                                  http://localhost:22000
-url:                                    https://freelancer.jekyll.one
+url:                                    http://localhost:22000
+# url:                                  https://freelancer.jekyll.one
 
 # The subpath of your site, e.g. /blog/. Used in conjunction with
 # site.url (see above) when you want a link to something with the
@@ -426,21 +432,20 @@ strict_front_matter:                    false
 sass:
   sass_dir:                             _sass
   style:                                expanded                                # nested | expanded | compact | compressed
-# verbose:                              true
+# verbose:                              true                                    # possible values: nested expanded compact compressed
 
 # ------------------------------------------------------------------------------
 # WEBRICK Customizations
 # You can provide custom headers for your site
-#
 # See: https://jekyllrb.com/docs/configuration/webrick/
 #      https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 #
 # NOTE:
-#   Jekyll provides by default Content-Type and Cache-Control
-#   response headers: one dynamic in order to specify the nature of
-#   the data being served, the other static in order to disable
-#   caching so that you don’t have to fight with Chrome’s aggressive
-#   caching when you are in development mode.
+# Jekyll provides by default Content-Type and Cache-Control
+# response headers: one dynamic in order to specify the nature of
+# the data being served, the other static in order to disable
+# caching so that you don’t have to fight with Chrome’s aggressive
+# caching when you are in development mode.
 #
 # webrick:
 #   headers:
@@ -542,7 +547,7 @@ whitelist:
 
 
 # ==============================================================================
-# 5. SEO and Social Media settings (gloal)
+# 5. SEO ans Social Media settings (gloal)
 #
 # ------------------------------------------------------------------------------
 #
@@ -720,43 +725,6 @@ defaults:
       personalization:                  false
       exclude_from_search:              false
       series:                           false
-
-      resource_options:
-        - toccer:
-            collapseDepth:              3
-
-  # ----------------------------------------------------------------------------
-  # PUBLIC - SERIES
-  #
-  - scope:
-      type:                             posts
-      path:                             posts/public/series
-
-    values:
-      layout:                           post
-      compress:                         true
-
-      author:
-        name:                           Juergen Adams
-        url:                            https://jekyll.one/
-
-      logo:                             /assets/images/icons/j1/j1-512x512.png
-      image:
-        path:                           /assets/images/promo/home/screenshot.jpg
-        width:                          1200
-        height:                         800
-        alt:                            J1 Theme Home
-
-      robots:
-        index:                          true
-        follow:                         true
-
-      toc:                              true
-      fab_menu_id:                      open_toc_reload
-      scrollbar:                        false
-      page_navigation:                  true
-      personalization:                  false
-      exclude_from_search:              false
 
       resource_options:
         - toccer:

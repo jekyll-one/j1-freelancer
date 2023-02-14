@@ -185,14 +185,6 @@ lanes:
       path:                             static
       file:                             masthead.html
 
-  - lane:
-      enabled:                          false
-      region:                           body-header
-      type:                             sync
-      base:                             _includes/custom/freelancer
-      path:                             templates
-      file:                             masthead.html
-
   # ----------------------------------------------------------------------------
   # CONTENT region (region body-main)
   #

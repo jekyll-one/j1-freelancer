@@ -46,39 +46,34 @@ settings:
   attics:
 
     # --------------------------------------------------------------------------
-    # Home page (disabled for theme FREELANCER)
+    # Home page
     #
     - name:                             Home
       attic:
-        enabled:                        false
+        enabled:                        true
 
         id:                             attic_home
         layout:                         home
 
-        padding_top:                    550
-        padding_bottom:                 60
-        opacity:                        0.8
+#       title_animate:                  animate__fadeInDown
+#       title_animate_duration:         animate__slower
+#       title_animate_delay:            animate__delay-2s
+#       raised_level:                   15
+
+        padding_top:                    400
+        padding_bottom:                 50
+        opacity:                        0.5
 
 #       background_color_1:             transparent
 #       background_color_2:             transparent
 
-        background_color_1:             "#a8aaad"
-        background_color_2:             "#030914"
+        background_color_1:             "#0D47A1"                               # md-blue-900
+        background_color_2:             "#0D47A1"                               # md-blue-900
 
         filters:
-          grayscale:                    0
+          grayscale:                    1
           contrast:                     0.8
           brightness:                   0.8
-
-#       currently NOT implemented|supported
-#
-#       action:
-#         enabled:                      true
-#         action_url:                   "#void"
-#         action_button:                btn-default
-#         action_icon:                  download                                # cloud-action
-#         action_icon_family:           MDI                                     # FontAweSome
-#         action_text:                  Download Now
 
     # --------------------------------------------------------------------------
     # layouts posts|pages
@@ -89,20 +84,42 @@ settings:
 
         id:                             attic_page_post
         layout:                         [ collection, page, post, blog_archive ]
-
-        padding_top:                    610
+        padding_top:                    400
         padding_bottom:                 50
-        opacity:                        0.8
-
-#       no background colors
-#
-#       background_color_1:             "#1abc9c"                               # default
-#       background_color_2:             "#1abc9c"                               # default
+        opacity:                        0.5
 
         filters:
-          grayscale:                    0
+          grayscale:                    1
           contrast:                     0.8
           brightness:                   0.8
+
+    # --------------------------------------------------------------------------
+    # layouts raw
+    #
+    - name:                             Raw pages
+      attic:
+        enabled:                        true
+
+        id:                             attic_raw
+        layout:                         [ raw ]
+        padding_top:                    400
+        padding_bottom:                 50
+        opacity:                        0.5
+
+        filters:
+          grayscale:                    1
+          contrast:                     0.8
+          brightness:                   0.8
+
+    # --------------------------------------------------------------------------
+    #  layouts collection|app|raw
+    #
+    - name:                             Text pages
+      attic:
+        enabled:                        true
+
+        id:                             attic_text
+        layout:                         [ app ]
 
 # ------------------------------------------------------------------------------
 # END config

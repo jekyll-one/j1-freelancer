@@ -79,7 +79,7 @@ gem 'j1-template', '~> 2023.0.0'
 
 # Loaded from gem.fury.io
 #source 'https://gem.fury.io/jekyll-one-org/' do
-#  gem 'j1-template', '~> 2023.0.15'
+#  gem 'j1-template', '~> 2023.0.16'
 #end
 
 # ------------------------------------------------------------------------------
@@ -145,6 +145,7 @@ group :jekyll_plugins do
   #
   # gem 'algolia', '~> 2.0', '>= 2.0.4'                                         # Required for Algolia support only
   # gem 'asciidoctor-pdf', '>= 1.5.4'                                           # Required for Asciidoctor PDF creation only
+  # gem 'jekyll-sass-converter', '>= 2.1.0'                                     # Required for Jekyll|SASS (file) conversion support
   #
   # Additional Jekyll Plugins  (optional)
   #

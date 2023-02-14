@@ -29,8 +29,8 @@ settings:
 
   filters:
     grayscale:                          0
-    contrast:                           1
-    brightness:                         1
+    contrast:                           0.8
+    brightness:                         0.8
 
   # ----------------------------------------------------------------------------
   # INTRO panel
@@ -53,22 +53,28 @@ settings:
         animate:                        false
         properties:                     pt-5 pb-5
 
-        position:                       center                                  # left | center
-        title:                          All in One
-        tagline:                        top features
+        position:                       left                                    # left | center
+        title:                          Features
+        tagline:                        power of jekyll one
         title_translate:                notranslate                             # translate|notranslate
-        description_properties:         mt-3 mr-3 mb-3
+        description_properties:         mt-3 mr-3 mb-5
         description: >
                                         <p class="dropcap">
-                                          People quite often ask if static websites make sense
-                                          for anything beyond a one-page website. Some others see in
-                                          static websites the stone age of the World Wide Web. What's
-                                          about static websites today? What's achievable?
+                                          People quite often ask if static websites make sense for
+                                          anything beyond a one-page website. The answer is clearly
+                                          <b>yes</b>!
                                         </p>
                                         <p>
-                                          This board highlights top features, which make static webs
-                                          not only an option, but an attractive method to create fast,
-                                          secure, and sophisticated websites for many use cases.
+                                          Static websites can make sense for any type of website, from
+                                          a portfolio website to an e-commerce store. Static websites
+                                          are becoming increasingly popular because they are faster,
+                                          more secure, and easier to maintain than traditional dynamic
+                                          websites. Static websites are also great for SEO (search engine
+                                          optimization) as they are easier for search engines to crawl
+                                          and index.
+                                        </p>
+                                        <p class="tagline">
+                                          <b>Learn the top features of JekyllOne.</b>
                                         </p>
 
         style:                          flat
@@ -80,46 +86,18 @@ settings:
             enabled:                      true
             height:                       2                                     # [1 .. 9]
             style:                        wave-1                                # default
-            color:                        "#c4c4c4"                             # "#dcdcdc"
+            color:                        "#EEEEEE"                             # "#dcdcdc"
             background_color:             "#f5f5f5"                             # auto|rgb_value, "#f5f5f5"
             transform:                    false                                 # false or rotate|flip-x|flip-y and combinations
           bottom:
             enabled:                      true
             height:                       2
-            style:                        wave-1
-            color:                        "#c4c4c4"
+            style:                        wave-4
+            color:                        "#EEEEEE"
             background_color:             "#f5f5f5"
             transform:                    flip-y flip-x
 
         cards:
-
-          - name:                       Tools
-            card:
-              enabled:                  true
-              type:                     text
-              title:                    Tools
-              title_translate:          notranslate                             # translate|notranslate
-              tagline:                  J1 Theme
-              icon:                     tools
-              icon_family:              MDI
-              icon_size:                3x
-              icon_color:
-              text: >
-                                        <p class="dropcap">
-                                          Current Technology and Design. Excellent performance in running
-                                          a website. Use Jekyll One to present your content at its best.
-                                        </p>
-
-              buttons:
-                - name:                 Read More
-                  button:
-                    type:               text
-                    text:               Make your Web Site unique
-                    class:
-                    icon:
-                    icon_size:
-                    icon_color:
-                    href:               /pages/public/panels/intro_panel#current-technology
 
           - name:                       Design
             card:
@@ -149,6 +127,34 @@ settings:
                     icon_size:
                     icon_color:
                     href:               /pages/public/panels/intro_panel#responsive-design
+
+          - name:                       Tools
+            card:
+              enabled:                  true
+              type:                     text
+              title:                    Tools
+              title_translate:          notranslate                             # translate|notranslate
+              tagline:                  J1 Theme
+              icon:                     tools
+              icon_family:              MDI
+              icon_size:                3x
+              icon_color:
+              text: >
+                                        <p class="dropcap">
+                                          Current Technology and Design. Excellent performance in running
+                                          a website. Use Jekyll One to present your content at its best.
+                                        </p>
+
+              buttons:
+                - name:                 Read More
+                  button:
+                    type:               text
+                    text:               Make your Web Site unique
+                    class:
+                    icon:
+                    icon_size:
+                    icon_color:
+                    href:               /pages/public/panels/intro_panel#current-technology
 
           - name:                       Time
             card:
@@ -204,7 +210,7 @@ settings:
         provider:                       Github
         account:                        daattali
 
-        position:                       center                                  # left | center
+        position:                       left                                    # left | center
         title:                          J1 Plans
         title_translate:                notranslate                             # translate|notranslate
         tagline:                        your way
@@ -227,14 +233,14 @@ settings:
             enabled:                      true
             height:                       4                                     # [1 .. 9]
             style:                        wave-4                                # default
-            color:                        "#c4c4c4"
+            color:                        "#EEEEEE"
             background_color:             "#f5f5f5"
             transform:                    false                                 # false or rotate|flip-x|flip-y and combinations
           bottom:
             enabled:                      true
             height:                       2
             style:                        wave-4
-            color:                        "#c4c4c4"
+            color:                        "#EEEEEE"
             background_color:             "#f5f5f5"
             transform:                    rotate
 
@@ -396,7 +402,7 @@ settings:
         scroller:                       true
         properties:                     pt-5 pb-5
 
-        position:                       center                                  # left | center
+        position:                       left                                    # left | center
         title:                          Jekyll One
         tagline:                        featured theme for jekyll
         description_properties:         mt-3 mr-3 mb-3
@@ -406,8 +412,6 @@ settings:
                                           anything beyond a one-page website. Some others see in
                                           static websites the stone age of the World Wide Web.
                                           What's about static websites today? What's achievable?
-                                        </p>
-                                        <p>
                                           This board highlights top features, which make static webs
                                           not only an option but a state-of-the-art technology to create
                                           fast, secure, and sophisticated websites for many use cases.
@@ -429,14 +433,14 @@ settings:
             enabled:                      true
             height:                       2                                     # [1 .. 9]
             style:                        wave-1                                # default
-            color:                        "#c4c4c4"
+            color:                        "#EEEEEE"
             background_color:             "#f5f5f5"
             transform:                    false                                 # false or rotate|flip-x|flip-y and combinations
           bottom:
             enabled:                      true
             height:                       2
             style:                        wave-4
-            color:                        "#c4c4c4"
+            color:                        "#EEEEEE"
             background_color:             "#f5f5f5"
             transform:                    rotate
 
@@ -729,26 +733,30 @@ settings:
         category_blacklist:             [ posts, public, private, protected, featured, series ]
         properties:                     pt-5 pb-5
 
-        position:                       center                                  # left | center
-        title:                          BLOG
+        position:                       left                                    # left | center
+        title:                          Blog
         tagline:                        latest news
         translate_description:          notranslate                             # translate|notranslate
-        description_properties:         mt-3 mr-3 mb-3
-        description:
-
+        description_properties:         mt-3 mr-3 mb-5
+        description: >
+                                        <p class="dropcap">
+                                          Explore the blog and find interesting articles around Jekyll and
+                                          website creation processes in general. And this blog is an excellent
+                                          example of how J1 and Jekyll can be used for blogging.
+                                        </p>
         wave:
           top:
             enabled:                      false
             height:                       2                                     # [1 .. 9]
             style:                        wave-1                                # default
-            color:                        "#c4c4c4"
+            color:                        "#EEEEEE"
             background_color:             "#f5f5f5"
             transform:                    false                                 # false or rotate|flip-x|flip-y and combinations
           bottom:
             enabled:                      false
             height:                       2
             style:                        wave-4
-            color:                        "#c4c4c4"
+            color:                        "#EEEEEE"
             background_color:             "#f5f5f5"
             transform:                    rotate
 
