@@ -406,8 +406,16 @@ j1.adapter.translator = (function (j1, window) {
     // the selection for a translation|language
     // -------------------------------------------------------------------------
     cbGoogle: function () {
-      var logger                = log4javascript.getLogger('j1.adapter.translator.cbGoogle');
-      var msDropdown            = document.getElementById('dropdownJSON').msDropdown;
+      var logger            = log4javascript.getLogger('j1.adapter.translator.cbGoogle');
+      var msDropdown        = document.getElementById('dropdownJSON').msDropdown;
+
+      var url               = new liteURL(window.location.href);
+      var baseUrl           = url.origin;
+      var hostname          = url.hostname;
+      var auto_domain       = hostname.substring(hostname.lastIndexOf('.', hostname.lastIndexOf('.') - 1) + 1);
+
+      var domainAttribute    = '';
+
 //    var cookie_names          = j1.getCookieNames();
 //    var user_consent          = j1.readCookie(cookie_names.user_consent);
 //    var user_translate        = j1.readCookie(cookie_names.user_translate);
@@ -417,10 +425,10 @@ j1.adapter.translator = (function (j1, window) {
 //    var domain                = hostname.substring(hostname.lastIndexOf('.', hostname.lastIndexOf('.') - 1) + 1);
 //    var cookie_option_domain  = '{{cookie_options.domain}}';
 //    var same_site             = '{{cookie_options.same_site}}';
+
       var srcLang;
       var destLang;
       var transCode;
-      var domainAttribute;
       var selectedTranslationLanguage;
 
       // set domain used by cookies
@@ -457,6 +465,7 @@ j1.adapter.translator = (function (j1, window) {
       // translation language MUST be DIFFERENT from content language
       if (srcLang == selectedTranslationLanguage ) {
         Cookies.remove('googtrans', { domain: domainAttribute });
+        Cookies.remove('googtrans', { domain: auto_domain });
         Cookies.remove('googtrans', { domain: hostname });
         Cookies.remove('googtrans');
         location.reload(true);
@@ -468,6 +477,7 @@ j1.adapter.translator = (function (j1, window) {
 
       // remove all googtrans cookies that POTENTIALLY exists
       Cookies.remove('googtrans', { domain: domainAttribute });
+      Cookies.remove('googtrans', { domain: auto_domain });
       Cookies.remove('googtrans', { domain: hostname });
       Cookies.remove('googtrans');
 
@@ -477,7 +487,19 @@ j1.adapter.translator = (function (j1, window) {
       // in an empty field and two cookies (host+domain) if domain option
       // is enabled!!!
       // -----------------------------------------------------------------------
-      Cookies.set('googtrans', transCode);
+      // if (domainAttribute) {
+      //   Cookies.set('googtrans', transCode, { domain: domainAttribute });
+      // } else {
+      //   Cookies.set('googtrans', transCode, { domain: hostname });
+      // }
+
+      Cookies.set('googtrans', transCode, { domain: auto_domain });
+
+      // j1.writeCookie({
+      //   name:     'googtrans',
+      //   data:     transCode,
+      //   domain:   hostname
+      // });
 
       // reload current page (skip cache)
       location.reload(true);
