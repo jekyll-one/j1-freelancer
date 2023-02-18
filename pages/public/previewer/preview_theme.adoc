@@ -31,13 +31,14 @@ resource_options:
   - attic:
       padding_top:                      610
       padding_bottom:                   50
+
       slides:
-        - url:                          /assets/images/modules/attics/1920x1280/clem-onojeghuo.jpg
-          alt:                          Photo by Clem Onojeghuo on Unsplash
+        - url:                          /assets/images/modules/attics/1920x1280/matthaeus.jpg
+          alt:                          Photo by Matthaeus on Unsplash
           badge:
             type:                       unsplash
-            author:                     Clem Onojeghuo
-            href:                       https://unsplash.com/@clemono
+            author:                     Matthaeus
+            href:                       https://unsplash.com/@matthaeus123
 ---
 
 // Page Initializer
