@@ -88,9 +88,20 @@ regenerate:                             true
 j1.adapter.translator = (function (j1, window) {
   var environment       = '{{environment}}';
   var user_translate    = {};
+
+//var stringifiedAttributes       = '';
+
+  var cookieDefaults;
+  var cookieSettings;
+  var cookieOptions;
+
   var translatorDefaults;
   var translatorSettings;
   var translatorOptions;
+
+  var check_cookie_option_domain;
+  var auto_domain;
+
   var _this;
   var $modal;
   var cookie_names;
@@ -99,8 +110,11 @@ j1.adapter.translator = (function (j1, window) {
   var url;
   var baseUrl;
   var hostname;
+
   var domain;
   var subDomain;
+  var auto_domain;
+
   var cookie_option_domain;
   var secure;
   var logText;
@@ -112,7 +126,47 @@ j1.adapter.translator = (function (j1, window) {
   var gtTranslateScript;
   var gtCallbackScript;
   var languageList;
+
   var domainAttribute;
+
+  // ---------------------------------------------------------------------------
+  // Helper functions
+  // ---------------------------------------------------------------------------
+
+  // function subDomain(url) {
+  // // See: https://snipplr.com/view/5449/check-if-a-url-contains-a-subdomain
+  //
+  // // IF THERE, REMOVE WHITE SPACE FROM BOTH ENDS
+  // url = url.replace(new RegExp(/^\s+/),""); // START
+  // url = url.replace(new RegExp(/\s+$/),""); // END
+  //
+  // // IF FOUND, CONVERT BACK SLASHES TO FORWARD SLASHES
+  // url = url.replace(new RegExp(/\\/g),"/");
+  //
+  // // IF THERE, REMOVES 'http://', 'https://' or 'ftp://' FROM THE START
+  // url = url.replace(new RegExp(/^http\:\/\/|^https\:\/\/|^ftp\:\/\//i),"");
+  //
+  // // IF THERE, REMOVES 'www.' FROM THE START OF THE STRING
+  // url = url.replace(new RegExp(/^www\./i),"");
+  //
+  // // REMOVE COMPLETE STRING FROM FIRST FORWARD SLASH ON
+  // url = url.replace(new RegExp(/\/(.*)/),"");
+  //
+  // // REMOVES '.??.??' OR '.???.??' FROM END - e.g. '.CO.UK', '.COM.AU'
+  // if (url.match(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i))) {
+  //       url = url.replace(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i),"");
+  //
+  // // REMOVES '.??' or '.???' or '.????' FROM END - e.g. '.US', '.COM', '.INFO'
+  // } else if (url.match(new RegExp(/\.[a-z]{2,4}$/i))) {
+  //       url = url.replace(new RegExp(/\.[a-z]{2,4}$/i),"");
+  // }
+  //
+  // // CHECK TO SEE IF THERE IS A DOT '.' LEFT IN THE STRING
+  // var subDomain = (url.match(new RegExp(/\./g))) ? true : false;
+  //
+  // return(subDomain);
+  //
+  // }
 
   // ---------------------------------------------------------------------------
   // Main object
@@ -138,16 +192,24 @@ j1.adapter.translator = (function (j1, window) {
       _this                 = j1.adapter.translator;
       logger                = log4javascript.getLogger('j1.adapter.translator');
 
+      // Load cookie DEFAULTS|CONFIG
+      cookieDefaults        = $.extend({}, {{cookie_defaults | replace: 'nil', 'null' | replace: '=>', ':' }});
+      cookieSettings        = $.extend({}, {{cookie_settings | replace: 'nil', 'null' | replace: '=>', ':' }});
+      cookieOptions         = $.extend(true, {}, cookieDefaults, cookieSettings);
+
       // Load  module DEFAULTS|CONFIG
       translatorDefaults    = $.extend({},   {{translator_defaults | replace: 'nil', 'null' | replace: '=>', ':' }});
       translatorSettings    = $.extend({},   {{translator_settings | replace: 'nil', 'null' | replace: '=>', ':' }});
       translatorOptions     = $.extend(true, {}, translatorDefaults, translatorSettings);
 
+      check_cookie_option_domain  = (cookieOptions.domain === 'false') ? false : true;
+
       url                   = new liteURL(window.location.href);
       baseUrl               = url.origin;
       hostname              = url.hostname;
-      domain                = hostname.substring(hostname.lastIndexOf('.', hostname.lastIndexOf('.') - 1) + 1);
-      subDomain             = j1.subdomain(hostname);
+      subDomain             = _this.subDomain(hostname);
+//    domain                = hostname.substring(hostname.lastIndexOf('.', hostname.lastIndexOf('.') - 1) + 1);
+      auto_domain           = hostname.substring(hostname.lastIndexOf('.', hostname.lastIndexOf('.') - 1) + 1);
       secure                = (url.protocol.includes('https')) ? true : false;
       navigator_language    = navigator.language || navigator.userLanguage;     // userLanguage for MS IE compatibility
       translation_language  = navigator_language.split('-')[0];
@@ -189,17 +251,30 @@ j1.adapter.translator = (function (j1, window) {
       // initializer
       // -----------------------------------------------------------------------
       var dependencies_met_page_ready = setInterval (function (options) {
-        var expires       = '{{cookie_options.expires}}';
-        var same_site     = '{{cookie_options.same_site}}';
-        var option_domain = '{{cookie_options.domain}}';
+        var expires       = cookieOptions.expires;
+        var same_site     = cookieOptions.same_site;
+        var option_domain = cookieOptions.domain;
 
         user_consent      = j1.readCookie(cookie_names.user_consent);
 
         // set domain used by cookies
-        if (option_domain == 'auto') {
-          domainAttribute = domain ;
-        } else  {
-          domainAttribute = '';
+
+        // if (option_domain == 'auto') {
+        //   domainAttribute = domain ;
+        // } else  {
+        //   domainAttribute = '';
+        // }
+
+        if (check_cookie_option_domain) {
+          if (cookieOptions.domain == 'auto') {
+            domainAttribute = auto_domain;
+//          stringifiedAttributes += '; ' + 'Domain=' + domainAttribute;
+          } else  {
+            domainAttribute = cookieOptions.domain;
+//          stringifiedAttributes += '; ' + 'Domain=' + domainAttribute;
+          }
+        } else {
+          domainAttribute = cookieOptions.domain;
         }
 
         var pageState   = $('#no_flicker').css("display");
@@ -223,24 +298,17 @@ j1.adapter.translator = (function (j1, window) {
             });
           }
 
-          // hide the google translate element if exists
-          if ($('google_translate_element')) {
-            $('google_translate_element').hide();
-          }
-
           // show|hide translate button if enabled
           if (translatorOptions.hideTranslatorIcon) {
             if (!user_consent.analysis || !user_consent.personalization) {
               // disable google translate button if visible
               if ($('#quickLinksTranslateButton').css('display') === 'block')  {
-                logger.info('\n' + 'disable quickLinksTranslateButton');
                 $('#quickLinksTranslateButton').css('display', 'none');
               }
             }
             if (user_consent.analysis && user_consent.personalization) {
               // enable google translate button if not visible
               if ($('#quickLinksTranslateButton').css('display') === 'none')  {
-                logger.info('\n' + 'enable quickLinksTranslateButton');
                 $('#quickLinksTranslateButton').css('display', 'block');
               }
             }
@@ -295,29 +363,14 @@ j1.adapter.translator = (function (j1, window) {
           // enable|disable translation (after callback)
           if (user_translate.analysis && user_translate.personalization && user_translate.translationEnabled) {
             if (translatorOptions.translatorName === 'google') {
-              logger.info('\n' + 'append Google Translate Script: ' + gtTranslateScript.id);
               head.appendChild(gtTranslateScript);
-              if ($('google_translate_element')) {
-                $('google_translate_element').hide();
-              }
-              // if( $('#gt-callback').length ) {
-              //   logger.info('\n' + 'Google Translate Script already exists : ' + gtTranslateScript.id);
-              // } else {
-              //   logger.info('\n' + 'append Google Translate Script: ' + gtTranslateScript.id);
-              //   head.appendChild(gtTranslateScript);
-              //   if ($('google_translate_element')) {
-              //     $('google_translate_element').hide();
-              //   }
-              // }
             }
           } else {
             if (translatorOptions.translatorName === 'google') {
-              logger.info('\n' + 'translation disabled');
-              logger.info('\n' + 'remove existing Google Translate cookies');
               // remove all googtrans cookies that POTENTIALLY exists
-              Cookies.remove('googtrans', { domain: domainAttribute });
-              Cookies.remove('googtrans', { domain: hostname });
-              Cookies.remove('googtrans');
+              // Cookies.remove('googtrans', { domain: domainAttribute });
+              // Cookies.remove('googtrans', { domain: hostname });
+              // Cookies.remove('googtrans');
             }
           }
 
@@ -378,6 +431,44 @@ j1.adapter.translator = (function (j1, window) {
     }, // END getState
 
     // -------------------------------------------------------------------------
+    // subDomain()
+    // Returns true|false if a subdomain is used for URL
+    // -------------------------------------------------------------------------
+    subDomain: function (url) {
+      // See: https://snipplr.com/view/5449/check-if-a-url-contains-a-subdomain
+
+      // IF THERE, REMOVE WHITE SPACE FROM BOTH ENDS
+      url = url.replace(new RegExp(/^\s+/),""); // START
+      url = url.replace(new RegExp(/\s+$/),""); // END
+
+      // IF FOUND, CONVERT BACK SLASHES TO FORWARD SLASHES
+      url = url.replace(new RegExp(/\\/g),"/");
+
+      // IF THERE, REMOVES 'http://', 'https://' or 'ftp://' FROM THE START
+      url = url.replace(new RegExp(/^http\:\/\/|^https\:\/\/|^ftp\:\/\//i),"");
+
+      // IF THERE, REMOVES 'www.' FROM THE START OF THE STRING
+      url = url.replace(new RegExp(/^www\./i),"");
+
+      // REMOVE COMPLETE STRING FROM FIRST FORWARD SLASH ON
+      url = url.replace(new RegExp(/\/(.*)/),"");
+
+      // REMOVES '.??.??' OR '.???.??' FROM END - e.g. '.CO.UK', '.COM.AU'
+      if (url.match(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i))) {
+            url = url.replace(new RegExp(/\.[a-z]{2,3}\.[a-z]{2}$/i),"");
+
+      // REMOVES '.??' or '.???' or '.????' FROM END - e.g. '.US', '.COM', '.INFO'
+      } else if (url.match(new RegExp(/\.[a-z]{2,4}$/i))) {
+            url = url.replace(new RegExp(/\.[a-z]{2,4}$/i),"");
+      }
+
+      // CHECK TO SEE IF THERE IS A DOT '.' LEFT IN THE STRING
+      var subDomain = (url.match(new RegExp(/\./g))) ? true : false;
+
+      return(subDomain);
+    }, // END subDomain
+
+    // -------------------------------------------------------------------------
     // postTranslateElementInit()
     // ???
     // -------------------------------------------------------------------------
@@ -400,8 +491,8 @@ j1.adapter.translator = (function (j1, window) {
       var url               = new liteURL(window.location.href);
       var baseUrl           = url.origin;
       var hostname          = url.hostname;
+      var subDomain         = j1.adapter.translator.subDomain(hostname);
       var auto_domain       = hostname.substring(hostname.lastIndexOf('.', hostname.lastIndexOf('.') - 1) + 1);
-      var subDomain         = j1.subdomain(hostname);
       var domainAttribute   = '';
 
 //    var cookie_names          = j1.getCookieNames();
@@ -417,16 +508,28 @@ j1.adapter.translator = (function (j1, window) {
       var srcLang;
       var destLang;
       var transCode;
-      var domainAttribute;
       var selectedTranslationLanguage;
 
       // set domain used by cookies
+
       // if (cookie_option_domain == 'auto') {
       //   domainAttribute = domain ;
       // } else  {
       //   // domainAttribute = hostname;
       //   domainAttribute = '';
       // }
+
+      if (check_cookie_option_domain) {
+        if (cookieOptions.domain == 'auto') {
+          domainAttribute = auto_domain;
+//        stringifiedAttributes += '; ' + 'Domain=' + domainAttribute;
+        } else  {
+          domainAttribute = cookieOptions.domain;
+//        stringifiedAttributes += '; ' + 'Domain=' + domainAttribute;
+        }
+      } else {
+        domainAttribute = cookieOptions.domain;
+      }
 
       selectedTranslationLanguage = msDropdown.value;
       logger.info('\n' + 'selected translation language: ' + selectedTranslationLanguage);
@@ -440,7 +543,9 @@ j1.adapter.translator = (function (j1, window) {
 
       // translation language MUST be DIFFERENT from content language
       if (srcLang == selectedTranslationLanguage ) {
-        // remove all googtrans cookies that POTENTIALLY exists
+        if (subDomain) {
+          Cookies.remove('googtrans', { domain: auto_domain });
+        }
         Cookies.remove('googtrans', { domain: domainAttribute });
         Cookies.remove('googtrans', { domain: hostname });
         Cookies.remove('googtrans');
@@ -452,25 +557,28 @@ j1.adapter.translator = (function (j1, window) {
       transCode = '/' + srcLang + '/' + selectedTranslationLanguage;
 
       // remove all googtrans cookies that POTENTIALLY exists
+      if (subDomain) {
+        Cookies.remove('googtrans', { domain: auto_domain });
+      }
       Cookies.remove('googtrans', { domain: domainAttribute });
       Cookies.remove('googtrans', { domain: hostname });
       Cookies.remove('googtrans');
 
       // -----------------------------------------------------------------------
-      // NOTE: googtrans cookie will be rewritten (by Google!?) for
-      // attributes 'SameSite' and 'Domain'. This results for 'SameSite'
-      // in an empty field and two cookies (host+domain) if domain option
-      // is enabled!!!
+      // NOTE:
+      //  googtrans cookie will be rewritten by Google for
+      //  attributes 'SameSite' and 'Domain'. This results for 'SameSite'
+      //  in an empty field and two cookies (host+domain) if domain option
+      //  is enabled!!!
       // -----------------------------------------------------------------------
+
+//    Cookies.set('googtrans', transCode, { domain: auto_domain });
 
       if (subDomain) {
         Cookies.set('googtrans', transCode, { domain: auto_domain });
       } else {
-        Cookies.set('googtrans', transCode);
-//      Cookies.set('googtrans', transCode, { domain: hostname });
+        Cookies.set('googtrans', transCode, { domain: hostname });
       }
-
-//    Cookies.set('googtrans', transCode);
 
       // reload current page (skip cache)
       location.reload(true);
