@@ -16,7 +16,6 @@
 # About this configuration (used for J1 CC only)
 #
 about_config:
-
   title:                                Authentication
   scope:                                User settings
   location:                             _data/modules/authentication.yml

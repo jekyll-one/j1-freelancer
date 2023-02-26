@@ -16,7 +16,6 @@
 # About this configuration (used for J1 CC only)
 #
 about_config:
-
   title:                                Logger
   scope:                                User settings
   location:                             _data/modules/log4javascript.yml

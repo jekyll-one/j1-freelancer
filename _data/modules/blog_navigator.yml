@@ -16,7 +16,6 @@
 # Description (used for J1 CC only)
 #
 description:
-
   title:                                J1 Blog Navigator
   scope:                                User settings
   location:                             _data/builder/blog_navigator.yml
@@ -30,7 +29,7 @@ settings:
   # Navigator options
   # ----------------------------------------------------------------------------
   filters:
-    grayscale:                          0   
+    grayscale:                          0
 
 # ------------------------------------------------------------------------------
 # END config

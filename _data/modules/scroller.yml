@@ -15,7 +15,6 @@
 # Description (used for J1 CC only)
 #
 description:
-
   title:                                Scroller API
   scope:                                User settings
   location:                             _data/modules/scroller.yml
