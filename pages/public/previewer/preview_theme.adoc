@@ -3,10 +3,12 @@ title:                                  Theme Preview
 tagline:                                Explore Current Styles
 date:                                   2022-12-01 00:00:00
 description: >
-                                        Freelancer is one of the most popular HTML themes offered by Start Bootstrap.
-                                        I have Jekyllised this theme to give web developers and hobbyists a simple
-                                        and clean implimentation in Jekyll for starting new projects. This template
-                                        is free and open source, released under the MIT license.
+                                        Freelancer is based on a popular HTML theme offered by Start Bootstrap.
+                                        This Jekyllised theme give web developers and hobbyists a simple
+                                        and clean implimentation in Jekyll for a flat design, one page
+                                        Bootstrap portfolio theme perfect for freelancer portfolios, or
+                                        any other one page website. This theme is free and open source,
+                                        released under the MIT license.
 
 categories:                             [ Previewer ]
 tags:                                   [ Bootstrap, CSS, Theme ]
@@ -18,7 +20,7 @@ image:
   alt:                                  Photo by Clem Onojeghuo on Unsplash
 
 comments:                               false
-fab_menu_id:                            page_ctrl                               # open_toc
+fab_menu_id:                            open_toc
 scrollbar:                              false
 
 permalink:                              /pages/public/previewer/theme/
@@ -101,7 +103,7 @@ resource_options:
 // Set (local) page attributes here
 // -----------------------------------------------------------------------------
 // :page--attr:                         <attr-value>
-
+:start-bootstrap--home:                 https://startbootstrap.com
 //  Load Liquid procedures
 // -----------------------------------------------------------------------------
 {% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
@@ -113,17 +115,21 @@ resource_options:
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-[role="dropcap"]
-JekyllOne is a theme for multifunctional Bootstrap-based and responsive
-websites, and offers various unique functionalities compared to other themes
-and templates for Jekyll. Themes for Bootstrap are used to customize the appearance
-of a website based on the basic rules and definitions of Bootstrap's CSS styles.
+// [role="dropcap"]
+Freelancer is based on a popular *HTML* theme offered by
+link:{start-bootstrap--home}[Start Bootstrap, {browser-window--new}].
+This *Jekyllised* version of the theme gives web developers and hobbyists
+a simple and clean implimentation in _Jekyll_ for a flat design, one page
+Bootstrap portfolio theme perfect for freelancer portfolios, or any other
+one page website.
+
+This theme is free and open source, released under the MIT license.
 
 // Include sub-documents (if any)
 // -----------------------------------------------------------------------------
 ++++
   <!-- Add H1 (document title) tag here -->
-  <div id="theme" class="document-title row g-0 mt-4 mb-3"></div>
+  <div id="theme" class="document-title row g-0 mt-5 mb-3"></div>
 ++++
 
 Bootstrap themes are used to customize the appearance of a website based
@@ -2985,7 +2991,7 @@ endif::[]
   var user_state          = j1.readCookie(cookie_names.user_state);
   var theme_slogans       = {};
 
-  theme_slogans.Freelancer  = 'Start new projects';
+  theme_slogans.Freelancer  = 'A personal portfolio blog';
 
   themeName               = user_state.theme_name;
   theme_slogan            = theme_slogans[themeName];

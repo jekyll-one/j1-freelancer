@@ -182,7 +182,7 @@ lanes:
       region:                           body-header
       type:                             sync
       base:                             _includes/custom/freelancer
-      path:                             static
+      path:                             templates
       file:                             masthead.html
 
   # ----------------------------------------------------------------------------

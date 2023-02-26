@@ -1,16 +1,36 @@
-<!-- Masthead (template)-->
-<script>
+<!-- Masthead -->
+<div class="masthead bg-primary text-white text-center mb-5">
+  <div class="container d-flex align-items-center flex-column">
 
-  var attic = '<div class="masthead bg-primary text-white text-center mb-5"> <div class="container d-flex align-items-center flex-column"> <!-- Masthead Avatar Image--> <div> <img class="masthead-avatar mb-5" src="/assets/images/freelancer/img/avataaars.svg" alt="Masthead Aavatar" aria-label="Masthead Aavatar"> </div> <!-- Masthead Heading--> <h1 class="masthead-heading text-uppercase mb-0"> Freelancer </h1> <!-- Icon Divider--> <div class="divider-custom divider-light"> <div class="divider-custom-line"></div> <div class="divider-custom-icon"> <!--Font Awesome fontawesome.com --> <i class="fas fa-star"></i> </div> <div class="divider-custom-line"></div> </div> <!-- Masthead Subheading--> <p class="masthead-subheading font-weight-light mb-0"> Graphic Artist · Web Designer · Illustrator </p> </div> </div>'
+    <!-- Masthead Avatar Image-->
+    <div>
+      <img class="masthead-avatar mb-5" src="/assets/images/freelancer/img/avataaars.svg" alt="Masthead Aavatar" aria-label="Masthead Aavatar">
+    </div>
+    <!-- /Masthead Avatar Image-->
 
-  var dependencies_page_ready = setInterval (function () {
-    $('#header').hide();
-    if (j1.getState() === 'finished') {
-      $('#header').append(attic);
-      clearInterval(dependencies_page_ready);
-    }
-    $('#header').show();
+    <!-- Masthead Heading-->
+    <div id="head-title" class="animate__animated animate__fadeInLeft animate__slower">
+      <h1 class="masthead-heading text-uppercase mb-0">{{page.title}}</h1>
+    </div>
+    <!-- /Masthead Heading-->
 
-  }, 25); // END dependencies_page_ready
+    <!-- Divider-->
+    <div class="divider-custom divider-light animate__animated animate__fadeInLeft animate__slower">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <!--Font Awesome -->
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+    </div>
+    <!-- /Divider-->
 
-</script>
+    <!-- Masthead Subheading-->
+    <div id="head-tagline" class="animate__animated animate__fadeInLeft animate__slower">
+      <p class="masthead-subheading font-weight-light mb-0">{{page.tagline}}</p>
+    </div>
+    <!-- / Masthead Subheading-->
+
+  </div>
+</div>
+<!-- /Masthead -->

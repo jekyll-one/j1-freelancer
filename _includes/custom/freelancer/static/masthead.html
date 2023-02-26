@@ -5,24 +5,32 @@
     <!-- Masthead Avatar Image-->
     <div>
       <img class="masthead-avatar mb-5" src="/assets/images/freelancer/img/avataaars.svg" alt="Masthead Aavatar" aria-label="Masthead Aavatar">
-      <!-- img class="masthead-avatar mb-5" src="/assets/images/freelancer/img/avataaars.png" alt="Masthead Aavatar" aria-label="Masthead Aavatar" -->
     </div>
+    <!-- /Masthead Avatar Image-->
 
     <!-- Masthead Heading-->
-    <h1 class="masthead-heading text-uppercase mb-0"> Freelancer </h1>
+    <div id="head-title" class="animate__animated animate__fadeInLeft animate__slower">
+      <h1 class="masthead-heading text-uppercase mb-0">{{page.title}}</h1>
+    </div>
+    <!-- /Masthead Heading-->
 
-    <!-- Icon Divider-->
-    <div class="divider-custom divider-light">
+    <!-- Divider-->
+    <div class="divider-custom divider-light animate__animated animate__fadeInLeft animate__slower">
         <div class="divider-custom-line"></div>
         <div class="divider-custom-icon">
-          <!--Font Awesome fontawesome.com -->
+          <!--Font Awesome -->
           <i class="fas fa-star"></i>
         </div>
         <div class="divider-custom-line"></div>
     </div>
+    <!-- /Divider-->
 
     <!-- Masthead Subheading-->
-    <p class="masthead-subheading font-weight-light mb-0"> Graphic Artist · Web Designer · Illustrator </p>
+    <div id="head-tagline" class="animate__animated animate__fadeInLeft animate__slower">
+      <p class="masthead-subheading font-weight-light mb-0">{{page.tagline}}</p>
+    </div>
+    <!-- / Masthead Subheading-->
 
   </div>
 </div>
+<!-- /Masthead -->
