@@ -30,7 +30,7 @@ settings:
   # ----------------------------------------------------------------------------
   smoothscroll:
     offsetCorrection:                   0
-    offsetCorrectionLocal:              -90
+    offsetCorrectionLocal:              -80
 
   # ----------------------------------------------------------------------------
   # Scroller options
