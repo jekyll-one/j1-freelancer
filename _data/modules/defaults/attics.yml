@@ -77,8 +77,8 @@ defaults:
 
   # duo-color effect, base color 'blue' (requires gray-scaled images)
   #
-  background_color_1:                   "#0D47A1"                               # md-blue-900
-  background_color_2:                   "#0D47A1"                               # md-blue-900
+  background_color_1:                   "#0D47A1"                               # md-green-900
+  background_color_2:                   "#0D47A1"                               # md-green-900
 
   # currently NOT supported
   #

@@ -95,7 +95,7 @@ ifeval::[{cookies} == true]
 This website uses cookies and similar technologies for its operation
 this offer. You are free to give your consent, refuse, or revoke by clicking on
 the data protection dialog button. Subsequent changes are possible
-*at any time* by clicking on the icon mdi:cookie[18px, md-blue] placed in
+*at any time* by clicking on the icon mdi:cookie[18px, md-green] placed in
 the *menu bar*.
 
 *Advanced* third-party cookies are only used with your consent. Additional
