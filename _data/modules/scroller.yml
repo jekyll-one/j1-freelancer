@@ -25,14 +25,12 @@ description:
 settings:
   enabled:                              true
 
-  scrollOffsetCorrection:               -70
-  offsetCorrectionLocal:                -90
-
   # ----------------------------------------------------------------------------
   # SmoothScroll options
   # ----------------------------------------------------------------------------
   smoothscroll:
     offsetCorrection:                   -70
+    offsetCorrectionLocal:              -90
 
   # ----------------------------------------------------------------------------
   # Scroller options
@@ -44,6 +42,28 @@ settings:
   # Scroller configurations
   # ----------------------------------------------------------------------------
   scrollers:
+
+    # --------------------------------------------------------------------------
+    # Intro Panel
+    #
+    - scroller:
+        enabled:                        false
+        type:                           showOnScroll
+        id:                             home_intro_panel
+        container:                      home_intro_panel
+        showDelay:                      1000
+        scrollOffset:                   500
+
+    # --------------------------------------------------------------------------
+    # Service Panel
+    #
+    - scroller:
+        enabled:                        false
+        type:                           showOnScroll
+        id:                             home_service_panel
+        container:                      home_service_panel
+        showDelay:                      700
+        scrollOffset:                   200
 
     # --------------------------------------------------------------------------
     # News Panel (ScrollGroup)
@@ -63,7 +83,7 @@ settings:
                                         More articles can be found with the
                                         <a href="/pages/public/blog/navigator/" class="link-no-decoration">Navigator</a>
         lastPageInfo_de: >
-                                        Weitere Artikel finden Sie im
+                                        Weitere Artikel finden Sie mit dem
                                         <a href="/pages/public/blog/navigator/" class="link-no-decoration">Navigator</a>
 
     # --------------------------------------------------------------------------
@@ -77,7 +97,7 @@ settings:
         pagePath:                       /pages/public/blog/navigator/page
         elementScroll:                  true
         scrollOffset:                   200
-        lastPage:                       2
+        lastPage:                       4
         infoLastPage:                   false
 
         lastPageInfo_en:                ""
