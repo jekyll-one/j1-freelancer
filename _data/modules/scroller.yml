@@ -26,6 +26,7 @@ settings:
   enabled:                              true
 
   scrollOffsetCorrection:               -70
+  offsetCorrectionLocal:                -90
 
   # ----------------------------------------------------------------------------
   # SmoothScroll options
