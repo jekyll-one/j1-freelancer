@@ -478,10 +478,10 @@ tag::tags[]
 :icon-checked:                                    icon:check[role="green"]
 :icon-times:                                      icon:times[role="red mr-2"]
 :icon-file:                                       icon:file-alt[role="blue"]
-:icon-battery--quarter:                           icon:battery-quarter[role="md-green"]
-:icon-battery--half:                              icon:battery-half[role="md-green"]
-:icon-battery--three-quarter:                     icon:battery-three-quarter[role="md-green"]
-:icon-battery--full:                              icon:battery-full[role="md-green"]
+:icon-battery--quarter:                           icon:battery-quarter[role="md-green-700"]
+:icon-battery--half:                              icon:battery-half[role="md-green-700"]
+:icon-battery--three-quarter:                     icon:battery-three-quarter[role="md-green-700"]
+:icon-battery--full:                              icon:battery-full[role="md-green-700"]
 
 // level indicators
 //

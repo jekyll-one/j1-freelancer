@@ -79,7 +79,7 @@ settings:
         - item:                         To Top
           enabled:                      true
           id:                           fam_scroll_to_top
-          color:                        md-green
+          color:                        md-green-700
           event_handler:                scroll_to_top
           icon:                         chevron-double-up
           icon_properties:
@@ -111,7 +111,7 @@ settings:
         - item:                         To Top
           enabled:                      true
           id:                           fam_scroll_to_top
-          color:                        md-green
+          color:                        md-green-700
           event_handler:                scroll_to_top
           icon:                         chevron-double-up
           icon_properties:
@@ -119,7 +119,7 @@ settings:
         - item:                         Table of Contents
           enabled:                      true
           id:                           open_mmenu_toc
-          color:                        md-green
+          color:                        md-green-700
           event_handler:                open_mmenu_toc
           icon:                         wrap
           icon_properties:
@@ -143,7 +143,7 @@ settings:
         - item:                         To Top
           enabled:                      true
           id:                           fam_scroll_to_top
-          color:                        md-green
+          color:                        md-green-700
           event_handler:                scroll_to_top
           icon:                         chevron-double-up
           icon_properties:
@@ -159,7 +159,7 @@ settings:
         - item:                         Table of Contents
           enabled:                      true
           id:                           open_mmenu_toc
-          color:                        md-green
+          color:                        md-green-700
           event_handler:                open_mmenu_toc
           icon:                         wrap
           icon_properties:
@@ -184,7 +184,7 @@ settings:
         - item:                         To Top
           enabled:                      true
           id:                           fam_scroll_to_top
-          color:                        md-green
+          color:                        md-green-700
           event_handler:                scroll_to_top
           icon:                         chevron-double-up
           icon_properties:
@@ -192,7 +192,7 @@ settings:
         - item:                         Previous Section
           enabled:                      true
           id:                           fam_previous_section
-          color:                        md-green
+          color:                        md-green-700
           event_handler:                scroll_previous_section
           icon:                         step-backward
           icon_properties:              mdi-rotate-90
@@ -200,7 +200,7 @@ settings:
         - item:                         Next Section
           enabled:                      true
           id:                           fam_next_section
-          color:                        md-green
+          color:                        md-green-700
           event_handler:                scroll_next_section
           icon:                         step-forward
           icon_properties:              mdi-rotate-90
@@ -216,7 +216,7 @@ settings:
         - item:                         Table of Contents
           enabled:                      true
           id:                           open_mmenu_toc
-          color:                        md-green
+          color:                        md-green-700
           event_handler:                open_mmenu_toc
           icon:                         wrap
           icon_properties:
