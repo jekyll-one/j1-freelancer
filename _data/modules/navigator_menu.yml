@@ -1,0 +1,45 @@
+# ------------------------------------------------------------------------------
+# ~/_data/modules/j1_navigator_menu.yml (run-time)
+# Configuration of the J1 NAV Module for the main navigation bar
+#
+# Product/Info:
+# https://jekyll.one
+#
+# Copyright (C) 2023 Juergen Adams
+#
+# J1 Theme is licensed under the MIT License.
+# See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
+#
+# ------------------------------------------------------------------------------
+# NOTE:
+#   For general navigation settings, see navigator.yml
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# TOP-LEVEL items (NO sub-menu)
+#
+
+- item:                                 PORTFOLIO
+  href:                                 /#portfolio
+
+- item:                                 CLIENTS
+  href:                                 /#clients
+
+- item:                                 CONTACT
+  href:                                 /#contact
+
+# ------------------------------------------------------------------------------
+# Menu BLOG
+#
+- item:                                 BLOG
+  href:                                 /#panel_home_news
+
+- item:                                 THEME
+  href:                                 /pages/public/previewer/theme/
+
+
+- item:                                 DOWNLOAD
+  href:                                 /#download
+
+# ------------------------------------------------------------------------------
+# END config

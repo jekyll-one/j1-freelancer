@@ -1,0 +1,67 @@
+# ------------------------------------------------------------------------------
+# ~/_data/modules/carousel.yml
+# User configuration for J1 Carousel (based on Owl Carousel V1)
+#
+# Product/Info:
+# https://jekyll.one
+#
+# Copyright (C) 2023 Juergen Adams
+#
+# J1 Theme is licensed under the MIT License.
+# See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# Description (used for J1 CC only)
+#
+description:
+  title:                                Carousel
+  scope:                                User settings
+  location:                             _data/apps/carousel.yml
+
+# ------------------------------------------------------------------------------
+# User configuration settings
+#
+settings:
+  enabled:                              true
+
+
+  # ----------------------------------------------------------------------------
+  # CAROUSEL configurations
+  # ----------------------------------------------------------------------------
+  carousel:
+
+    # --------------------------------------------------------------------------
+    # AGENCY clients
+    #
+    - show:
+        enabled:                        true
+        provider:                       j1
+        id:                             clients_freelancer
+        type:                           image
+        images_path:                    /assets/images/freelancer/img/customers
+        images:                         [
+                                          client-1.png,
+                                          client-2.png,
+                                          client-3.png,
+                                          client-4.png,
+                                          client-5.png,
+                                          client-6.png,
+                                          client-7.png
+                                        ]
+        links:                          [
+                                          "#void", "#void", "#void",
+                                          "#void", "#void", "#void",
+                                          "#void"
+                                        ]
+        options:
+          autoPlay:                     3000
+          items:                        4
+          autoHeight :                  true
+          pagination:                   false
+          paginationNumbers:            false
+          itemsDesktop:                 "[1199,3]"
+          itemsDesktopSmall:            "[979,3]"
+
+# ------------------------------------------------------------------------------
+# END config
