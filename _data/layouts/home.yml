@@ -238,12 +238,13 @@ lanes:
       path:                             templates
       file:                             clients.html
 
+
   # ----------------------------------------------------------------------------
   # FREELANCER contact
   #
   - lane:
       enabled:                          true
-      id:                               freelancer_contact_form
+      id:                               freelancer_contact
       region:                           body-main
       type:                             sync
       base:                             _includes/custom/freelancer
@@ -251,7 +252,31 @@ lanes:
       file:                             contact_form.html
 
   # ----------------------------------------------------------------------------
-  # NEWS panel
+  # FREELANCER partners
+  #
+  - lane:
+      enabled:                          true
+      id:                               freelancer_partners
+      region:                           body-main
+      type:                             sync
+      base:                             _includes/custom/freelancer
+      path:                             templates
+      file:                             partners.html
+
+  # ----------------------------------------------------------------------------
+  # FREELANCER download
+  #
+  - lane:
+      enabled:                          true
+      id:                               freelancer_download
+      region:                           body-main
+      type:                             sync
+      base:                             _includes/custom/freelancer
+      path:                             static
+      file:                             download.html
+
+  # ----------------------------------------------------------------------------
+  # J1 NEWS panel
   #
   #   The news panel displays a configurable number of available posts
   #   (excerpts) using infinite scroll. Find the configuration with:
@@ -265,23 +290,11 @@ lanes:
   # ----------------------------------------------------------------------------
   #
   - lane:
-      enabled:                          true
+      enabled:                          false
       id:                               panel_home_news
       region:                           body-main
       type:                             async
       properties:                       elevated-z1
-
-  # ----------------------------------------------------------------------------
-  # FREELANCER download
-  #
-  - lane:
-      enabled:                          true
-      id:                               freelancer_download
-      region:                           body-main
-      type:                             sync
-      base:                             _includes/custom/freelancer
-      path:                             static
-      file:                             download.html
 
 # ------------------------------------------------------------------------------
 # END config

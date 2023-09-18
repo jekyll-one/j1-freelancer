@@ -43,6 +43,10 @@ $theme: "Freelancer" !default;
 // -----------------------------------------------------------------------------
 @import "./theme_freelancer/global.scss";
 
+// J1 Theme CSS overloads
+// -----------------------------------------------------------------------------
+@import "./theme_freelancer/overload.scss";
+
 // Components
 // -----------------------------------------------------------------------------
 @import "./theme_freelancer/components/anchors.scss";

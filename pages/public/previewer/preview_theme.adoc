@@ -1,22 +1,34 @@
 ---
-title:                                  Theme Preview
-tagline:                                Explore Freelancer Styles
-date:                                   2022-12-01 00:00:00
+title:                                  Theme
+title_extention:                        Preview Bootstrap Freelancer Styles
+tagline:                                Freelancer Styles
+
+date:                                   2022-12-01
+last_modified:                          2023-09-03
+
 description: >
-                                        JekyllOne is a theme for multifunctional Bootstrap-based and responsive
-                                        websites, and offers various unique functionalities compared to other themes
-                                        and templates for Jekyll. Themes for Bootstrap are used to customize the appearance
-                                        of a website based on the basic rules and definitions of Bootstrap's CSS styles.
+                                        Agency is based on a popular HTML theme offered by Start Bootstrap.
+                                        This Jekyllised version of the theme is perfect for small businesses
+                                        looking to set up a simple landing page for their company. The theme
+                                        can also be modified and adjusted to fit just about any purpose.
+                                        This theme is free and open source, released under the MIT license.
+keywords: >
+                                        open source, free, template, jekyll, jekyllone, web,
+                                        sites, static, jamstack, bootstrap,
+                                        freelancer, theme, template
 
 categories:                             [ Previewer ]
-tags:                                   [ Bootstrap, CSS, Theme ]
+tags:                                   [ Bootstrap, Theme ]
 
 image:
   path:                                 /assets/images/modules/attics/1920x1280/freelancer.jpg
   width:                                1920
   height:                               1280
-  alt:                                  Freelancer
+  alt:                                  Bootstrap Theme Freelancer
 
+comments:                               false
+fab_menu_id:                            open_toc
+scrollbar:                              false
 regenerate:                             false
 permalink:                              /pages/public/previewer/theme/
 
@@ -25,9 +37,12 @@ resource_options:
   - toccer:
       collapseDepth:                    3
   - attic:
+      padding_top:                      600
+      padding_bottom:                   50
+#     opacity:                          0.5
       slides:
         - url:                          /assets/images/modules/attics/1920x1280/freelancer.jpg
-          alt:                          Freelancer
+          alt:                          Bootstrap Theme Freelancer
 ---
 
 // Page Initializer
@@ -90,7 +105,7 @@ resource_options:
 // Set (local) page attributes here
 // -----------------------------------------------------------------------------
 // :page--attr:                         <attr-value>
-
+:start-bootstrap--home:                 https://startbootstrap.com
 //  Load Liquid procedures
 // -----------------------------------------------------------------------------
 {% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
@@ -102,12 +117,15 @@ resource_options:
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-[role="dropcap"]
-JekyllOne is a theme for multifunctional Bootstrap-based and responsive
-websites, and offers various unique functionalities compared to other themes
-and templates for Jekyll. Themes for Bootstrap are used to customize the
-appearance of a website based on the basic rules and definitions of Bootstrap's
-CSS styles.
+// [role="dropcap"]
+Freelancer is based on a popular *HTML* theme offered by
+link:{start-bootstrap--home}[Start Bootstrap, {browser-window--new}].
+This *Jekyllised* version of the theme gives web developers and hobbyists
+a simple and clean implimentation in _Jekyll_ for a flat design, one page
+Bootstrap portfolio theme perfect for freelancer portfolios, or any other
+one page website.
+
+This theme is free and open source, released under the MIT license.
 
 // Include sub-documents (if any)
 // -----------------------------------------------------------------------------
@@ -116,16 +134,14 @@ CSS styles.
   <div id="theme" class="document-title row g-0 mt-4 mb-3"></div>
 ++++
 
-Bootstrap themes are used to customize the appearance of a website based
-on the basic rules and definitions of Bootstrap's (CSS) styles. The use or
-change of a theme does not alter the functionality of the underlying Bootstrap
-framework but modifies, for example, the color scheme, fonts, or font sizes.
-The use or change of a style does not alter the functionality of the
-underlying Bootstrap framework but modifies, for example, the color scheme,
-fonts, or font sizes.
-
+Bootstrap themes are used to customize the appearance of a website founded
+on the basic rules and definitions of Bootstrap's CSS styles. The use or
+change of a theme does not alter the *functionality* of the underlying
+Bootstrap framework but modifies, for example, the color scheme, fonts,
+or font sizes.
 
 ifeval::[{navbars} == true]
+[role="mt-5"]
 == Navbars
 
 A navbar is an elementary page element, usually integrated at the top of
@@ -133,12 +149,13 @@ your page for navigation. Bootstrap offers many navigation functions that
 are minimized on smartphones and thus always remain easy to use.
 
 mdi:bootstrap[18px, mdi-md-deep-purple-400]
-link:{url-bs-docs--components-navbar}[Bootstrap Docs {char-middot} Navbar, {browser-window--new}]
+link:{url-bs-docs--components-navbar}[Bootstrap Docs {char-emdash} Navbar, {browser-window--new}]
 
 Theming the navbar has never been easier thanks to the combination of
-theming classes and background-color utilities. Choose from `.navbar-light`
-for use with light background colors, or '.navbar-dark' for dark background
-colors. Then, customize with `.bg-*` utilities.
+theming classes and background-color utilities. Choose from the navbar light
+class `.navbar-light` for use with light background colors, or the navbar dark
+class `.navbar-dark` for dark background colors. Then, customize with the
+background utilities `.bg-*`.
 
 ++++
 <div class="doc-example mb-3">
@@ -232,7 +249,6 @@ colors. Then, customize with `.bg-*` utilities.
     </div>
   </nav>
 
-
   <nav class="navbar navbar-expand-lg navbar-light md-light">
     <div class="container-fluid">
       <a class="link-no-decoration navbar-brand" href="javascript:void(0)">Navbar</a>
@@ -281,10 +297,12 @@ colors. Then, customize with `.bg-*` utilities.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for NAV bars
 [source, html]
 ----
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+  <div class="container-fluid">
     <a class="link-no-decoration navbar-brand" href="javascript:void(0)">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarColor01" aria-controls="navbarColor01"
@@ -326,35 +344,126 @@ colors. Then, customize with `.bg-*` utilities.
       </form>
     </div>
   </div>
-  </nav>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+  <div class="container-fluid">
+    <a class="link-no-decoration navbar-brand" href="javascript:void(0)">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarColor02" aria-controls="navbarColor02"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse ml-2" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="link-no-decoration nav-link active" href="javascript:void(0)">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="link-no-decoration nav-link" href="javascript:void(0)">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="link-no-decoration nav-link" href="javascript:void(0)">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="link-no-decoration nav-link" href="javascript:void(0)">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="link-no-decoration nav-link dropdown-toggle" data-bs-toggle="dropdown"
+            href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu">
+            <a class="link-no-decoration dropdown-item" href="javascript:void(0)">Action</a>
+            <a class="link-no-decoration dropdown-item" href="javascript:void(0)">Another action</a>
+            <a class="link-no-decoration dropdown-item" href="javascript:void(0)">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="link-no-decoration dropdown-item" href="javascript:void(0)">Separated link</a>
+          </div>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control mt-1" type="text" placeholder="Search">
+        <button class="btn btn-secondary btn-sm ml-3" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light md-light">
+  <div class="container-fluid">
+    <a class="link-no-decoration navbar-brand" href="javascript:void(0)">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarColor03" aria-controls="navbarColor03"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse ml-2" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="link-no-decoration nav-link active" href="javascript:void(0)">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="link-no-decoration nav-link" href="javascript:void(0)">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="link-no-decoration nav-link" href="javascript:void(0)">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="link-no-decoration nav-link" href="javascript:void(0)">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="link-no-decoration nav-link dropdown-toggle" data-bs-toggle="dropdown"
+            href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu">
+            <a class="link-no-decoration dropdown-item" href="javascript:void(0)">Action</a>
+            <a class="link-no-decoration dropdown-item" href="javascript:void(0)">Another action</a>
+            <a class="link-no-decoration dropdown-item" href="javascript:void(0)">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="link-no-decoration dropdown-item" href="javascript:void(0)">Separated link</a>
+          </div>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control mt-1" type="text" placeholder="Search">
+        <button class="btn btn-secondary btn-sm ml-3" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
 ----
 endif::[]
 
 ifeval::[{buttons} == true]
+[role="mt-5"]
 == Buttons
 
 Buttons are important visual anchors that encourage visitors to click on
 them to call up to click on certain pages and offers on a website.
 Well-designed buttons are usable instead of simple text links. With the use
-of buttons, a higher visiting rate (click-through rate) of important pages
-of a site is achievable.
+of buttons, a higher visiting rate of important pages of a site is achievable.
 
 The Bootstrap framework offers different buttons out of the box, which is
 sufficient for most use cases. Buttons are suitable for the following HTML
 elements:
 
-* Links (anchors)
+* Anchor links (anchors)
 * Form buttons (input)
 * General buttons (button)
 
-Defining a standard button in Bootstrap is very simple: assign the CSS class
-`.btn` to an HTML element. The following sections describe the different
-types of available buttons and how they are to be defined.
+Defining a standard button in Bootstrap is very simple: assign the base CSS
+class for buttons `.btn` to an HTML element. The following sections describe
+the different types of available buttons and how they are to be defined.
 
 mdi:bootstrap[18px, mdi-md-deep-purple-400]
-link:{url-bs-docs--components-buttons}[Bootstrap Docs {char-middot} Buttons, {browser-window--new}]
+link:{url-bs-docs--components-buttons}[Bootstrap Docs {char-emdash} Buttons, {browser-window--new}]
 
 ifeval::[{buttons_active} == true]
+[role="mt-4"]
 === Active buttons
 
 Active buttons will appear with a darker background and border. If pressed,
@@ -374,6 +483,8 @@ a *ripple* effect is shown for feedback.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for Buttons
 [source, html]
 ----
 <button type="button" class="btn btn-primary btn-raised">Primary</button>
@@ -389,6 +500,7 @@ a *ripple* effect is shown for feedback.
 endif::[]
 
 ifeval::[{buttons_disabled} == true]
+[role="mt-4"]
 === Disabled buttons
 
 Buttons look *inactive* by adding the *disabled* boolean attribute to any
@@ -408,6 +520,8 @@ Buttons look *inactive* by adding the *disabled* boolean attribute to any
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for disabled Buttons
 [source, html]
 ----
 <button type="button" class="btn btn-primary disabled">Primary</button>
@@ -423,11 +537,12 @@ Buttons look *inactive* by adding the *disabled* boolean attribute to any
 endif::[]
 
 ifeval::[{buttons_outline} == true]
+[role="mt-4"]
 === Outline buttons
 
 In need of a button, but not a hefty background color they bring? Replace
-the default modifier with the class `.btn-outline-*` to remove all
-background images and colors on any button.
+the default modifier with the button outline classes `.btn-outline-*` to
+remove all background images and colors on any button.
 
 ++++
 <div class="doc-example mb-3">
@@ -443,6 +558,8 @@ background images and colors on any button.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for outline Buttons
 [source, html]
 ----
 <button type="button" class="btn btn-outline-primary">Primary</button>
@@ -458,6 +575,7 @@ background images and colors on any button.
 endif::[]
 
 ifeval::[{buttons_dropdown} == true]
+[role="mt-4"]
 === Dropdown buttons
 
 In need of a button having a little menu, buttons with a (nested)
@@ -519,6 +637,8 @@ In need of a button having a little menu, buttons with a (nested)
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for a group of Buttons
 [source, html]
 ----
   <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
@@ -541,6 +661,7 @@ endif::[]
 
 
 ifeval::[{buttons_flat} == true]
+[role="mt-4"]
 === Flat buttons
 
 *Flat* buttons are text-only buttons. They may be used in dialogs, toolbars,
@@ -559,6 +680,8 @@ on press.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for flat Buttons
 [source, html]
 ----
 <button type="button" class="btn btn-primary">Primary</button>
@@ -572,6 +695,7 @@ on press.
 endif::[]
 
 ifeval::[{buttons_sizes} == true]
+[role="mt-4"]
 === Button sizes
 
 Beside the *default* size, small and large buttons are available.
@@ -584,6 +708,8 @@ Beside the *default* size, small and large buttons are available.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for Button sizes
 [source, html]
 ----
 <button type="button" class="btn btn-primary btn-raised btn-lg">Large button</button>
@@ -593,6 +719,7 @@ Beside the *default* size, small and large buttons are available.
 endif::[]
 
 ifeval::[{buttons_pulsed} == true]
+[role="mt-4"]
 === Pulsed button
 
 Draw attention to a button, e.g for a *recommended* action.
@@ -603,6 +730,8 @@ Draw attention to a button, e.g for a *recommended* action.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for a pulsed Button
 [source, html]
 ----
   <button type="button" class="btn btn-primary btn-raised pulsed-z2">Primary</button>
@@ -610,6 +739,7 @@ Draw attention to a button, e.g for a *recommended* action.
 endif::[]
 
 ifeval::[{buttons_blocklevel} == true]
+[role="mt-4"]
 === Block level button
 
 Create responsive stacks of full-width *block buttons* like those in BS@4
@@ -626,6 +756,8 @@ and responsive behaviors.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for block level Buttons
 [source, html]
 ----
 <div class="d-grid gap-2">
@@ -637,13 +769,15 @@ endif::[]
 endif::[]
 
 ifeval::[{selections} == true]
+[role="mt-5"]
 == Selections
 
-J1 Theme support two *selection* elements: checkboxes and radio buttons.
+J1 Template support two *selection* elements: checkboxes and radio buttons.
 These selection elements *replace* the default Bootstrap **toggle**-buttons
 for a better *style*.
 
 ifeval::[{selections_checkboxes} == true]
+[role="mt-4"]
 === Checkboxes
 
 Checkboxes are used if you want users to select *any* number of options
@@ -678,6 +812,8 @@ from a list of *preset* (available) options.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for Checkboxes
 [source, html]
 ----
   <div class="checkbox">
@@ -708,6 +844,7 @@ from a list of *preset* (available) options.
 endif::[]
 
 ifeval::[{selections_radio_buttons} == true]
+[role="mt-4"]
 === Radio buttons
 
 Radio buttons are used if you want to *limit* users to just *one*
@@ -742,6 +879,8 @@ selection from a list of *preset* (available) options.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for Radio Buttons
 [source, html]
 ----
   <div class="radio">
@@ -772,6 +911,7 @@ selection from a list of *preset* (available) options.
 endif::[]
 
 ifeval::[{selections_switches} == true]
+[role="mt-4"]
 === Switches
 
 You can use an *alternative* to standard J1 checkboxes: the Material Design
@@ -807,6 +947,8 @@ to select *any number* of options from a list of *preset* (available) options.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for Switches
 [source, html]
 ----
   <div class="switch">
@@ -837,6 +979,7 @@ to select *any number* of options from a list of *preset* (available) options.
 endif::[]
 
 ifeval::[{fab} == true]
+[role="mt-4"]
 === Floating Action Button (FAB)
 
 Floating Action Buttons are adopted navigation elements from mobile devices
@@ -845,7 +988,7 @@ buttons (FABs) for the web typically provide *additional* actions for a page,
 for example, in-page navigation.
 
 mdi:bootstrap[18px, mdi-md-deep-purple-400]
-https://material.io/components/buttons-floating-action-button/android#using-fabs[Google Material Design {char-middot} Floating action buttons, {browser-window--new}]
+https://material.io/components/buttons-floating-action-button/android#using-fabs[Google Material Design {char-emdash} Floating action buttons, {browser-window--new}]
 
 ++++
 <div class="doc-example mt-2 mb-4">
@@ -855,6 +998,8 @@ https://material.io/components/buttons-floating-action-button/android#using-fabs
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for a Floating Action Button
 [source, html]
 ----
   <button type="button" class="btn btn-fab btn-primary" aria-label="fab-button">
@@ -866,8 +1011,8 @@ ifeval::[{fab_raised} == true]
 ==== Raised FAB
 
 To put a 3D effect on floating action buttons, buttons can be *raised* by
-adding the additional CSS class `raised-zX`. J1 supports 25 levels of
-raising HTML elements ranging from 0 to 24.
+adding the additional CSS classes raised `raised-zX`. J1 supports 25 levels
+of raising HTML elements ranging from 0 to 24.
 
 ++++
 <div class="doc-example mt-2 mb-4">
@@ -883,6 +1028,8 @@ raising HTML elements ranging from 0 to 24.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for raised FABs
 [source, html]
 ----
   <button type="button" class="btn btn-fab btn-primary raised-z5" aria-label="fab-button">
@@ -911,6 +1058,8 @@ captivating effect.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for a pulsed FAB
 [source, html]
 ----
   <button type="button" class="btn btn-fab btn-primary pulsed-z3" aria-label="fab-button">
@@ -932,6 +1081,8 @@ A smaller sized, *mini* floating action button (FAB) is also available.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for a Mini FAB
 [source, html]
 ----
   <button type="button" class="btn btn-danger btn-fab btn-fab-sm" aria-label="fab-button-small">
@@ -943,9 +1094,9 @@ endif::[]
 ifeval::[{fab_mini_raised} == true]
 ==== Mini FAB raised
 
-Mini FAB buttons can be *raised* as well by adding the additional CSS class
-`raised-zX`. J1 supports 25 levels of raising HTML elements ranging from 0
-to 24.
+Mini FAB buttons can be *raised* as well by adding the the additional CSS
+classes raised `raised-zX`. J1 supports 25 levels of raising HTML elements
+ranging from 0 to 24.
 
 ++++
 <div class="doc-example mt-2 mb-4">
@@ -961,6 +1112,8 @@ to 24.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for a raised mini FAB
 [source, html]
 ----
   <button type="button" class="btn btn-fab btn-fab-sm btn-primary raised-z5 mr-3" aria-label="fab-button">
@@ -1005,6 +1158,8 @@ be applied.
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for colored FAB Buttons
 [source, html]
 ----
   <button type="button" class="btn btn-fab btn-primary" aria-label="fab-button-primary">
@@ -1029,63 +1184,6 @@ be applied.
     <i class="mdi mdi-plus"></i>
   </button>
   <button type="button" class="btn btn-fab btn-light" aria-label="fab-button-light">
-    <i class="mdi mdi-plus"></i>
-  </button>
-----
-
-++++
-<div class="doc-example mt-2 mb-4">
-  <button type="button" class="btn btn-fab btn-fab-sm btn-primary" aria-label="fab-button-primary">
-    <i class="mdi mdi-plus"></i>
-  </button>
-  <button type="button" class="btn btn-fab btn-fab-sm btn-secondary" aria-label="fab-button-secondary">
-    <i class="mdi mdi-plus"></i>
-  </button>
-  <button type="button" class="btn btn-fab btn-fab-sm btn-danger" aria-label="fab-button-danger">
-    <i class="mdi mdi-plus"></i>
-  </button>
-  <button type="button" class="btn btn-fab btn-fab-sm btn-info" aria-label="fab-button-info">
-    <i class="mdi mdi-plus"></i>
-  </button>
-  <button type="button" class="btn btn-fab btn-fab-sm btn-success" aria-label="fab-button-success">
-    <i class="mdi mdi-plus"></i>
-  </button>
-  <button type="button" class="btn btn-fab btn-fab-sm btn-warning" aria-label="fab-button-warning">
-    <i class="mdi mdi-plus"></i>
-  </button>
-  <button type="button" class="btn btn-fab btn-fab-sm btn-dark" aria-label="fab-button-dark">
-    <i class="mdi mdi-plus"></i>
-  </button>
-  <button type="button" class="btn btn-fab btn-fab-sm btn-light" aria-label="fab-button-light">
-    <i class="mdi mdi-plus"></i>
-  </button>
-</div>
-++++
-
-[source, html]
-----
-  <button type="button" class="btn btn-fab btn-fab-sm btn-primary" aria-label="fab-button-primary">
-    <i class="mdi mdi-plus"></i>
-  </button>
-  <button type="button" class="btn btn-fab btn-fab-sm btn-secondary" aria-label="fab-button-secondary">
-    <i class="mdi mdi-plus"></i>
-  </button>
-  <button type="button" class="btn btn-fab btn-fab-sm btn-danger" aria-label="fab-button-danger">
-    <i class="mdi mdi-plus"></i>
-  </button>
-  <button type="button" class="btn btn-fab btn-fab-sm btn-info" aria-label="fab-button-info">
-    <i class="mdi mdi-plus"></i>
-  </button>
-  <button type="button" class="btn btn-fab btn-fab-sm btn-success" aria-label="fab-button-success">
-    <i class="mdi mdi-plus"></i>
-  </button>
-  <button type="button" class="btn btn-fab btn-fab-sm btn-warning" aria-label="fab-button-warning">
-    <i class="mdi mdi-plus"></i>
-  </button>
-  <button type="button" class="btn btn-fab btn-fab-sm btn-dark" aria-label="fab-button-dark">
-    <i class="mdi mdi-plus"></i>
-  </button>
-  <button type="button" class="btn btn-fab btn-fab-sm btn-light" aria-label="fab-button-light">
     <i class="mdi mdi-plus"></i>
   </button>
 ----
@@ -1126,13 +1224,14 @@ FAB Buttons look inactive by adding the `disabled` boolean attribute to the
 </div>
 ++++
 
+[role="mt-5"]
+.Example HTML code for disabled FAB Buttons
 [source, html]
 ----
   <button type="button" class="btn btn-fab btn-primary disabled" aria-label="fab-button">
     <i class="mdi mdi-plus"></i>
   </button>
 ----
-
 ++++
 <div class="doc-example mt-2 mb-4">
   <button type="button" class="btn btn-fab btn-fab-sm btn-primary disabled" aria-label="fab-button-primary">
@@ -1161,17 +1260,11 @@ FAB Buttons look inactive by adding the `disabled` boolean attribute to the
   </button>
 </div>
 ++++
-
-[source, html]
-----
-  <button type="button" class="btn btn-fab btn-fab-sm btn-primary disabled" aria-label="fab-button">
-    <i class="mdi mdi-plus"></i>
-  </button>
-----
 endif::[]
 endif::[]
 
 ifeval::[{typography} == true]
+[role="mt-5"]
 == Typography
 
 Typography is a feature of Bootstrap for styling and formatting the text
@@ -1184,9 +1277,10 @@ different from the standard Bootstrap configuration using the font family of
 *Helvetica* for the default.
 
 mdi:bootstrap[18px, mdi-md-deep-purple-400]
-link:{url-bs-docs--content-typography}[Bootstrap Docs {char-middot} Typography, {browser-window--new}]
+link:{url-bs-docs--content-typography}[Bootstrap Docs {char-emdash} Typography, {browser-window--new}]
 
 ifeval::[{typography_headings} == true]
+[role="mt-4"]
 === Headings
 
 HTML headings provide valuable information by highlighting important topics
@@ -1234,6 +1328,7 @@ whereas the <h6> tag defines the least important heading in a document.
 endif::[]
 
 ifeval::[{typography_blockquotes} == true]
+[role="mt-4"]
 === Blockquotes
 
 The HTML element `<blockquote>` specifies a section with content quoted
@@ -1242,7 +1337,8 @@ left and right margins, along with a little extra space added above and
 below.
 
 For Bootstrap, are more complex styling of cites is available with the
-`<blockquote>` elements respectively the additional CSS class `.blockquote`.
+blockquote elements `<blockquote>` respectively the additional CSS class
+for blockquote elements `.blockquote`.
 
 ++++
 <div class="doc-example mb-3">
@@ -1258,14 +1354,15 @@ endif::[]
 endif::[]
 
 ifeval::[{tables} == true]
+[role="mt-5"]
 == Tables
 
-Creating a design for tables is challenging. The approach used by J1 Theme
+Creating a design for tables is challenging. The approach used by J1 Template
 is based on pure CSS on top of the classic Bootstrap styles for simplicity
 and portability to be viewed best on all devices and browsers.
 
 mdi:bootstrap[18px, mdi-md-deep-purple-400]
-link:{url-bs-docs--content-tables}[Bootstrap Docs {char-middot} Tables, {browser-window--new}]
+link:{url-bs-docs--content-tables}[Bootstrap Docs {char-emdash} Tables, {browser-window--new}]
 
 ++++
 <div class="doc-example mb-3">
@@ -1346,6 +1443,7 @@ link:{url-bs-docs--content-tables}[Bootstrap Docs {char-middot} Tables, {browser
 endif::[]
 
 ifeval::[{forms} == true]
+[role="mt-5"]
 == Forms
 
 For collecting structured data, forms are essential. So-called Web forms,
@@ -1362,7 +1460,7 @@ advantage of newer input controls like email verification, number selection,
 and more.
 
 mdi:bootstrap[18px, mdi-md-deep-purple-400]
-link:{url-bs-docs--components-forms}[Bootstrap Docs {char-middot} Forms, {browser-window--new}]
+link:{url-bs-docs--components-forms}[Bootstrap Docs {char-emdash} Forms, {browser-window--new}]
 
 ++++
 <div class="doc-example mb-3">
@@ -1404,9 +1502,9 @@ link:{url-bs-docs--components-forms}[Bootstrap Docs {char-middot} Forms, {browse
 </div>
 ++++
 
-Textual form controls-like `<input>`, `<select>`, and `<textarea>` are styled
-with the `.form-control` class. Included are styles for general appearance,
-focus state, sizing, and more.
+Textual form controls-like inputs `<input>`, selects `<select>`, and textarea
+elements `<textarea>` are styled with the form control class `.form-control`.
+Included are styles for general appearance, focus state, sizing, and more.
 
 ++++
 <div class="doc-example mb-3">
@@ -1441,18 +1539,8 @@ focus state, sizing, and more.
 </div>
 ++++
 
-For file inputs, swap the `.form-control` for `.form-control-file`.
-
-// ++++
-// <div class="doc-example mb-3">
-//   <form>
-//     <div class="form-group">
-//       <input type="file" class="form-control-file" id="exampleFormControlFile1">
-//       <label for="exampleFormControlFile1" class="bmd-label-floating">Example file input</label>
-//     </div>
-//   </form>
-// </div>
-// ++++
+For *file* inputs, swap the form control class `.form-control` to the form
+control file class `.form-control-file`.
 
 ++++
 <div class="doc-example mb-3">
@@ -1487,6 +1575,7 @@ For file inputs, swap the `.form-control` for `.form-control-file`.
 ++++
 
 ifeval::[{forms_bootstrap} == true]
+[role="mt-4"]
 === Bootstrap Forms
 
 ++++
@@ -1541,7 +1630,7 @@ ifeval::[{forms_bootstrap} == true]
         <div class="form-check">
           <label class="form-check-label">
             <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-            Option one is this and that—be sure to include why it's great
+            Option one is this and that &nbsp; -- &nbsp; be sure to include why it's great
           </label>
         </div>
         <div class="form-check">
@@ -1598,6 +1687,7 @@ ifeval::[{forms_bootstrap} == true]
 </div>
 ++++
 
+[role="mt-4"]
 === Bootstrap Inputs
 
 ++++
@@ -1675,26 +1765,28 @@ endif::[]
 endif::[]
 
 ifeval::[{navs} == true]
+[role="mt-5"]
 == Navs
 
 Navigation available in Bootstrap shares general markup and styles, from the
-base `.nav` class to the active and disabled states. Swap modifier classes to
-switch between each style.
+base navigation class `.nav` class to the active and disabled states. Swap
+modifier classes to switch between each style.
 
-The base `.nav` component is built with a flexbox and provides a strong
+The base NAV CSS style `.nav` is built with a flexbox and provides a strong
 foundation for building all navigation components. It includes some style
-overrides (for working with lists), link padding for larger hit areas,
-and basic disabled styling.
+overrides, for example to work with lists, link padding for larger hit
+areas, and basic disabled styling.
 
 mdi:bootstrap[18px, mdi-md-deep-purple-400]
-link:{url-bs-docs--components-navs}[Bootstrap Docs {char-middot} Navs, {browser-window--new}]
+link:{url-bs-docs--components-navs}[Bootstrap Docs {char-emdash} Navs, {browser-window--new}]
 
 ifeval::[{navs_tabs} == true]
+[role="mt-4"]
 === Tabs
 
-Tabs takes the basic nav from above and adds the `.nav-tabs` class to generate
-a tabbed interface. Use them to create tabbable regions with the BS5 tab
-JavaScript plugin.
+Tabs takes the basic nav from above and adds the tabs class `.nav-tabs` to
+generate a tabbed interface. Use them to create tabbable regions with the
+Bootstrap V5 tab JavaScript plugin.
 
 ++++
 <div class="doc-example mb-3">
@@ -1734,9 +1826,10 @@ JavaScript plugin.
 endif::[]
 
 ifeval::[{navs_pills} == true]
+[role="mt-4"]
 === Pills
 
-Take that same HTML as Tabs, but use `.nav-pills` class instead.
+Take that same HTML as Tabs, but use the NAV pills class `.nav-pills` instead.
 
 ++++
 <div class="doc-example mb-3">
@@ -1776,6 +1869,7 @@ Take that same HTML as Tabs, but use `.nav-pills` class instead.
 endif::[]
 
 ifeval::[{navs_breadcrumbs} == true]
+[role="mt-4"]
 === Breadcrumbs
 
 Breadcrumbs indicate the current page’s location within a navigational
@@ -1802,10 +1896,11 @@ Separators are automatically added in CSS through ::before and content.
 endif::[]
 
 ifeval::[{navs_pagination} == true]
+[role="mt-4"]
 === Pagination
 
 We use a large block of connected links for our pagination, making links
-hard to miss and easily scalable—all while providing large hit areas.
+hard to miss and easily scalable &nbsp; -- &nbsp; all while providing large hit areas.
 Pagination is built with list HTML elements so screen readers can announce
 the number of available links. Use a wrapping <nav> element to identify
 it as a navigation section to screen readers and other assistive technologies.
@@ -1893,6 +1988,7 @@ endif::[]
 endif::[]
 
 ifeval::[{indicators} == true]
+[role="mt-5"]
 == Indicators
 
 With Bootstrap, indicators are elememts to raise the users awareness. Alerts
@@ -1901,6 +1997,7 @@ wrong.  Contrasting *Badges, static BS elememts, to raise attention e.g for
 something *new*.
 
 ifeval::[{indicators_alerts} == true]
+[role="mt-4"]
 === Alerts
 
 Alerts provide contextual feedback messages for typical user actions with the
@@ -1912,7 +2009,7 @@ button. For proper styling, use one of the eight required contextual classes
 https://getbootstrap.com/docs/4.0/components/alerts/#dismissing[jQuery plugin].
 
 mdi:bootstrap[18px, mdi-md-deep-purple-400]
-link:{url-bs-docs--components-alerts}[Bootstrap Docs {char-middot} Alerts, {browser-window--new}]
+link:{url-bs-docs--components-alerts}[Bootstrap Docs {char-emdash} Alerts, {browser-window--new}]
 
 ++++
 <div class="doc-example mt-2 mb-4">
@@ -1951,6 +2048,7 @@ link:{url-bs-docs--components-alerts}[Bootstrap Docs {char-middot} Alerts, {brow
 endif::[]
 
 ifeval::[{indicators_badges} == true]
+[role="mt-4"]
 === Badges
 
 Badges are small count and labeling components. They scale to match the size
@@ -1964,7 +2062,7 @@ situation, these badges may seem like random additional words or numbers
 at the end of a sentence, link, or button.
 
 mdi:bootstrap[18px, mdi-md-deep-purple-400]
-link:{url-bs-docs--components-badges}[Bootstrap Docs {char-middot} Badge, {browser-window--new}]
+link:{url-bs-docs--components-badges}[Bootstrap Docs {char-emdash} Badge, {browser-window--new}]
 
 ++++
 <div class="doc-example mt-2 mb-4">
@@ -1994,16 +2092,20 @@ endif::[]
 endif::[]
 
 ifeval::[{scrollbars} == true]
+[role="mt-5"]
 == Scrollbars
 
 Chromium-based browsers like Chrome, Edge, Safari or Opera support the *webkit*
 `::-webkit-scrollbar` pseudo element, which allows to modify the look of the
 browser's scrollbar.
 
-NOTE: Custom webkit-based scrollbars are *not* supported with the *Firefox*
+[NOTE]
+====
+Custom webkit-based scrollbars are *not* supported with the *Firefox*
 browser.
+====
 
-.Default scrollbar (J1 Theme)
+.Default scrollbar (J1 Template)
 [source, css]
 ----
 ::-webkit-scrollbar {
@@ -2080,6 +2182,7 @@ if (!$.browser.webkit) {
 endif::[]
 
 ifeval::[{progress} == true]
+[role="mt-5"]
 == Progress
 
 Bootstrap custom progress bars featuring support for stacked bars, animated
@@ -2089,9 +2192,10 @@ HTML5 <progress> element, ensuring you can stack progress bars, animate them,
 and place text labels over them.
 
 mdi:bootstrap[18px, mdi-md-deep-purple-400]
-link:{url-bs-docs--components-progress}[Bootstrap Docs {char-middot} Progress, {browser-window--new}]
+link:{url-bs-docs--components-progress}[Bootstrap Docs {char-emdash} Progress, {browser-window--new}]
 
 ifeval::[{progress_basic} == true]
+[role="mt-4"]
 === Basic
 
 ++++
@@ -2102,7 +2206,8 @@ ifeval::[{progress_basic} == true]
 </div>
 ++++
 
-.Basic progressbar
+[role="mt-5"]
+.Example HTML code for a basic Progressbar
 [source, html]
 ----
   <div class="progress">
@@ -2118,6 +2223,7 @@ ifeval::[{progress_basic} == true]
 endif::[]
 
 ifeval::[{progress_contextual_alternatives} == true]
+[role="mt-4"]
 === Contextual alternatives
 
 ++++
@@ -2137,7 +2243,8 @@ ifeval::[{progress_contextual_alternatives} == true]
 </div>
 ++++
 
-.Progressbar SUCCESS
+[role="mt-5"]
+.Example HTML code for a progressbar of type SUCCESS
 [source, html]
 ----
   <div class="progress">
@@ -2152,6 +2259,7 @@ ifeval::[{progress_contextual_alternatives} == true]
 endif::[]
 
 ifeval::[{progress_multiple_bars} == true]
+[role="mt-4"]
 === Multiple bars
 
 ++++
@@ -2166,6 +2274,7 @@ ifeval::[{progress_multiple_bars} == true]
 endif::[]
 
 ifeval::[{progress_striped} == true]
+[role="mt-4"]
 === Striped
 
 ++++
@@ -2190,6 +2299,7 @@ ifeval::[{progress_striped} == true]
 endif::[]
 
 ifeval::[{progress_animated} == true]
+[role="mt-4"]
 === Animated
 
 ++++
@@ -2203,6 +2313,7 @@ endif::[]
 endif::[]
 
 ifeval::[{lists} == true]
+[role="mt-5"]
 == Lists
 
 Lists are a flexible and powerful component for displaying a series of content
@@ -2222,6 +2333,7 @@ within an single HTML element.
 endif::[]
 
 ifeval::[{cards} == true]
+[role="mt-5"]
 == Cards
 
 Bootstrap’s cards provide a flexible and extensible content container with
@@ -2239,9 +2351,10 @@ they offer easy alignment and mix well with other Bootstrap components.
 They have no margin by default, so use spacing utilities as needed.
 
 mdi:bootstrap[18px, mdi-md-deep-purple-400]
-link:{url-bs-docs--components-cards}[Bootstrap Docs {char-middot} Card, {browser-window--new}]
+link:{url-bs-docs--components-cards}[Bootstrap Docs {char-emdash} Card, {browser-window--new}]
 
 ifeval::[{cards_simple} == true]
+[role="mt-4"]
 === Simple cards
 ++++
 <div class="doc-example mb-3">
@@ -2373,6 +2486,7 @@ ifeval::[{cards_simple} == true]
 endif::[]
 
 ifeval::[{cards_image} == true]
+[role="mt-4"]
 === Image cards
 ++++
 <div class="doc-example mb-3">
@@ -2438,12 +2552,14 @@ endif::[]
 endif::[]
 
 ifeval::[{dialogs} == true]
+[role="mt-5"]
 == Dialogs
 
 Dialogs are important, interactive UI (user interface) components in Bootstrap
 to *inform* visitor of an website.
 
 ifeval::[{dialogs_modals} == true]
+[role="mt-4"]
 === Modals
 
 Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for
@@ -2453,7 +2569,7 @@ else in the document and remove scroll from the <body> so that modal
 content scrolls instead.
 
 mdi:bootstrap[18px, mdi-md-deep-purple-400]
-link:{url-bs-docs--components-modal}[Bootstrap Docs {char-middot} Modal, {browser-window--new}]
+link:{url-bs-docs--components-modal}[Bootstrap Docs {char-emdash} Modal, {browser-window--new}]
 
 .Modal types
 [cols="3a,7a,2a", options="header", width="100%", role="rtable"]
@@ -2781,7 +2897,8 @@ closed, any tooltips and popovers within are also automatically dismissed.
 ++++
 |===
 
-.Base Modal example
+[role="mt-5"]
+.Example HTML code for a base Modal
 [source, html]
 ----
 <!-- Trigger Button (modal) -->
@@ -2833,6 +2950,7 @@ closed, any tooltips and popovers within are also automatically dismissed.
 endif::[]
 
 ifeval::[{dialogs_popovers_tooltips} == true]
+[role="mt-4"]
 === Tooltips and Popovers
 
 Popovers and Tooltips rely on the 3rd party library __Popper.js__ for positioning.
@@ -2840,7 +2958,7 @@ To make them properly positioned, the Javascript library `popper.min.js` has to
 be included before `bootstrap.js` in order to make popovers and tooltips to work.
 
 mdi:bootstrap[18px, mdi-md-deep-purple-400]
-link:{url-bs-docs--components-tooltips}[Bootstrap Docs {char-middot} Tooltips, {browser-window--new}]
+link:{url-bs-docs--components-tooltips}[Bootstrap Docs {char-emdash} Tooltips, {browser-window--new}]
 
 ++++
 <div class="doc-example mb-3">
@@ -2855,7 +2973,8 @@ link:{url-bs-docs--components-tooltips}[Bootstrap Docs {char-middot} Tooltips, {
 </div>
 ++++
 
-.Examples for Tooltips
+[role="mt-5"]
+.Example HTML code for Tooltips
 [source, html]
 ----
   <button type="button" class="btn btn-primary btn-raised"
@@ -2881,7 +3000,7 @@ link:{url-bs-docs--components-tooltips}[Bootstrap Docs {char-middot} Tooltips, {
 ----
 
 mdi:bootstrap[18px, mdi-md-deep-purple-400]
-link:{url-bs-docs--components-popovers}[Bootstrap Docs {char-middot} Popovers, {browser-window--new}]
+link:{url-bs-docs--components-popovers}[Bootstrap Docs {char-emdash} Popovers, {browser-window--new}]
 
 ++++
 <div class="doc-example mb-3">
@@ -2896,7 +3015,8 @@ link:{url-bs-docs--components-popovers}[Bootstrap Docs {char-middot} Popovers, {
 </div>
 ++++
 
-.Examples for Popovers
+[role="mt-5"]
+.Example HTML code for Popovers
 [source, html]
 ----
   <button type="button" class="btn btn-primary btn-raised"
@@ -2943,42 +3063,15 @@ endif::[]
   var theme_slogan;
   var themeName;
   var themeNameHeadline;
-  var cookie_names        = j1.getCookieNames();
-  var user_state          = j1.readCookie(cookie_names.user_state);
-  var theme_slogans       = {};
+  var cookie_names      = j1.getCookieNames();
+  var user_state        = j1.readCookie(cookie_names.user_state);
+  var theme_slogans     = {};
 
-  theme_slogans.UnoLight  = 'A touch of light';
-  theme_slogans.UnoDark   = 'A night mode style';
-  theme_slogans.Bootstrap = 'Bootstrap V5 default';
-  theme_slogans.Agency    = 'A popular Bootstrap V5 theme from StartBootstrap';
+  theme_slogans.Freelancer  = 'perfect for small businesses';
 
-  theme_slogans.Cerulean  = 'A calm blue sky';
-  theme_slogans.Cosmo     = 'An ode to Metro';
-  theme_slogans.Cyborg    = 'Jet black and electric blue';
-  theme_slogans.Darkly    = 'Theme Flatly in night mode';
-  theme_slogans.Flatly    = 'Flat and modern';
-  theme_slogans.Journal   = 'Crisp like a new sheet of paper';
-  theme_slogans.Litera    = 'The medium is the message';
-  theme_slogans.Lumen     = 'Light and shadow';
-  theme_slogans.Materia   = 'Material is the metaphor';
-  theme_slogans.Minty     = 'A fresh feel';
-  theme_slogans.Morph     = 'A neumorphic layer';
-  theme_slogans.Pulse     = 'A trace of purple';
-  theme_slogans.Quartz    = 'A glassmorphic layer';
-  theme_slogans.Sandstone = 'A touch of warmth';
-  theme_slogans.Simplex   = 'Mini and minimalist';
-  theme_slogans.Slate     = 'Shades of gunmetal gray';
-  theme_slogans.Solar     = 'A spin on Solarized';
-  theme_slogans.Spacelab  = 'Silvery and sleek';
-  theme_slogans.Superhero = 'The brave and the blue';
-  theme_slogans.United    = 'Ubuntu orange and unique font';
-  theme_slogans.Vapor     = 'A cyberpunk aesthetic';
-  theme_slogans.Yeti      = 'A friendly foundation';
-  theme_slogans.Zephyr    = 'Breezy and beautiful';
-
-  themeName               = user_state.theme_name;
-  theme_slogan            = theme_slogans[themeName];
-  themeNameHeadline       = '<h1 id="theme_name" class="notoc mb-0" style="margin-left: -5px">Theme ' +themeName+ '</h1>';
+  themeName             = user_state.theme_name;
+  theme_slogan          = theme_slogans[themeName];
+  themeNameHeadline     = '<h1 id="theme_name" class="notoc mb-0" style="margin-left: -5px">Theme ' +themeName+ '</h1>';
 
   $('#theme').prepend(themeNameHeadline);
   $('#theme').append('<p class="tagline mb-2"><b>'  + theme_slogan + '</b></p>');

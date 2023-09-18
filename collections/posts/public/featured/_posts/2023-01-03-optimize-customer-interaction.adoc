@@ -1,16 +1,25 @@
 ---
-layout:                                 post
-
 title:                                  Performance
+title_extention:                        Optimize Customer Interaction
 tagline:                                Optimize Customer Interaction
-# date:                                 2023-01-03 09:33:20 +0000
+
+#date:                                  2023-01-03
+#last_modified:                         2023-01-01
+
 description: >
-                                        Customer interaction for websites refers to how a website interacts with
-                                        visitors or customers. Interaction can include a variety of activities
-                                        and features.
+                                        Customer interaction for websites refers to how a website
+                                        interacts with visitors or customers. Interaction can include
+                                        a variety of activities and features.
+keywords: >
+                                        open source, free, template, jekyll, jekyllone, web,
+                                        sites, static, jamstack, bootstrap,
+                                        performance, web vitals
 
 categories:                             [ Development ]
 tags:                                   [ Performance, Web Vitals ]
+
+#group:                                 Featured
+#series:                                Featured
 
 image:
   path:                                 /assets/images/modules/attics/1920x1280/nadim-merrikh.jpg
@@ -18,11 +27,9 @@ image:
   height:                               1280
   alt:                                  Photo by Nadim Merrikh on Unsplash
 
-fab_menu_id:                            default
-comments:                               false
-scrollbar:                              false
 regenerate:                             false
 
+#resources:                             [ animate, bmd ]
 resources:                              [ animate ]
 resource_options:
   - attic:
@@ -49,6 +56,9 @@ resource_options:
 Customer interaction for websites refers to how a website interacts with
 visitors or customers. Interaction can include a variety of activities
 and features.
+
+You can optimize customer interaction and improve customer satisfaction,
+for loyalty and retention.
 
 excerpt__end
 

@@ -339,7 +339,10 @@ resources:
   # ----------------------------------------------------------------------------
 
   # ----------------------------------------------------------------------------
-  # J1 Core, Main JS API for J1 Theme
+  # J1 Core, Main CSS styles and JS API for J1 Theme
+  #
+  # NOTE Theme CSS loaded via module 'themer'
+  # NOTE: load always 'unolight' as a 'bese' (e.g. for unodark, but should be removed)
   #
   - name:                               J1 Theme Core
     resource:
@@ -350,22 +353,18 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
-      preload:                          false                                   # property currently unused
+      preload:                          false
       script_load:
       dependencies:                     false
       pass_init_data:                   true
       data:
         css:                            [
-                                          modules/spinner/css/spin,
-                                          core/css/icon-fonts/mdi,
-                                          core/css/icon-fonts/mdil,
-                                          core/css/icon-fonts/fontawesome,
                                           core/css/themes/unolight/bootstrap,
+                                          core/css/icon-fonts/mdib,
                                           core/css/vendor
                                         ]
         files:                          [ adapter/js/j1.js ]
         js:                             [
-                                          modules/spinner/js/spin,
                                           modules/jquery/js/jquery,
                                           modules/jquery/js/extensions/hasClass,
                                           modules/jquery/js/extensions/removeClass,
@@ -375,7 +374,30 @@ resources:
         init_function:                  [ j1.init ]
 
   # ----------------------------------------------------------------------------
-  # Bootstrap V5 JS components
+  # Speak2Me
+  # Speech synthesis (TTS)
+  #
+  - name:                               speak2me
+    resource:
+      enabled:                          true
+
+      id:                               speak2me
+      comment:                          Module speak2me
+      region:                           head
+      layout:                           [ all ]
+      required:                         always
+      preload:                          false
+      script_load:                      defer
+      dependencies:                     false
+      pass_init_data:                   true
+      data:
+        css:                            []
+        files:                          [ adapter/js/speak2me.js ]
+        js:                             []
+        init_function:                  [ j1.adapter.speak2me.init ]
+
+  # ----------------------------------------------------------------------------
+  # Bootstrap JS v5.3.0
   #
   # See: https://getbootstrap.com/docs/5.0/getting-started/introduction/
   #
@@ -411,8 +433,8 @@ resources:
       comment:                          Module BMD
       region:                           head
       layout:                           [ all ]
-      required:                         always
-      preload:                          false                                   # property currently unused
+      required:                         ondemand
+      preload:                          false
       script_load:
       dependencies:                     false
       pass_init_data:                   false
@@ -421,32 +443,6 @@ resources:
         files:                          [ adapter/js/bmd.js ]
         js:                             [ modules/bmd/js/bmd ]
         init_function:                  [ j1.adapter.bmd.init ]
-
-  # ----------------------------------------------------------------------------
-  # Materialize, responsive JS (Vanilla) UI framework (currently NOT used)
-  #
-  # See: https://materializecss.com/
-  #
-  - name:                               Materialize
-    resource:
-      enabled:                          false
-
-      id:                               materialze
-      comment:                          Module Materialize
-      region:                           head
-      layout:                           [ all ]
-      required:                         ondemand
-      preload:                          false                                   # property currently unused
-      script_load:
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            []
-        files:                          [
-                                          modules/materialize/js/fam.js
-                                        ]
-        js:                             [ modules/materialize/js/cash ]
-        init_function:                  []
 
   # ----------------------------------------------------------------------------
   # Google Analytics OptIn, a browser library to opt-in in Google Analytics
@@ -487,7 +483,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
-      preload:                          false                                   # property currently unused
+      preload:                          false
       script_load:
       dependencies:                     false
       pass_init_data:                   false
@@ -512,7 +508,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
-      preload:                          false                                   # property currently unused
+      preload:                          false
       script_load:
       dependencies:                     false
       pass_init_data:                   false
@@ -537,7 +533,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
-      preload:                          false                                   # property currently unused
+      preload:                          false
       script_load:
       dependencies:                     false
       pass_init_data:                   true
@@ -562,7 +558,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
-      preload:                          false                                   # property currently unused
+      preload:                          false
       script_load:
       dependencies:                     false
       pass_init_data:                   false
@@ -586,7 +582,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
-      preload:                          false                                   # property currently unused
+      preload:                          false
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   false
@@ -595,8 +591,8 @@ resources:
                                           modules/mmenuLight/css/mmenu-light,
                                           modules/mmenuLight/css/theme/uno/mmenu
                                         ]
-        files:                          [adapter/js/mmenu.js]
-        js:                             [modules/mmenuLight/js/mmenu]
+        files:                          [ adapter/js/mmenu.js ]
+        js:                             [ modules/mmenuLight/js/mmenu ]
         init_function:                  [ j1.adapter.mmenu.init ]
 
   # ----------------------------------------------------------------------------
@@ -614,7 +610,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
-      preload:                          false                                   # property currently unused
+      preload:                          false
       script_load:
       dependencies:                     false
       pass_init_data:                   false
@@ -639,7 +635,7 @@ resources:
       layout:                           [ page, post, collection, blog_archive ]
       region:                           head
       required:                         always
-      preload:                          false                                   # property currently unused
+      preload:                          false
       script_load:
       dependencies:                     false
       pass_init_data:                   true
@@ -664,7 +660,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
-      preload:                          false                                   # property currently unused
+      preload:                          false
       script_load:
       dependencies:                     false
       pass_init_data:                   false
@@ -723,12 +719,11 @@ resources:
       pass_init_data:                   true
       data:
         css:                            []                                      # styles moved to Template CSS
-        files:                          [
-                                          modules/fab/js/cash.js,               # adapted|old (1.3.5) version from Materialize
-                                          modules/fab/js/fab.js,                # modified version for J1 (former: button.js)
-                                          adapter/js/fab.js
+        files:                          [ adapter/js/fab.js ]
+        js:                             [
+                                          modules/fab/js/cash,                  # adapted|old (1.3.5) version from Materialize
+                                          modules/fab/js/fab                    # modified version for J1 (former: button.js)
                                         ]
-        js:                             []
         init_function:                  [ j1.adapter.fab.init ]
 
   # ----------------------------------------------------------------------------
@@ -739,7 +734,7 @@ resources:
   #
   - name:                               jQueryUI
     resource:
-      enabled:                          true
+      enabled:                          false
 
       id:                               jquery-ui
       comment:                          Module jQueryUI
@@ -760,30 +755,6 @@ resources:
         init_function:                  []
 
   # ----------------------------------------------------------------------------
-  # jqMouseWheel, cross-browser mouse wheel support (currently NOT used)
-  #
-  # See: https://github.com/jquery/jquery-mousewheel
-  #
-  - name:                               jqMouseWheel
-    resource:
-      enabled:                          false
-
-      id:                               jq_mouse_wheel
-      comment:                          Module jqMouseWheel
-      region:                           head
-      layout:                           [ all ]
-      required:                         always
-      preload:                          false                                   # property currently unused
-      script_load:
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            []
-        files:                          []
-        js:                             [ modules/jqMouseWheel/js/jquery.mousewheel ]
-        init_function:                  []
-
-  # ----------------------------------------------------------------------------
   # Theme Switcher, JS API for switching Bootstrap Themes (Bootswatch)
   #
   # See: https://bootswatch.com/
@@ -797,7 +768,7 @@ resources:
       region:                           head
       layout:                           [ all ]
       required:                         always
-      preload:                          false                                   # property currently unused
+      preload:                          false
       script_load:
       dependencies:                     false
       pass_init_data:                   false
@@ -827,7 +798,7 @@ resources:
       dependencies:                     false
       pass_init_data:                   false
       data:
-        css:                            [ modules/rtable/css/theme/uno/rtable ]
+        css:                            []
         files:                          [ adapter/js/rtable.js ]
         js:                             [ modules/rtable/js/rtable ]
         init_function:                  [ j1.adapter.rtable.init ]
@@ -855,30 +826,6 @@ resources:
         init_function:                  [ j1.adapter.asciidoctor.init ]
 
   # ----------------------------------------------------------------------------
-  # CSS Flags Previewer, preview page (UI) for country flags
-  #
-  # See: https://github.com/lipis/flag-icons
-  #
-  - name:                               CSS Flags Previewer
-    resource:
-      enabled:                          true
-
-      id:                               css_flags_previewer
-      comment:                          Module CSS Flags Previewer
-      layout:                           [ all ]
-      region:                           head
-      required:                         always
-      preload:                          false
-      script_load:
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            [ core/country-flags/css/theme/uno ]
-        files:                          []
-        js:                             []
-        init_function:                  []
-
-  # ----------------------------------------------------------------------------
   # rtextResizer (currently NOT used)
   #
   - name:                               J1 RText Resizer
@@ -890,7 +837,7 @@ resources:
       region:                           head
       layout:                           [ home, page, post, collection, blog_archive ]
       required:                         always                                  # always | ondemand
-      preload:                          false                                   # property currently unused
+      preload:                          false
       script_load:
       dependencies:                     false
       pass_init_data:                   false
@@ -920,8 +867,8 @@ resources:
       dependencies:                     false
       pass_init_data:                   false
       data:
-        css:                            []
-        files:                          [ modules/msDropdown/css/themes/uno/msDropdown.css ]
+        css:                            [ modules/msDropdown/css/themes/uno/msDropdown ]
+        files:                          []
         js:                             [ modules/msDropdown/js/msDropdown ]
         init_function:                  []
 
@@ -1133,7 +1080,7 @@ resources:
       layout:                           [ home, page, post, collection, blog_archive ]
       region:                           head
       required:                         ondemand
-      preload:                          false                                   # property currently unused
+      preload:                          false
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   true
@@ -1145,54 +1092,6 @@ resources:
         files:                          [ adapter/js/lightbox.js ]
         js:                             [ modules/lightbox/js/lightbox ]
         init_function:                  [ j1.adapter.lightbox.init ]
-
-  # ----------------------------------------------------------------------------
-  # Twitter Emoji Icons, CSS component for using Twitter Emojis
-  #
-  # See: https://twemoji.twitter.com/
-  #
-  - name:                               Twitter Emoji Icons
-    resource:
-      enabled:                          true
-
-      id:                               twemoji
-      comment:                          Module Twitter Emoji Icons
-      layout:                           [ home, page, post, collection, blog_archive ]
-      region:                           head
-      required:                         ondemand
-      preload:                          false
-      script_load:                      defer
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            [ core/css/icon-fonts/twemoji ]
-        files:                          []
-        js:                             []
-        init_function:                  []
-
-  # ----------------------------------------------------------------------------
-  # Twitter Emoji Picker, selection UI for Twitter Emojis
-  #
-  # See: https://github.com/xLs51/Twemoji-Picker
-  #
-  - name:                               Twitter Emoji Picker
-    resource:
-      enabled:                          true
-
-      id:                               twemoji_picker
-      comment:                          Module Twitter Emoji Picker
-      layout:                           [ page ]
-      region:                           head
-      required:                         ondemand
-      preload:                          false
-      script_load:                      defer
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            [ modules/twemoji/css/picker/twemoji-picker ]
-        files:                          []
-        js:                             [ modules/twemoji/js/picker/twemoji-picker ]
-        init_function:                  []
 
   # ----------------------------------------------------------------------------
   # Iconify Framework, JS API to use Iconify icons
@@ -1214,8 +1113,8 @@ resources:
       pass_init_data:                   false
       data:
         css:                            [ core/css/icon-fonts/iconify ]
-        files:                          [ modules/iconifyAPI/js/iconify.min.js ]
-        js:                             []
+        files:                          []
+        js:                             [ modules/iconifyAPI/js/iconify ]
         init_function:                  []
 
   # ----------------------------------------------------------------------------
@@ -1225,7 +1124,7 @@ resources:
   #
   - name:                               Algolia API (JS)
     resource:
-      enabled:                          true
+      enabled:                          false
 
       id:                               Module Algolia API
       comment:                          Resources used by Algolia Instantsearch
@@ -1271,7 +1170,7 @@ resources:
         init_function:                  [ j1.adapter.clipboard.init ]
 
   # ----------------------------------------------------------------------------
-  # Carousel, JS API for the main carousel used by J1 Theme
+  # Carousel, JS API for the built-in carousel used by J1 Theme
   #
   - name:                               J1 Carousel
     resource:
@@ -1280,24 +1179,21 @@ resources:
       id:                               carousel
       comment:                          Module J1 Carousel
       region:                           head
-      layout:                           [ home, page, post, collection, blog_archive ]
+      layout:                           [ all ]
       required:                         ondemand
       preload:                          false
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   true
       data:
-        css:                            []
-        files:                          [
-                                          modules/carousel/css/carousel.css,
-                                          modules/carousel/css/carousel_transitions.css,
-                                          modules/carousel/css/theme/uno.css,
-                                          modules/carousel/js/carousel.js,
-                                          adapter/js/carousel.js
+        css:                            [
+                                          modules/carousel/css/carousel,
+                                          modules/carousel/css/carousel_transitions,
+                                          modules/carousel/css/theme/uno
                                         ]
+        files:                          [ adapter/js/carousel.js ]
         js:                             []
         init_function:                  [ j1.adapter.carousel.init ]
-
 
   # ----------------------------------------------------------------------------
   # MasterSlider, lite|free version 2.85.13 - Feb 2022
@@ -1410,7 +1306,7 @@ resources:
       region:                           head
       layout:                           [ home, page, post, collection, blog_archive, raw, app ]
       required:                         ondemand
-      preload:                          false                                   # property currently unused
+      preload:                          false
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   false
@@ -1481,8 +1377,8 @@ resources:
       pass_init_data:                   false
       data:
         css:                            []
-        files:                          [ modules/vimeo/froogaloop/js/froogaloop2.min.js ]
-        js:                             []
+        files:                          []
+        js:                             [ modules/vimeo/froogaloop/js/froogaloop2 ]
         init_function:                  []
 
   # ----------------------------------------------------------------------------
@@ -1532,31 +1428,7 @@ resources:
         init_function:                  [ j1.adapter.rangeSlider.init ]
 
   # ----------------------------------------------------------------------------
-  # Data tables for J1 Theme (currently NOT used)
-  #
-  # See: https://datatables.net/
-  #
-  - name:                               Datatables
-    resource:
-      enabled:                          false
-
-      id:                               datatables
-      comment:                          Module Datatables
-      region:                           head
-      layout:                           [ all ]
-      required:                         ondemand
-      preload:                          false                                   # property currently unused
-      script_load:                      defer
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            [ modules/datatables/css/datatables ]
-        files:                          [ modules/datatables/css/theme/uno.css ]
-        js:                             [ modules/datatables/js/datatables ]
-        init_function:                  []
-
-  # ----------------------------------------------------------------------------
-  # scroller, JS API to implement infinite scroll
+  # Scroller, JS API to implement infinite scroll
   #
   - name:                               J1 Scroller
     resource:
@@ -1567,7 +1439,7 @@ resources:
       region:                           head
       layout:                           [ home, page, post, collection, blog_archive ]
       required:                         ondemand                                # always | ondemand
-      preload:                          false                                   # property currently unused
+      preload:                          false
       script_load:                      defer
       dependencies:                     false
       pass_init_data:                   false
@@ -1576,55 +1448,6 @@ resources:
         files:                          [ adapter/js/scroller.js ]
         js:                             [ modules/scroller/js/scroller ]
         init_function:                  [ j1.adapter.scroller.init ]
-
-  # ----------------------------------------------------------------------------
-  # deeplAPI, JS Wrapper for the DeepL API
-  #
-  # See: https://www.deepl.com/docs-api/
-  #
-  - name:                               Deepl API
-    resource:
-      enabled:                          true
-
-      id:                               deeplAPI
-      comment:                          Module Deepl API
-      region:                           head
-      layout:                           [ home, page, post, collection, blog_archive ]
-      required:                         ondemand
-      preload:                          false
-      script_load:                      defer
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            []
-        files:                          []
-        js:                             [ modules/cryptoJS/js/aes, modules/deeplAPI/js/deeplAPI ]
-        init_function:                  []
-
-  # ----------------------------------------------------------------------------
-  # Crypto, JS implementation of standard and secure cryptographic
-  # algorithms based on Google's cryptoJS APIs
-  #
-  # See: https://code.google.com/archive/p/crypto-js/
-  #
-  - name:                               Crypto
-    resource:
-      enabled:                          true
-
-      id:                               crypto
-      comment:                          Module Crypto
-      region:                           head
-      layout:                           [ all ]
-      required:                         ondemand
-      preload:                          false
-      script_load:                      defer
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            []
-        files:                          []
-        js:                             [ modules/cryptoJS/js/aes ]
-        init_function:                  []
 
   # ----------------------------------------------------------------------------
   # Advertising, JS implementation to provide Advertising services
@@ -1643,13 +1466,10 @@ resources:
       preload:                          false
       script_load:                      defer
       dependencies:                     false
-      pass_init_data:                   false
+      pass_init_data:                   true
       data:
         css:                            []
-        files:                          [
-                                          modules/advertising/js/adInitializer.js,
-                                          adapter/js/advertising.js
-                                        ]
+        files:                          [ adapter/js/advertising.js ]
         js:                             []
         init_function:                  [ j1.adapter.advertising.init ]
 
@@ -1678,6 +1498,9 @@ resources:
   # ----------------------------------------------------------------------------
   # Dropdowns. JS API to create simple dropdown menus
   #
+  # NOTE: Modified version for J1
+  # NOTE: Adapted|old (1.3.5) version for cash.js from Materialize
+  #
   - name:                               Dropdowns
     resource:
       enabled:                          true
@@ -1693,139 +1516,23 @@ resources:
       pass_init_data:                   false
       data:
         css:                            [ modules/dropdowns/css/theme/uno/dropdowns ]
-        files:                          [
-                                          modules/dropdowns/js/cash.js,         # adapted|old (1.3.5) version from Materialize
-                                          modules/dropdowns/js/dropdowns.js,    # modified version for J1
-                                          adapter/js/dropdowns.js
+        files:                          [ adapter/js/dropdowns.js ]
+        js:                             [
+                                          modules/dropdowns/js/cash,
+                                          modules/dropdowns/js/dropdowns
                                         ]
-        js:                             []
         init_function:                  [ j1.adapter.dropdowns.init ]
 
   # ----------------------------------------------------------------------------
-  # J1 NBI, implement nbinteract core JS for J1 Theme
-  #
-  - name:                               J1 NBinteract
-    resource:
-      enabled:                          true
-
-      id:                               nbinteract
-      comment:                          Module J1 NBinteract
-      region:                           head
-      layout:                           [ all ]
-      required:                         ondemand
-      preload:                          false
-      script_load:                      defer
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            [ modules/nbinteract-core/css/theme/uno/nbinteract ]
-        files:                          [
-                                          modules/nbinteract-core/js/nbinteract/j1-nbinteract-core.js,
-                                          adapter/js/nbinteract.js
-                                        ]
-        js:                             []
-        init_function:                  [ j1.adapter.nbinteract.init ]
-
-  # ----------------------------------------------------------------------------
-  # Plotly Open Source Graphing Library
-  # Interactive charts and maps for Python, R, Julia, Javascript,
-  # ggplot2, F#, MATLAB®, and Dash.
-  #
-  # See: https://plotly.com/graphing-libraries/
-  #      https://plotly.com/javascript/getting-started/
-  #
-  - name:                               Plotly
-    resource:
-      enabled:                          false
-
-      id:                               plotly
-      comment:                          Module Plotly Open Source JS
-      region:                           head
-      layout:                           [ all ]
-      required:                         ondemand
-      preload:                          false
-      script_load:                      defer
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            []
-        files:                          []
-        js:                             [
-                                          modules/plotly/js/plotly
-                                        ]
-        init_function:                  []
-
-  # ----------------------------------------------------------------------------
-  # BokehJS - JS Interface for Bokeh Interactive Visualization library
-  # It provides elegant, concise construction of versatile graphics, and
-  # affords high-performance interactivity over large or streaming datasets.
-  #
-  # See: https://github.com/bokeh/bokeh
-  #
-  - name:                               BokehJS
-    resource:
-      enabled:                          false
-
-      id:                               bokeh
-      comment:                          Module BokehJS
-      region:                           head
-      layout:                           [ all ]
-      required:                         ondemand
-      preload:                          false
-      script_load:                      defer
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            []
-        files:                          [ modules/bokeh/js/v2.4.3/bokeh.min.js ]
-        js:                             []
-        init_function:                  []
-
-  # ----------------------------------------------------------------------------
-  # Vega – A Visualization Grammar
-  # Vega is a visualization grammar, a declarative language for creating,
-  # saving, and sharing interactive visualization designs. With Vega you can
-  # describe data visualizations in a JSON format, and generate interactive
-  # views using either HTML5 Canvas or SVG.
-  #
-  # See: https://github.com/vega/vega
-  #      https://github.com/vega/vega-lite
-  #      https://github.com/vega/vega-embed
-  #
-  - name:                               Vega
-    resource:
-      enabled:                          false
-
-      id:                               vega
-      comment:                          Module Vega Visualization Grammar Bundle
-      region:                           head
-      layout:                           [ all ]
-      required:                         ondemand
-      preload:                          false
-      script_load:                      defer
-      dependencies:                     false
-      pass_init_data:                   false
-      data:
-        css:                            []
-        files:                          []
-        js:                             [
-                                          modules/vega/js/vega/vega,
-                                          modules/vega/js/vega/vega-core,
-                                          modules/vega/js/vega-lite/vega-lite,
-                                          modules/vega/js/vega-embed/vega-embed
-                                        ]
-        init_function:                  []
-
-  # ----------------------------------------------------------------------------
   # RequireJS
-  # RequireJS loads plain JavaScript files as well as more defined modules.
+  # RequireJS loads plain JavaScript files as defined (required) in modules
   #
   # See: https://github.com/requirejs/requirejs
   #      https://plotly.com/javascript/getting-started/
   #
   - name:                               RequireJS
     resource:
-      enabled:                          true
+      enabled:                          false
 
       id:                               require
       comment:                          Module RequireJS
@@ -1847,7 +1554,7 @@ resources:
   #
   - name:                               Waves
     resource:
-      enabled:                          true
+      enabled:                          false
 
       id:                               waves
       comment:                          Module Waves
@@ -1869,7 +1576,7 @@ resources:
   #
   - name:                               Particles
     resource:
-      enabled:                          true
+      enabled:                          false
 
       id:                               particles
       comment:                          Module Particles
@@ -1939,9 +1646,9 @@ resources:
       dependencies:                     false
       pass_init_data:                   false
       data:
-        css:                            [ modules/masonry/css/theme/uno ]
+        css:                            []
         files:                          [ adapter/js/masonry.js ]
-        js:                             [ modules/masonry/js/masonry.pkgd ]
+        js:                             [ modules/masonry/js/masonry ]
         init_function:                  [ j1.adapter.masonry.init ]
 
   # ----------------------------------------------------------------------------
@@ -1991,6 +1698,52 @@ resources:
         files:                          [ adapter/js/themeToggler.js ]
         js:                             []
         init_function:                  [ j1.adapter.themeToggler.init ]
+
+  # ----------------------------------------------------------------------------
+  # dynamicLoader
+  # Configurable JS
+  #
+  - name:                               lazyCSSLoader
+    resource:
+      enabled:                          true
+
+      id:                               lazy_loader
+      comment:                          Module lazyCSSLoader
+      region:                           head
+      layout:                           [ all ]
+      required:                         always
+      preload:                          false
+      script_load:                      defer
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            []
+        files:                          [ adapter/js/lazyLoader.js ]
+        js:                             []
+        init_function:                  [ j1.adapter.lazyLoader.init ]
+
+  # ----------------------------------------------------------------------------
+  # slimSelect
+  # Advanced select dropdown
+  #
+  - name:                               slimSelect
+    resource:
+      enabled:                          true
+
+      id:                               slim_select
+      comment:                          Module slimSelect
+      region:                           head
+      layout:                           [ all ]
+      required:                         ondemand
+      preload:                          false
+      script_load:                      defer
+      dependencies:                     false
+      pass_init_data:                   false
+      data:
+        css:                            [ modules/slimSelect/css/select ]
+        files:                          []
+        js:                             [ modules/slimSelect/js/select ]
+        init_function:                  []
 
 # ------------------------------------------------------------------------------
 # END config

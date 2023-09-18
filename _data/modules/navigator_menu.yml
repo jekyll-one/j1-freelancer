@@ -28,18 +28,22 @@
 - item:                                 CONTACT
   href:                                 /#contact
 
-# ------------------------------------------------------------------------------
-# Menu BLOG
-#
-- item:                                 BLOG
-  href:                                 /#panel_home_news
+- item:                                 DOWNLOAD
+  href:                                 /#download
 
+# ------------------------------------------------------------------------------
+# Menu BLOG|THEME
+#
+# - item:                               BLOG
+#   href:                               /#panel_home_news
+
+- item:                                 BLOG
+  href:                                 /pages/public/blog/navigator/
 - item:                                 THEME
   href:                                 /pages/public/previewer/theme/
 
 
-- item:                                 DOWNLOAD
-  href:                                 /#download
+
 
 # ------------------------------------------------------------------------------
 # END config

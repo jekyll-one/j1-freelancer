@@ -3,9 +3,14 @@ layout:                                 page
 
 title:                                  Navigator
 tagline:                                Explore Posts
-date:                                   2022-01-01 01:00:00
+
+date:                                   2022-01-01
+#last_modified:                         2023-01-01
+
 description: >
-                                        To make all posts using J1 Theme easy accessible to the visitors,
+                                        J1 Template is a Bootstrap V5 website template for the static
+                                        site generator Jekyll.
+                                        To make all posts using J1 Template easy accessible to the visitors,
                                         the Navigation System of J1 Template provides a Explorer module
                                         for Blog articles: the Navigator. The Naviagtor supports the users
                                         for browsing articles by sorting criteria like category and date
@@ -27,7 +32,6 @@ image:
   path:                                 /assets/images/modules/attics/1920x1280/matthaeus.jpg
   width:                                1920
   height:                               1280
-  alt:                                  Photo by Matthaeus on Unsplash
 
 sort:                                   date
 fab_menu_id:                            default
@@ -38,7 +42,6 @@ regenerate:                             false                                   
 resources:                              [ animate, scroller ]
 resource_options:
   - attic:
-      padding_top:                      600
       slides:
         - url:                          /assets/images/modules/attics/1920x1280/matthaeus.jpg
           alt:                          Photo by Matthaeus on Unsplash
@@ -159,7 +162,7 @@ resource_options:
         {% endcomment %}
 
         <div class="navigator-headline">
-          <nav class="paginator">
+          <nav class="paginator speak2me-ignore">
             <ul class="pagination raised-z0">
               <li class="page-item"><a class="page-link" href="/" title="Home">Home</a></li>
               <li class="page-item"><a class="page-link" href="{{category_view}}" alt="View by Category">{{category_view_button_text}}</a></li>

@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-# ~/_plugins/asciidoctor-extensions/mdi-icon-inline.rb
+# ~/_plugins/asciidoctor-extensions/mdil-icon-inline.rb
 # Asciidoctor extension for J1 Theme
 #
 # Product/Info:
@@ -22,7 +22,7 @@ include Asciidoctor
 #
 # Example:
 #
-#   mdil:account[mdi-48px, <modifier>]
+#   mdil:account[mdil-48px, <modifier>]
 #
 Asciidoctor::Extensions.register do
   class MdilIconInlineMacro < Extensions::InlineMacroProcessor

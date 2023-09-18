@@ -3,9 +3,14 @@ layout:                                 page
 
 title:                                  Archive
 tagline:                                Explore All Posts
-date:                                   2022-01-01 01:00:00
+
+date:                                   2022-01-01
+#last_modified:                         2023-01-01
+
 description: >
-                                        To make all posts using J1 Theme easy accessible to the visitors,
+                                        J1 Template is a Bootstrap V5 website template for the static
+                                        site generator Jekyll.
+                                        To make all posts using J1 Template easy accessible to the visitors,
                                         the Navigation System of J1 Template provides a Explorer module
                                         for Blog articles: the Navigator. The Naviagtor supports the users
                                         for browsing articles by sorting criteria like category and date
@@ -22,7 +27,6 @@ image:
   path:                                 /assets/images/modules/attics/1920x1280/matthaeus.jpg
   width:                                1920
   height:                               1280
-  alt:                                  Photo by Matthaeus on Unsplash
 
 sort:                                   date
 exclude_from_search:                    true
@@ -30,9 +34,7 @@ regenerate:                             false                                   
 
 resources:                              [ animate, scroller ]
 resource_options:
-
   - attic:
-      padding_top:                      600
       slides:
         - url:                          /assets/images/modules/attics/1920x1280/matthaeus.jpg
           alt:                          Photo by Matthaeus on Unsplash
@@ -140,7 +142,7 @@ site_category_word_list:    {{site_category_word_list | debug}}
 {% comment %} Main
 -------------------------------------------------------------------------------- {% endcomment %}
 <!-- [INFO   ] [ {{page.url}} ] [Generate HTML}] -->
-<div class="paginator ml-3">
+<div class="paginator speak2me-ignore ml-3">
   <ul class="pagination raised-z0">
     <li class="page-item"><a class="page-link" href="/" title="Home">Home</a></li>
     <li class="page-item"><a class="page-link" href="{{navigator}}" alt="Blog View">Navigator</a></li>
@@ -204,7 +206,7 @@ site_category_word_list:    {{site_category_word_list | debug}}
 
         <div class="col-md-6 p-0">
           <div class="card-body r-text-300 mt-0">{{excerpt}}</div>
-          <div class="card-footer not-rounded r-text-200">
+          <div class="card-footer speak2me-ignore not-rounded r-text-200">
             <div class="card-footer-text">
 
               {% if post.date %}

@@ -37,7 +37,7 @@ settings:
     - show:
         enabled:                        true
         provider:                       j1
-        id:                             clients_freelancer
+        id:                             freelancer_customers
         type:                           image
         images_path:                    /assets/images/freelancer/img/customers
         images:                         [

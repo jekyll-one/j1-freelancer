@@ -168,20 +168,16 @@ defaults:
     xhr_data_element:                   quicklinks
     xhr_data_path:                      /assets/data/quicklinks/index.html
 
-    icon_family:                        MDI
+    icon_family:                        mdib
     icon_color:                         '#212121'                               # gray-900
     icon_color_hover:                   '#757575'                               # gray-600
-    icon_size:                          mdi-2x
+    icon_size:                          mdib-2x
 
     # Link buttons
     # --------------------------------------------------------------------------
     home_icon:                          home-variant
     home_url:                           /                                       # URL | none (disables the home button)
     home_label:                         Home
-
-    back_icon:                          subdirectory-arrow-left
-    back_url:                           none
-    back_label:                         Page back
 
     disqus_icon:                        disqus
     disqus_url:                         none
@@ -203,6 +199,10 @@ defaults:
     twitter_url:                        none
     twitter_label:                      Twitter
 
+    buymeacoffee_icon:                  food
+    buymeacoffee_url:                   https://www.buymeacoffee.com/jrgnadams6
+    buymeacoffee_label:                 buymeacoffee
+
     # Action buttons
     # --------------------------------------------------------------------------
     quicksearch_icon:                   magnify
@@ -216,6 +216,10 @@ defaults:
     translate_icon:                     google-translate
     translate_action:                   translate
     translate_label:                    Google Translate
+
+    speak2me_icon:                      speaker
+    speak2me_action:                    speak
+    speak2me_label:                     Speak2Me
 
     theme_toggler_icon:                 lightbulb-outline
     theme_toggler_action:               themeToggler

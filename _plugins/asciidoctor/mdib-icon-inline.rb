@@ -1,5 +1,5 @@
 # ------------------------------------------------------------------------------
-# ~/_plugins/asciidoctor-extensions/fas-icon-inline.rb
+# ~/_plugins/asciidoctor-extensions/mdib-icon-inline.rb
 # Asciidoctor extension for J1 Theme
 #
 # Product/Info:
@@ -14,20 +14,30 @@
 require 'asciidoctor/extensions' unless RUBY_ENGINE == 'opal'
 include Asciidoctor
 
+# A inline macro that places an MDIB icon into the output document
+#
+# Usage
+#
+#   mdib:<name>[<size>, <modifier>]
+#
+# Example:
+#
+#   mdib:account[mdib-48px, <modifier>]
+#
 Asciidoctor::Extensions.register do
-  class FasIconInlineMacro < Extensions::InlineMacroProcessor
+  class MdibIconInlineMacro < Extensions::InlineMacroProcessor
     use_dsl
-    named :fas
+    named :mdib
     name_positional_attributes 'size', 'modifier'
     default_attrs 'size' => '1x', 'modifier' => ''
 
     def process parent, target, attributes
       doc = parent.document
-      size_class = (size = attributes['size']) ? %(fa-#{size}) : nil
+      size_class = (size = attributes['size']) ? %(mdib-#{size}) : nil
       modifier_class = (modifier = attributes['modifier']) ? %(#{modifier}) : nil
       icon_name = target.tr '_', '-'
-      %(<i class="fa fas fa-#{icon_name} #{size_class} #{modifier}"></i>)
+      %(<i class="mdib #{size_class} #{modifier} mdib-#{icon_name}"></i>)
     end
   end
-  inline_macro FasIconInlineMacro
+  inline_macro MdibIconInlineMacro
 end
