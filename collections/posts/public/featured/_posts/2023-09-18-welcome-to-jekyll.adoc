@@ -27,6 +27,7 @@ image:
   height:                               1280
   alt:                                  Photo by Nick Fewings on Unsplash
 
+tts:                                    false
 regenerate:                             false
 
 #resources:                             [ animate, bmd ]

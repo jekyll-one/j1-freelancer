@@ -8,8 +8,6 @@ date:                                   2022-01-01
 #last_modified:                         2023-01-01
 
 description: >
-                                        J1 Template is a Bootstrap V5 website template for the static
-                                        site generator Jekyll.
                                         To make all posts using J1 Template easy accessible to the visitors,
                                         the Navigation System of J1 Template provides a Explorer module
                                         for Blog articles: the Navigator. The Naviagtor supports the users
@@ -28,6 +26,7 @@ image:
   width:                                1920
   height:                               1280
 
+tts:                                    false
 sort:                                   date
 exclude_from_search:                    true
 regenerate:                             false                                   # set to 'true', if update posts is required
@@ -156,12 +155,13 @@ site_category_word_list:    {{site_category_word_list | debug}}
 <div id="index" class="post-search-results ml-3">
 
   {% if blog_navigator_options.date_view.page_text.enabled %}
-  <div class="view-description">{{view_description_text}}</div>
+  <div class="view-description mb-5">{{view_description_text}}</div>
   {% endif %}
 
-  <div class="post-headline">
+  <!-- div class="post-headline">
     <h1 id="post-headline notoc" class="mt-5">{{view_headline}}</h1>
-  </div>
+  </div -->
+
   {% assign openList = '<ul class="list-unstyled link-news">' %}
   {% assign closeList = '</ul>' %}
 

@@ -27,6 +27,7 @@ image:
   height:                               1280
   alt:                                  Photo by Nadim Merrikh on Unsplash
 
+tts:                                    false
 regenerate:                             false
 
 #resources:                             [ animate, bmd ]
@@ -73,9 +74,12 @@ excerpt__end
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+mdi:clock-time-five-outline[24px, md-gray mr-2 mt-4]
+*2 Minutes* to read
 
 // Include sub-documents (if any)
 // -----------------------------------------------------------------------------
+[role="mt-5"]
 To optimize customer interaction, here are some strategies you can implement:
 
 . Personalized communication: Use customer data and behavior to personalize

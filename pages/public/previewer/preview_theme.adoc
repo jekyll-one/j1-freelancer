@@ -26,6 +26,7 @@ image:
   height:                               1280
   alt:                                  Bootstrap Theme Freelancer
 
+tts:                                    false
 comments:                               false
 fab_menu_id:                            open_toc
 scrollbar:                              false

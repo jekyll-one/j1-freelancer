@@ -1,8 +1,13 @@
 ---
 title:                                  Comment Policy
 tagline:                                Discuss With Respect
-date:                                   2021-03-30 00:00:00
+
+date:                                   2021-03-30
+#last_modified:                         2023-01-01
+
 description: >
+                                        J1 Template is a Bootstrap V5 website template for the static
+                                        site generator Jekyll.
                                         We love comments and appreciate the time that our visitors
                                         spend to share ideas and give feedback. Thank you to everyone
                                         who comments at this site.
@@ -15,10 +20,9 @@ robots:
   follow:                               true
 
 image:
-  path:                                 /assets/images/modules/attics/1920x1280/freelancer.jpg
+  path:                                 /assets/images/modules/attics/1920x1280/j1-starter-mockup-1.jpg
   width:                                1920
   height:                               1280
-  alt:                                  Freelancer
 
 sitemap:                                false
 exclude_from_search:                    true
@@ -29,8 +33,8 @@ resources:                              [ animate, clipboard, comments, rouge ]
 resource_options:
   - attic:
       slides:
-        - url:                          /assets/images/modules/attics/1920x1280/freelancer.jpg
-          alt:                          Freelancer
+        - url:                          /assets/images/modules/attics/1920x1280/j1-starter-mockup-1.jpg
+          alt:                          J1 Starter Mockup
 ---
 
 // Page Initializer
@@ -71,13 +75,16 @@ an account as an *individual* at _Hyvor_. One of the primary purposes of
 encouraging comments on the {j1--site-name} website is to promote a sense
 of community.
 
-NOTE:  _Hyvor Talk_ is a *privacy-first*, no ads, no tracking platform to
+[NOTE]
+====
+_Hyvor Talk_ is a *privacy-first*, no ads, no tracking platform to
 support visitors for comments on websites. When you visit our website, the
 commenting platform will establish a direct connection between your browser
 and the server at Hyvor, but does *not* sell any of your personal data to
 third-parties or any advertisers. The _Hyvor Talk_ platform includes various
 features, such as social integration and social networking to support
 your personal networks.
+====
 endif::[]
 
 ifeval::[{disqus} == true]
@@ -86,14 +93,19 @@ an account as an *individual* at _Disqus_. One of the primary purposes of
 encouraging comments on the {j1--site-name} website is to promote a sense
 of community.
 
-NOTE: _Disqus_ (/dɪsˈkʌs/) is a *commercial* blog comment hosting service
+[NOTE]
+====
+_Disqus_ (/dɪsˈkʌs/) is a *commercial* blog comment hosting service
 for websites and online communities that use a networked platform. When you
 visit our website, the commenting platform will establish a direct connection
 between your browser and the server at Disqus. The _Disqus_ platform includes
 various features, such as social integration and social networking to support
 your personal networks.
+====
 endif::[]
 
+
+[role="mt-5"]
 == Discuss with Respect
 
 One of the most important aspects of a helpful blog is the conversation
@@ -109,8 +121,12 @@ instances where comments will be edited or deleted. The owner of this site
 reserves the right to edit or delete any comments submitted to the blog
 without notice.
 
-NOTE: This comment policy is subject to change at any time.
+[NOTE]
+====
+This comment policy is subject to change at any time.
+====
 
+[role="mt-5"]
 Promotional::
 Comments deemed to be spam or solely promotional in nature will be
 deleted. Links to relevant content are permitted, but comments should be

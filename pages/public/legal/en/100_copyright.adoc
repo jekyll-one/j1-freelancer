@@ -1,8 +1,13 @@
 ---
 title:                                  Copyright
 tagline:                                Legal Right Of The Content
-date:                                   2020-10-23 00:00:00
+
+date:                                   2020-10-23
+#last_modified:                         2023-01-01
+
 description: >
+                                        J1 Template is a Bootstrap V5 website template for the static
+                                        site generator Jekyll.
                                         The content and works published on this website are governed by the copyright
                                         laws of Germany. Any duplication, processing, distribution, or any form of
                                         utilization beyond the scope of copyright law shall require the prior written
@@ -16,10 +21,9 @@ robots:
   follow:                               true
 
 image:
-  path:                                 /assets/images/modules/attics/1920x1280/freelancer.jpg
+  path:                                 /assets/images/modules/attics/1920x1280/j1-starter-mockup-1.jpg
   width:                                1920
   height:                               1280
-  alt:                                  Freelancer
 
 sitemap:                                false
 exclude_from_search:                    true
@@ -30,8 +34,8 @@ resources:                              [ animate, clipboard, comments, rouge ]
 resource_options:
   - attic:
       slides:
-        - url:                          /assets/images/modules/attics/1920x1280/freelancer.jpg
-          alt:                          Freelancer
+        - url:                          /assets/images/modules/attics/1920x1280/j1-starter-mockup-1.jpg
+          alt:                          J1 Starter Mockup
 ---
 
 // Page Initializer
@@ -53,8 +57,11 @@ resource_options:
 {% include {{load_attributes}} scope="global" %}
 
 ifeval::[{legal-warning} == true]
-WARNING: This document *does not* constitute any *legal advice*. It is
+[WARNING]
+====
+This document *does not* constitute any *legal advice*. It is
 highly recommended to verify legal aspects and implications.
+====
 endif::[]
 
 
@@ -68,6 +75,7 @@ consent of the author or authors in question.
 
 // Include sub-documents (if any)
 // -----------------------------------------------------------------------------
+[role="mt-5"]
 == Copyright policy
 
 The content provided by this site is subject to German copyright law. The
@@ -80,6 +88,7 @@ parties' copyrights are respected. Nevertheless, you were on one copyright
 infringement, we friendly ask for a corresponding note.
 
 ifeval::[{disclaimer} == true]
+[role="mt-5"]
 == Disclaimer
 
 The website contents were created with the care and to the best of our
