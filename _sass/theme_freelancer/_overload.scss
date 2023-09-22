@@ -3,8 +3,35 @@
 //
 
 // -----------------------------------------------------------------------------
+// Overload BS
+// -----------------------------------------------------------------------------
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #cddc39;
+    --bs-btn-border-color: #cddc39;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #008074;
+    --bs-btn-hover-border-color: #00786d;
+    --bs-btn-focus-shadow-rgb: 38, 166, 154;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #00786d;
+    --bs-btn-active-border-color: #007166;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #cddc39;
+    --bs-btn-disabled-border-color: #cddc39;
+}
+
+.btn-primary:hover {
+    color: #9E9d24;
+    background-color: #9E9d24;
+    border-color: #9E9d24;
+}
+
+// -----------------------------------------------------------------------------
 // Overload MS CSS
 // -----------------------------------------------------------------------------
 .j1-ms-info {
-  background-color: unset;
+    background-color: unset;
 }
