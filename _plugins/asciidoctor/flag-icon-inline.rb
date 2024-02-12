@@ -5,9 +5,9 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2023 Juergen Adams
+# Copyright (C) 2023, 2024 Juergen Adams
 #
-# J1 Theme is licensed under the MIT License.
+# J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
 # ------------------------------------------------------------------------------
 # <i class="flag-icon flag-icon-gr rectangle size-xs"></i>
@@ -25,13 +25,16 @@ Asciidoctor::Extensions.register do
     default_attrs 'style' => 'rectangle', 'size' => '', 'modifier' => ''
 
     def process parent, target, attributes
+
       doc = parent.document
-      style_class = (style = attributes['style']) ? %(#{style}) : nil
-      size_class = (size = attributes['size']) ? %(size-#{size}) : nil
-      modifier_class = (modifier = attributes['modifier']) ? %(#{modifier}) : nil
-      country_name = target.tr '_', '-'
+      style_class     = (style = attributes['style']) ? %(#{style}) : nil
+      size_class      = (size = attributes['size']) ? %(size-#{size}) : nil
+      modifier_class  = (modifier = attributes['modifier']) ? %(#{modifier}) : nil
+      country_name    = target.tr '_', '-'
+
       %(<i class="flag-icon flag-icon-#{country_name} #{style_class} #{size_class} #{modifier}"></i>)
     end
   end
+
   inline_macro FlagIconInlineMacro
 end

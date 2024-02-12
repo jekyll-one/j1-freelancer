@@ -6,11 +6,10 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2023 Juergen Adams
+# Copyright (C) 2023, 2024 Juergen Adams
 #
-# J1 Theme is licensed under the MIT License.
+# J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
-#
 # ------------------------------------------------------------------------------
 # NOTE:
 #   For main navigation bar settings, see j1_navigator_menu.yml
@@ -30,41 +29,41 @@ description:
 defaults:
   enabled:                              true
 
-  # ------------------------------------------------------------------------------
+  # ----------------------------------------------------------------------------
   # Font icon settings
   #
   #   icon_family
-  #   ----------------------------------------------------------------------------
-  #   Set the Icon font (Material Design Icon MDI|FontAwesone FA)
+  #   --------------------------------------------------------------------------
+  #   Set the Icon font (Material Design Icon mdib|FontAwesone FA)
   #
-  #   values:                         familiy (MDI|FA)
-  #   default:                        MDI
+  #   values:                         familiy (mdib|fa)
+  #   default:                        mdib
   #
   #   icon_style
-  #   ----------------------------------------------------------------------------
-  #   Select the style (FA only, for MDI always mdi)
+  #   --------------------------------------------------------------------------
+  #   Select the style (FA only, for mdib always mdi)
   #
   #   values:                         style (mdi|far|fas|fab)
   #   default:                        mdi
   #
   #   icon_color
-  #   ----------------------------------------------------------------------------
+  #   --------------------------------------------------------------------------
   #   Select the icon color used
   #
   #   values:                         color string (all supported MD color names mdi-*)
   #   default:                        no default
   #
   #   icon_size
-  #   ----------------------------------------------------------------------------
+  #   --------------------------------------------------------------------------
   #   Select the icon color used
   #
   #   values:                         size string (all supported size names mdi-*)
   #   default:                        true
   #
-  icon_family:                          MDI
-  icon_style:                           mdi
-  icon_color:                           mdi-grey
-  icon_size:                            mdi-sm
+  icon_family:                          mdib
+  icon_style:                           mdib
+  icon_color:                           mdib-grey
+  icon_size:                            mdib-sm
 
   nav_primary_color:                    "#2196F3"                               # md-blue, general color for navbar and nav-menus
 
@@ -85,14 +84,14 @@ defaults:
     fixed:                              true
     style:                              overlay
     color:                              light
-    nav_item_color:                     '#212121'                               # gray-900 rgba-lighten
-    nav_item_color_hover:               '#9E9E9E'                               # gray-500 rgba-lighten
+    nav_item_color:                     '#212121'                               # gray-900|rgba-lighten
+    nav_item_color_hover:               '#EEEEEE'                               # gray-200|rgba-lighten-400
+    nav_item_background_image:          'linear-gradient(#afabab, #1c1c1c 40%, #212121);'
     position:                           left
     bottom_line_height:                 1
     bottom_line_color:                  "#EEEEEE"                               # md-grey-200
-    background_color_full:              '#009688'                               # rgba(0, 0, 0, 0.8)  darken-600
-    background_color_collapsed:         default                                 # default: theme|bg_primary
-    background_color_scrolled:          default                                 # default: theme|bg_primary
+    background_color_full:              'rgba(255, 255, 255, 0.8)'              # rgba(0, 0, 0, 0.8) lighten-800
+    background_color_scrolled:          'var(--bs-primary)'                     # default: theme|bs-primary
 
   # ----------------------------------------------------------------------------
   # NavMenu (Mobile)
@@ -132,10 +131,10 @@ defaults:
     max_height:                         600                                     # px
     menu_font_size:                     larger
     megamenu_font_size:                 small
-    icon_family:                        MDI
-    icon_style:                         mdi                                     # far regular icon
+    icon_family:                        mdib
+    icon_style:                         mdib                                    # far regular icon
     icon_color:                         "#9E9E9E"                               # md-grey
-    icon_size:                          mdi-sm
+    icon_size:                          mdib-sm
     menu_item_color:                    '#212121'                               # gray-900 rgba-lighten
     menu_item_color_hover:              '#EEEEEE'                               # gray-500 rgba-lighten-900
     dropdown_style:                     raised
@@ -200,11 +199,15 @@ defaults:
     twitter_label:                      Twitter
 
     buymeacoffee_icon:                  food
-    buymeacoffee_url:                   https://www.buymeacoffee.com/jrgnadams6
+    buymeacoffee_url:                   none
     buymeacoffee_label:                 buymeacoffee
 
     # Action buttons
     # --------------------------------------------------------------------------
+    docsearch_icon:                     head-question
+    docsearch_action:                   documind
+    docsearch_label:                    Doc Search
+
     quicksearch_icon:                   magnify
     quicksearch_action:                 quicksearch
     quicksearch_label:                  Search

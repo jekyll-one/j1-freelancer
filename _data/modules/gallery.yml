@@ -1,0 +1,110 @@
+# ------------------------------------------------------------------------------
+# ~/_data/modules/gallery.yml
+# User configuration for J1 Justified Gallery (jg)
+#
+# Product/Info:
+# https://jekyll.one
+#
+# Copyright (C) 2023, 2024 Juergen Adams
+#
+# J1 Template is licensed under the MIT License.
+# See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# Description
+#
+description:
+  title:                                Justified Gallery
+  scope:                                User settings
+  location:                             _data/apps/justifiedGallery.yml
+
+# ------------------------------------------------------------------------------
+# User configuration settings
+#
+settings:
+  enabled:                              false
+
+  # ----------------------------------------------------------------------------
+  # All galleries available
+  # ----------------------------------------------------------------------------
+  galleries:
+
+    # ==========================================================================
+    # Image Galleries
+    # ==========================================================================
+
+    # --------------------------------------------------------------------------
+    # Old Times
+    #
+    - gallery:
+      enabled:                          false
+
+      id:                               jg_old_times
+      type:                             image
+      image_base_path:                  /assets/images/modules/gallery/old_times
+      thumb_base_path:                  /assets/images/modules/gallery/old_times
+
+      # ------------------------------------------------------------------------
+      # Justified Gallery settings
+      # ------------------------------------------------------------------------
+      #
+      gallery_options:
+        rowHeight:                      250
+        gutters:                        3
+
+      # ------------------------------------------------------------------------
+      # Lightbox settings
+      # ------------------------------------------------------------------------
+      #
+      lightbox:
+        enabled:                        true
+        type:                           lg                                      # lb | lg
+
+      lightGallery:
+        plugins:                        lgFullscreen, lgRotate, lgThumbnail
+
+        options:
+          licenseKey:                   0000-0000-000-0000
+          download:                     false
+          alignThumbnails:              left
+
+      # ------------------------------------------------------------------------
+      # Images
+      #
+      images:
+
+        - image:                        # image
+          file:                         image_01.jpg
+          description: >
+                                        <h5>GrandPa</h5>
+                                        <h6>80th Birthday</h6>
+          caption:
+            text:                       GrandPa &middot; 80th Birthday
+
+        - image:                        # image
+          file:                         image_02.jpg
+          description: >
+                                        <h5>GrandPa</h5>
+                                        <h6>80th Birthday</h6>
+          caption:
+            text:                       GrandPa &middot; 80th Birthday
+
+        - image:                        # image
+          file:                         image_03.jpg
+          description: >
+                                        <h5>GrandPa</h5>
+                                        <h6>Annual journey</h6>
+          caption:
+            text:                       GrandPa &middot; Annual journey
+
+        - image:                        # image
+          file:                         image_04.jpg
+          description: >
+                                        <h5>GrandPa</h5>
+                                        <h6>Annual journey</h6>
+          caption:
+            text:                       GrandPa &middot; Annual journey
+
+# ------------------------------------------------------------------------------
+# END config

@@ -5,9 +5,9 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2023 Juergen Adams
+# Copyright (C) 2023, 2024 Juergen Adams
 #
-# J1 Theme is licensed under the MIT License.
+# J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
 # ------------------------------------------------------------------------------
 
@@ -29,6 +29,7 @@ settings:
   # SmoothScroll options
   # ----------------------------------------------------------------------------
   smoothscroll:
+    offsetBase:                         80
     offsetCorrection:                   -9
     offsetCorrectionLocal:              -90
 
@@ -91,7 +92,7 @@ settings:
         pagePath:                       /pages/public/blog/navigator/page
         elementScroll:                  true
         scrollOffset:                   200
-        lastPage:                       1
+        lastPage:                       1                                       # Dosn't work: high number "means" ALL pages|posts to load
         infoLastPage:                   false
 
         lastPageInfo_en:                ""

@@ -60,7 +60,7 @@ settings:
         layout:                         home
 
         padding_top:                    600
-        opacity:                        1
+        opacity:                        1.0
 
         # CSS filter setting applied on (backstretch|background) image
         #
@@ -80,7 +80,7 @@ settings:
         layout:                         [ page ]
 
         padding_top:                    600
-        opacity:                        1
+        opacity:                        1.0
 
         # CSS filter setting applied on (backstretch|background) image
         #
@@ -100,14 +100,14 @@ settings:
         layout:                         [ collection, post ]
 
         padding_top:                    600
-        opacity:                        1
+        opacity:                        1.0
 
         # CSS filter setting applied on (backstretch|background) image
         #
         filters:
           grayscale:                    0
           contrast:                     1
-          brightness:                   1
+          brightness:                   0.7
 
     # --------------------------------------------------------------------------
     # Attic Raw

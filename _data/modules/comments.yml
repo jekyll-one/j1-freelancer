@@ -1,14 +1,14 @@
 # ------------------------------------------------------------------------------
-#  ~/_data/modules/comments.yml
-#  User configuration settings for J1 Comments Module
+# ~/_data/modules/comments.yml
+# User configuration settings for J1 Comments Module
 #
-#  Product/Info:
-#  https://jekyll.one
+# Product/Info:
+# https://jekyll.one
 #
-#  Copyright (C) 2023 Juergen Adams
+# Copyright (C) 2023, 2024 Juergen Adams
 #
-#  J1 Theme is licensed under the MIT License.
-#  See: https://github.com/jekyll-one/J1 Theme/blob/master/LICENSE
+# J1 Template is licensed under the MIT License.
+# See: https://github.com/jekyll-one/J1 Theme/blob/master/LICENSE
 # ------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------
@@ -23,13 +23,16 @@ description:
 # User configuration settings
 #
 settings:
-  enabled:                              false
+  enabled:                              true
 
   # ----------------------------------------------------------------------------
   # Provider settings
   # ----------------------------------------------------------------------------
   provider:                             hyvor
   site_id:                              your-site-id
+
+# provider:                             disqus
+# site_id:                              your-site-id
 
 # ------------------------------------------------------------------------------
 # END config

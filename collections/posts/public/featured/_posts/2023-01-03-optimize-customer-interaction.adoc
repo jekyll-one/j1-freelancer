@@ -28,6 +28,8 @@ image:
   alt:                                  Photo by Nadim Merrikh on Unsplash
 
 tts:                                    true
+toc:                                    false
+fab_menu_id:                            default
 regenerate:                             false
 
 resources:                              [ animate ]

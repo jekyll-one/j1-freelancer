@@ -74,7 +74,7 @@ settings:
         - slide:
           alt:                          Facebook
           title:                        Facebook
-          foreground_image:             /assets/images/freelancer/img/partners/scalable/facebook.svg
+          foreground_image:             /assets/images/agency/img/partners/scalable/facebook.svg
           background_image:             /assets/themes/j1/modules/masterslider/css/blank.gif
           thumb_image:                  false
           slideinfo:
@@ -97,7 +97,7 @@ settings:
         - slide:
           alt:                          Google
           title:                        Google
-          foreground_image:             /assets/images/freelancer/img/partners/scalable/google.svg
+          foreground_image:             /assets/images/agency/img/partners/scalable/google.svg
           background_image:             /assets/themes/j1/modules/masterslider/css/blank.gif
           thumb_image:                  false
           slideinfo:
@@ -120,7 +120,7 @@ settings:
         - slide:
           alt:                          IBM
           title:                        IBM
-          foreground_image:             /assets/images/freelancer/img/partners/scalable/ibm.svg
+          foreground_image:             /assets/images/agency/img/partners/scalable/ibm.svg
           background_image:             /assets/themes/j1/modules/masterslider/css/blank.gif
           thumb_image:                  false
           slideinfo:
@@ -143,7 +143,7 @@ settings:
         - slide:
           alt:                          Microsoft
           title:                        Microsoft
-          foreground_image:             /assets/images/freelancer/img/partners/scalable/microsoft.svg
+          foreground_image:             /assets/images/agency/img/partners/scalable/microsoft.svg
           background_image:             /assets/themes/j1/modules/masterslider/css/blank.gif
           thumb_image:                  false
           slideinfo:

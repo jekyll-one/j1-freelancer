@@ -37,14 +37,17 @@ settings:
     nav_item_color:                     '#ffffff'
     nav_item_color_hover:               '#616161'
 
+    background_color_full:              '#29272c'                               # attic image color
+    background_color_collapsed:         default                                 # default: theme|bg_primary
+    background_color_scrolled:          default                                 # default: theme|bg_primary
+
+    nav_item_background_image:          unset
+
   # ----------------------------------------------------------------------------
   # NavMenu (Desktop)
   #
   nav_menu:
     enabled:                            true
-
-    menu_item_color:                    '#ffffff'
-    menu_item_color_hover:              '#616161'
 
   # ----------------------------------------------------------------------------
   # NavQuicklinks
@@ -52,7 +55,7 @@ settings:
   nav_quicklinks:
     enabled:                            true
 
-    icon_color:                         '#ffffff'
+    icon_color:                         '#fff'
     icon_color_hover:                   '#616161'
 
   # ----------------------------------------------------------------------------

@@ -7,11 +7,11 @@
 # https://jekyll.one
 #
 # Copyright (C) 2002-2014 Will Norris
-# Copyright (C) 2023 Juergen Adams
+# Copyright (C) 2023, 2024 Juergen Adams
 #
 # symlink_watcher is licensed under the  MIT license
 # See: https://github.com/willnorris/willnorris.com/blob/master/LICENSE
-# J1 Theme is licensed under the MIT License.
+# J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
 # ------------------------------------------------------------------------------
 # NOTE:

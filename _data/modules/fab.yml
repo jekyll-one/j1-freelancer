@@ -5,14 +5,10 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2023 Juergen Adams
+# Copyright (C) 2023, 2024 Juergen Adams
 #
-# J1 Theme is licensed under the MIT License.
+# J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
-#
-# ------------------------------------------------------------------------------
-# NOTE:
-#
 # ------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------
@@ -47,7 +43,7 @@ settings:
       enabled:                          true
       id:                               default
       icon:                             chevron-double-up
-      icon_family:                      MDI
+      icon_family:                      mdib
       icon_color:                       md-gray-900
       icon_hover:                       chevron-double-up
       color:                            primary
@@ -67,7 +63,7 @@ settings:
       enabled:                          true
       id:                               top-reload
       icon:                             plus
-      icon_family:                      MDI
+      icon_family:                      mdib
       icon_color:                       md-gray-900
       icon_hover:                       chevron-up
       color:                            primary
@@ -99,7 +95,7 @@ settings:
       enabled:                          true
       id:                               open_toc
       icon:                             plus
-      icon_family:                      MDI
+      icon_family:                      mdib
       icon_color:                       md-gray-900
       icon_hover:                       chevron-up
       color:                            primary
@@ -131,7 +127,7 @@ settings:
       enabled:                          true
       id:                               open_toc_reload
       icon:                             plus
-      icon_family:                      MDI
+      icon_family:                      mdib
       icon_color:                       md-gray-900
       icon_hover:                       chevron-up
       color:                            primary
@@ -171,7 +167,7 @@ settings:
       enabled:                          true
       id:                               page_ctrl
       icon:                             plus
-      icon_family:                      MDI
+      icon_family:                      mdib
       icon_color:                       md-gray-900
       icon_hover:                       chevron-up
       color:                            primary
@@ -195,7 +191,7 @@ settings:
           color:                        md-green
           event_handler:                scroll_previous_section
           icon:                         step-backward
-          icon_properties:              mdi-rotate-90
+          icon_properties:              mdib-rotate-90
 
         - item:                         Next Section
           enabled:                      true
@@ -203,7 +199,7 @@ settings:
           color:                        md-green
           event_handler:                scroll_next_section
           icon:                         step-forward
-          icon_properties:              mdi-rotate-90
+          icon_properties:              mdib-rotate-90
 
         - item:                         Reload Page
           enabled:                      true

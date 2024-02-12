@@ -5,11 +5,10 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2023 Juergen Adams
+# Copyright (C) 2023, 2024 Juergen Adams
 #
-# J1 Theme is licensed under the MIT License.
+# J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
-#
 # ------------------------------------------------------------------------------
 require 'asciidoctor/extensions' unless RUBY_ENGINE == 'opal'
 include Asciidoctor
@@ -22,12 +21,15 @@ Asciidoctor::Extensions.register do
     default_attrs 'size' => '1x', 'modifier' => ''
 
     def process parent, target, attributes
-      doc = parent.document
-      size_class = (size = attributes['size']) ? %(#{size}) : nil
-      modifier_class = (modifier = attributes['modifier']) ? %(#{modifier}) : nil
-      icon_name = target.tr '_', '-'
+
+      doc             = parent.document
+      size_class      = (size = attributes['size']) ? %(#{size}) : nil
+      modifier_class  = (modifier = attributes['modifier']) ? %(#{modifier}) : nil
+      icon_name       = target.tr '_', '-'
+
       %(<span class="iconify iconify-#{size_class} #{modifier}" data-icon="#{icon_name}" data-inline="false"></span>)
     end
   end
+
   inline_macro IconifyIconInlineMacro
 end

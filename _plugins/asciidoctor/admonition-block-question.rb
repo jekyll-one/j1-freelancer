@@ -5,11 +5,10 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2023 Juergen Adams
+# Copyright (C) 2023, 2024 Juergen Adams
 #
-# J1 Theme is licensed under the MIT License.
+# J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
-#
 # ------------------------------------------------------------------------------
 require 'asciidoctor/extensions'
 include Asciidoctor
@@ -36,13 +35,14 @@ Asciidoctor::Extensions.register do
     named :QUESTION
     on_contexts :example, :paragraph
 
-    def process parent, reader, attrs
-      attrs['name'] = 'question'
-      attrs['caption'] = 'Question'
-      create_block parent, :admonition, reader.lines, attrs, content_model: :compound
+    def process parent, reader, attributes
+
+      attributes['name'] = 'question'
+      attributes['caption'] = 'Question'
+
+      create_block parent, :admonition, reader.lines, attributes, content_model: :compound
     end
   end
 
   block CustomAdmonitionBlockQuestion
-
 end

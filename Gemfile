@@ -6,9 +6,9 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2023 Juergen Adams
+# Copyright (C) 2023, 2024 Juergen Adams
 #
-# J1 Theme is licensed under the MIT License.
+# J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
 # ------------------------------------------------------------------------------
 
@@ -75,11 +75,11 @@ gem 'jekyll', '~> 4.0'
 # Specify the THEME GEM used for the project
 
 # Loaded from RubyGems
-gem 'j1-template', '~> 2023.9.0'
+gem 'j1-template', '~> 2024.1'
 
 # Loaded from gem.fury.io
 #source 'https://gem.fury.io/jekyll-one-org/' do
-#  gem 'j1-template', '~> 2023.9.0'
+#  gem 'j1-template', '~> 2024.1'
 #end
 
 # ------------------------------------------------------------------------------

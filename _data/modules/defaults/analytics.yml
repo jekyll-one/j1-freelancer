@@ -5,11 +5,10 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2023 Juergen Adams
+# Copyright (C) 2023, 2024 Juergen Adams
 #
-# J1 Theme is licensed under the MIT License.
+# J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
-#
 # ------------------------------------------------------------------------------
 # NOTE:
 #
@@ -52,7 +51,6 @@ defaults:
   enabled:                              false
 
   provider:                             google
-  trackingID:                           your-tracking-id
   skipAllHosts:                         localhost, 127.0.0.1
 
   google:
@@ -98,7 +96,7 @@ defaults:
     # --------------------------------------------------------------------------
     #
     optInOut:                           true
-    anonymizeIP:                        false
+    anonymizeIP:                        true
 
 # ------------------------------------------------------------------------------
 # END config

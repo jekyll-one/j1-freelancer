@@ -5,11 +5,10 @@
 # Product/Info:
 # https://jekyll.one
 #
-# Copyright (C) 2023 Juergen Adams
+# Copyright (C) 2023, 2024 Juergen Adams
 #
-# J1 Theme is licensed under the MIT License.
+# J1 Template is licensed under the MIT License.
 # See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
-#
 # ------------------------------------------------------------------------------
 require 'asciidoctor/extensions' unless RUBY_ENGINE == 'opal'
 include Asciidoctor
@@ -29,5 +28,6 @@ Asciidoctor::Extensions.register do
       %(<i class="mdi #{size_class} #{modifier} mdi-#{icon_name}"></i>)
     end
   end
+
   inline_macro MdiIconInlineMacro
 end

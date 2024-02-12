@@ -10,8 +10,6 @@ package-lock.json
 # Unneeded files created by you or helper processes
 # ------------------------------------------------------------------------------
 
-support/
-
 Gemfile.lock
 
 Passengerfile.json
